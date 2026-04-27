@@ -1,0 +1,42 @@
+<ion-content fullscreen class="intro-background">
+  <div class="overlay">
+    <div class="intro-container" [class.show]="showContent">
+      
+      <!-- Icono de audífonos -->
+      <div class="headset-icon">
+        <ion-icon name="headset-outline"></ion-icon>
+      </div>
+
+      <h2 class="intro-title">Antes de comenzar</h2>
+
+      <div class="intro-text">
+        <p class="main-text">
+          Para una mejor experiencia, usa audífonos.
+        </p>
+        
+        <p class="warning-text">
+          No todas las decisiones son correctas.<br>
+          El silencio también es una elección.<br>
+          El universo recuerda lo que haces.
+        </p>
+      </div>
+
+      <ion-button 
+        expand="block" 
+        shape="round" 
+        class="continue-button"
+        (click)="continue()">
+        Continuar
+      </ion-button>
+
+      <ion-button 
+        expand="block" 
+        fill="clear" 
+        class="back-button"
+        (click)="goBack()">
+        Volver
+      </ion-button>
+
+    </div>
+  </div>
+</ion-content>

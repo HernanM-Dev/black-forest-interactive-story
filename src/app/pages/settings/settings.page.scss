@@ -1,0 +1,166 @@
+.settings-content {
+  --background: #0a0a0a;
+}
+
+ion-header {
+  ion-toolbar {
+    --background: #1a1a1a;
+    --color: #fff;
+    --border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  ion-title {
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+  }
+
+  ion-back-button {
+    --color: #dc2626;
+  }
+}
+
+.settings-container {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.settings-list {
+  background: transparent;
+  padding: 0;
+}
+
+.setting-item {
+  --background: rgba(255, 255, 255, 0.03);
+  --border-radius: 12px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-end: 0;
+  
+  margin-bottom: 1rem;
+  border-radius: 12px;
+
+  ion-label {
+    h2 {
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .setting-icon {
+    color: #dc2626;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.range-item {
+  --background: rgba(255, 255, 255, 0.03);
+  --border-radius: 12px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  
+  margin-bottom: 2rem;
+  border-radius: 12px;
+
+  ion-range {
+    padding: 1rem 0;
+
+    &::part(tick) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &::part(tick-active) {
+      background: #dc2626;
+    }
+
+    &::part(pin) {
+      background: #dc2626;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    &::part(knob) {
+      background: #dc2626;
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+    }
+
+    &::part(bar) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &::part(bar-active) {
+      background: #dc2626;
+    }
+  }
+}
+
+.select-item {
+  --background: rgba(255, 255, 255, 0.03);
+  --border-radius: 12px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  
+  margin-bottom: 2rem;
+  border-radius: 12px;
+
+  ion-select {
+    width: 100%;
+    padding: 0.75rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    
+    &::part(placeholder) {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &::part(icon) {
+      color: #dc2626;
+    }
+  }
+}
+
+.credits-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    --background: rgba(255, 255, 255, 0.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  ion-label p {
+    color: rgba(220, 38, 38, 0.7);
+    font-style: italic;
+  }
+}
+
+// Estilos para el popover del select
+ion-popover {
+  --background: #1a1a1a;
+  --color: #fff;
+
+  ion-select-option {
+    --background: #1a1a1a;
+    --color: #fff;
+
+    &.select-option-selected {
+      --background: rgba(220, 38, 38, 0.2);
+      --color: #dc2626;
+    }
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "chapter": 5,
+  "title": "El peso de la carne",
+  "scenes": [
+    {
+      "id": 500,
+      "title": "La vuelta a casa",
+      "image": "/assets/images/black-forest-home.jpg",
+      "text": "Has vuelto del bosque. Has vuelto, pero algo en el aire de la casa es diferente. Jane está en el sofá, leyendo un libro. La televisión está apagada. No hay radio encendida. Solo el silencio y el crepúsculo que se filtra por las ventanas.\n\n—¿Dónde estabas? —pregunta, y su voz es normal. Demasiado normal.\n\n—En el bosque —respondes. No hay razón para mentir. O sí. Pero ya no sabes distinguir.\n\nElla arquea una ceja.\n\n—¿En el bosque? ¿A estas horas? ¿Por qué?\n\n—Te buscaba.\n\nSonríe. Es la misma sonrisa de siempre. Pero sus ojos... sus ojos se demoran un segundo más de lo debido en ti. Como si comprobaran algo.\n\n—He estado aquí todo el día —dice—. Trabajando. ¿No te diste cuenta?\n\nNo respondes. No sabes qué decir.\n\nElla cierra el libro y se levanta.\n\n—Preparo la cena. ¿Te quedas?\n\nLa pregunta es absurda. Vives aquí. Pero la forma en que lo dice... como si no diera por sentado que te quedes.\n\nAsientes.\n\nMientras ella cocina, te sientas en el salón. La mano en el bolsillo. La horquilla sigue ahí. No la has tirado. No la has mostrado.\n\nEn la cocina, Jane tararea una canción. No la reconoces. No es de las que tararea ella.",
+      "choices": [
+        {
+          "id": "preguntar_cancion",
+          "text": "“¿Qué canción es esa?”",
+          "effects": {
+            "info": 1,
+            "addInfo": ["cancion_desconocida"]
+          },
+          "nextSceneId": 501
+        },
+        {
+          "id": "mostrar_horquilla",
+          "text": "Sacar la horquilla y preguntar: “¿Es tuya?”",
+          "effects": {
+            "safety": -1,
+            "stress": 1,
+            "addInfo": ["horquilla_confrontacion"]
+          },
+          "nextSceneId": 502
+        },
+        {
+          "id": "guardar_silencio",
+          "text": "No decir nada. Observar.",
+          "effects": {
+            "control": 1,
+            "stress": 0
+          },
+          "nextSceneId": 503
+        }
+      ]
+    },
+    {
+      "id": 501,
+      "title": "La canción",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane deja de tararear. Se queda quieta un segundo, como si no hubiera notado que lo hacía.\n\n—No sé —dice al fin—. Debe de haberla oído en algún sitio.\n\n—No es de las que te gustan.\n\nSe gira. Te mira. Su expresión es neutra.\n\n—¿Y cómo sabes lo que me gusta ahora?\n\nLa pregunta te golpea. No es una pregunta casual. Es una prueba.\n\n—Llevamos años juntos —respondes.\n\n—Ya. —Vuelve a girarse hacia la cocina—. Años. Mucho tiempo.\n\nEl tono es extraño. Como si los años fueran un dato, no un recuerdo.\n\nSigues escuchando. Ella vuelve a tararear, pero esta vez es una canción que reconoces. Una que le gustaba en la universidad.\n\nTe preguntas si lo ha hecho a propósito.",
+      "choices": [
+        {
+          "id": "dejar_pasar",
+          "text": "Dejar pasar el momento",
+          "effects": {
+            "stress": -1,
+            "info": 0
+          },
+          "nextSceneId": 503
+        },
+        {
+          "id": "insistir",
+          "text": "“¿Desde cuándo tarareas canciones que no conoces?”",
+          "effects": {
+            "safety": -1,
+            "stress": 1,
+            "addInfo": ["jane_evasiva"]
+          },
+          "nextSceneId": 504
+        }
+      ]
+    },
+    {
+      "id": 502,
+      "title": "La horquilla",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sacas la horquilla del bolsillo. La sostienes entre los dedos.\n\n—¿Es tuya?\n\nJane se acerca. Toma la horquilla. La mira. La gira entre sus dedos.\n\n—Sí —dice—. Es mía. La perdí hace unos días, creo.\n\n—¿Dónde?\n\n—No recuerdo. En la ducha, quizás. O en el jardín.\n\nTe devuelve la horquilla.\n\n—Gracias por encontrarla.\n\nSu tono es agradecido. Normal. Demasiado normal.\n\nPero tú la encontraste en el bosque. Dentro de Black Forest. En el umbral de un edificio abandonado.\n\nY ella dice que la perdió en la ducha.\n\nAlgo no encaja. O ella miente. O tú estás perdiendo la cabeza.\n\nJane vuelve a la cocina. Tú te quedas con la horquilla en la mano. Ahora pesa más.",
+      "choices": [
+        {
+          "id": "aceptar_explicacion",
+          "text": "Aceptar su explicación. No hay pruebas.",
+          "effects": {
+            "stress": -1,
+            "safety": 0
+          },
+          "nextSceneId": 503
+        },
+        {
+          "id": "contradecir",
+          "text": "“La encontré en el bosque. Dentro de Black Forest.”",
+          "effects": {
+            "safety": -2,
+            "stress": 2,
+            "addInfo": ["jane_mentira_descubierta"]
+          },
+          "nextSceneId": 504
+        }
+      ]
+    },
+    {
+      "id": 503,
+      "title": "La cena en silencio",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Cenáis en silencio. Jane ha preparado algo sencillo. Comes sin hambre, mirando el plato.\n\nEn algún momento, levantas la vista. Ella te está mirando. Fijamente. Cuando tus ojos se encuentran, ella sonríe y aparta la mirada.\n\nPero la has visto. La forma en que te miraba. No era amor. No era cariño. Era... estudio.\n\nComo si estuviera aprendiendo a ser ella.\n\n—¿Pasa algo? —pregunta.\n\n—Nada.\n\nTerminas de cenar. Recoges los platos. Cuando vas a la cocina, notas que en el fregadero hay más platos de los que habéis usado. Como si alguien más hubiera comido aquí.\n\n—¿Tuviste invitados? —preguntas.\n\nJane niega.\n\n—He estado sola todo el día.\n\nMiras los platos. Son tres. Tú, ella, y alguien más.\n\nPero no dices nada.\n\nTu móvil vibra en el bolsillo. Un mensaje de un número desconocido: “No es ella. No del todo. Sal mientras puedas.”\n\nBoras el mensaje. Jane no lo ha visto.",
+      "choices": [
+        {
+          "id": "ignorar_mensaje",
+          "text": "Ignorar el mensaje. Fingir normalidad.",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 505
+        },
+        {
+          "id": "responder_mensaje",
+          "text": "Responder al mensaje: “¿Quién eres?”",
+          "effects": {
+            "info": 1,
+            "stress": 1,
+            "addInfo": ["contacto_misterioso"]
+          },
+          "nextSceneId": 506
+        }
+      ]
+    },
+    {
+      "id": 504,
+      "title": "La grieta se abre",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "El ambiente se tensa. Jane deja de sonreír. Te mira con una frialdad que no le conoces.\n\n—No sé de qué hablas —dice—. Yo no he estado en ningún bosque.\n\n—La horquilla estaba allí.\n\n—Pues alguien la llevó. O te la encontraste en otro sitio y lo recuerdas mal.\n\n—No lo recuerdo mal.\n\nElla da un paso hacia ti. No es un paso amenazante, pero tampoco amable.\n\n—Llevas días raro —dice—. Paranoico. Mirándome como si fuera a hacer algo. ¿Qué crees que soy, Daniel? ¿Qué crees que te he hecho?\n\nLa pregunta te desarma. Porque no sabes qué responder.\n\n—Nada —dices al fin—. Lo siento.\n\nJane niega con la cabeza.\n\n—Voy a dormir. Tú haz lo que quieras.\n\nSube las escaleras. No te mira al despedirse.\n\nTe quedas solo en el salón, con la horquilla en la mano y la certeza de que algo se ha roto.\n\nY lo peor: no sabes si la que se ha ido es ella, o la que se ha quedado.",
+      "choices": [
+        {
+          "id": "subir_detras",
+          "text": "Subir detrás de ella. Intentar arreglarlo.",
+          "effects": {
+            "safety": -1,
+            "stress": 1
+          },
+          "nextSceneId": 505
+        },
+        {
+          "id": "quedarse_abajo",
+          "text": "Quedarte en el salón. Necesitas espacio.",
+          "effects": {
+            "control": 1,
+            "stress": 0
+          },
+          "nextSceneId": 505
+        }
+      ]
+    },
+    {
+      "id": 505,
+      "title": "Noche en vela",
+      "image": "/assets/images/black-forest-night.jpg",
+      "text": "No duermes. O sí, pero en fragmentos. En cada pesadilla, el bosque. La montaña. La voz que te llama por tu nombre.\n\nTe despiertas varias veces. La cama está vacía. Jane no está a tu lado.\n\nLa primera vez, bajas a buscarla. Está en la cocina, bebiendo agua. Normal.\n\n—¿No duermes? —preguntas.\n\n—Sed —responde.\n\nSubes. Vuelves a dormirte.\n\nLa segunda vez, ella está en el salón. De pie, mirando por la ventana hacia el bosque. No se mueve. No respira hondo. Solo mira.\n\n—¿Jane?\n\nNo responde. Te acercas. Pones una mano en su hombro. Está fría. Muy fría.\n\nElla se gira. Su rostro es el de siempre. Pero sus ojos... durante un segundo, no te ven. Ven algo detrás de ti. Algo que no está.\n\nLuego parpadea.\n\n—¿Qué haces despierto? —pregunta, y su voz es normal.\n\n—Te vi aquí.\n\n—He oído un ruido. Bajé a mirar.\n\nNo hay ruido. No hay nada. Pero asientes.\n\nVuelves a la cama. No cierras los ojos en lo que queda de noche.\n\nAl amanecer, Jane está a tu lado, durmiendo plácidamente. Su mano reposa sobre la tuya.\n\nEstá caliente.\n\nNo sabes cuándo volvió a calentarse.",
+      "choices": [
+        {
+          "id": "despertarla",
+          "text": "Despertarla. Preguntarle por la noche.",
+          "effects": {
+            "safety": -1,
+            "stress": 1
+          },
+          "nextSceneId": 507
+        },
+        {
+          "id": "dejarla_dormir",
+          "text": "Dejarla dormir. Salir a caminar. Necesitas pensar.",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 508
+        }
+      ]
+    },
+    {
+      "id": 506,
+      "title": "El contacto",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Respondes al mensaje. “¿Quién eres?”\n\nTarda unos minutos en llegar la respuesta. “Alguien que todavía puede ver.”\n\n“¿Ver qué?”\n\n“Lo que se lleva puesto. Lo que lleva dentro. Tu mujer no está bien.”\n\n“¿Quién eres?” repites.\n\n“Sarah.”\n\nTu sangre se hiela. Sarah. La chica de la tienda. La que volvió de Black Forest.\n\n“¿Dónde estás?”\n\n“Cerca. No puedo entrar. Ellos me reconocerían. Pero tú todavía puedes hacer algo.”\n\n“¿El qué?”\n\n“Sacarla antes de que la cambien del todo. Antes de que se olvide de quién es.”\n\nEl mensaje se corta. Intentas llamar. No hay cobertura.\n\nCuando vuelves a mirar la conversación, los mensajes han desaparecido. No hay rastro.\n\nPero sabes lo que has leído.\n\nY sabes que es verdad.",
+      "choices": [
+        {
+          "id": "buscar_sarah",
+          "text": "Salir a buscar a Sarah. Necesitas más respuestas.",
+          "effects": {
+            "control": -1,
+            "stress": 2,
+            "addInfo": ["buscar_sarah"]
+          },
+          "nextSceneId": 508
+        },
+        {
+          "id": "quedarse_casa",
+          "text": "Quedarte en casa. Vigilar a Jane.",
+          "effects": {
+            "control": 1,
+            "info": 0,
+            "stress": 1
+          },
+          "nextSceneId": 507
+        }
+      ]
+    },
+    {
+      "id": 507,
+      "title": "La mañana siguiente",
+      "image": "/assets/images/black-forest-morning2.jpg",
+      "text": "El sol entra por la ventana. Un día nuevo. Todo parece normal.\n\nJane se despierta, se estira, te sonríe.\n\n—¿Dormiste bien?\n\nMientes. Asientes.\n\nElla se levanta, prepara el desayuno. Tararea. Esta vez la canción es una que conoces. Una que le gusta.\n\nTe sientas a la mesa. El café huele bien. El pan está tostado.\n\nTodo es normal.\n\nDemasiado normal.\n\nMientras comes, la miras. Buscas algo. Algo que te diga que no es ella.\n\nNo encuentras nada.\n\nPero tampoco encuentras a la Jane que conocías.\n\n—Hoy tengo que salir —dices.\n\n—¿Adónde?\n\n—Al pueblo. Necesito ver a alguien.\n\nElla asiente.\n\n—Vuelve pronto. No me gusta estar sola aquí.\n\nLa frase te hiela. Antes, no le importaba estar sola. Incluso lo disfrutaba.\n\n—Claro —dices—. Vuelvo pronto.\n\nSales de casa. En el porche, te detienes.\n\nAlgo te dice que no deberías dejarla sola.\n\nAlgo te dice que, si vuelves, puede que no sea la misma.",
+      "choices": [
+        {
+          "id": "ir_pueblo",
+          "text": "Ir al pueblo a buscar a Sarah o Don Manuel.",
+          "effects": {
+            "info": 1,
+            "stress": 0
+          },
+          "nextSceneId": 508
+        },
+        {
+          "id": "quedarse_casa",
+          "text": "Quedarte en casa. Vigilarla de cerca.",
+          "effects": {
+            "safety": 1,
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 509
+        }
+      ]
+    },
+    {
+      "id": 508,
+      "title": "El pueblo vacío",
+      "image": "/assets/images/black-forest-empty-town.jpg",
+      "text": "Bajas al pueblo. Las calles están desiertas. No hay nadie en la tienda. La puerta está cerrada, pero no con llave. Empujas. El interior está vacío. Las estanterías han sido despejadas. Solo polvo.\n\n—¿Sarah? —llamas.\n\nSilencio.\n\nSales. Vas a la iglesia. Vacía. A la cafetería. Cerrada.\n\nEl pueblo parece abandonado. Pero ayer había gente. Sarah estaba. Don Manuel estaba.\n\nLlegas a la casa de Don Manuel. La puerta está abierta de par en par. Entras.\n\nEl mapa sigue en la pared, pero las marcas han cambiado. Nuevas marcas. Nuevas fechas.\n\nLa última: hoy.\n\nAlguien ha escrito debajo: “Todos van.”\n\nTu teléfono vibra. Un mensaje de Jane: “¿Dónde estás? Me siento rara. Vuelve.”\n\nNo sabes si es ella quien escribe.\n\nSales de la casa. En la calle, ves una figura al final del camino. Es Sarah. Te hace señas para que te acerques.\n\nCorres hacia ella. Pero cuando llegas, ya no está. Solo su chaqueta, en el suelo.\n\nLa recoges. Está húmeda. Huele a bosque.\n\nY dentro del bolsillo, un papel. Una sola palabra: “CORRE.”",
+      "choices": [
+        {
+          "id": "correr_casa",
+          "text": "Correr de vuelta a casa. Jane está en peligro.",
+          "effects": {
+            "control": -1,
+            "stress": 2,
+            "safety": -1
+          },
+          "nextSceneId": 509
+        },
+        {
+          "id": "buscar_sarah",
+          "text": "Buscar a Sarah. Necesitas saber más.",
+          "effects": {
+            "info": 1,
+            "stress": 2,
+            "control": -1
+          },
+          "nextSceneId": 510
+        }
+      ]
+    },
+    {
+      "id": 509,
+      "title": "De regreso a casa",
+      "image": "/assets/images/black-forest-home.jpg",
+      "text": "Corres. No miras atrás. Las piernas te arden, los pulmones te queman. La cuesta que lleva a tu casa parece más empinada que nunca.\n\nLlegas. La puerta está cerrada. Metes la llave. Entras.\n\nLa casa está en penumbra. Las cortinas echadas. El aire, frío.\n\n—¿Jane?\n\nSilencio.\n\nSubes las escaleras. La habitación está vacía. La cama, hecha.\n\nBuscas en el baño, en el estudio, en el sótano. Nada.\n\nVuelves al salón. Sobre la mesa, una nota. Letra de Jane.\n\n“No podía esperar más. Tenía que entender. El bosque me llama. Si vuelvo, te lo contaré todo.”\n\nEl corazón se te para.\n\nMiras por la ventana. El bosque está ahí. Oscuro. Esperando.\n\nTu móvil vibra. El mismo número de antes. Un mensaje:\n\n“Aún puedes alcanzarla. Pero no mires atrás. Y no confíes en lo que veas.”\n\nSales de casa sin pensarlo. El bosque te recibe con su silencio.\n\nAdelante, entre los árboles, ves una figura que se aleja. Su silueta. Su forma de caminar.\n\n—¡Jane!\n\nNo se detiene.\n\nCorres tras ella.",
+      "choices": [
+        {
+          "id": "seguir_jane",
+          "text": "Seguir a Jane hacia el bosque.",
+          "effects": {
+            "control": -1,
+            "stress": 2,
+            "addInfo": ["jane_entro_bosque"]
+          },
+          "nextSceneId": 600
+        },
+        {
+          "id": "buscar_ayuda",
+          "text": "Buscar ayuda primero. Don Manuel, el sheriff, alguien.",
+          "effects": {
+            "control": 1,
+            "stress": 1,
+            "addInfo": ["buscar_ayuda"]
+          },
+          "nextSceneId": 510
+        }
+      ]
+    },
+    {
+      "id": 510,
+      "title": "En la penumbra",
+      "image": "/assets/images/black-forest-dark.jpg",
+      "text": "Te adentras en el bosque. La figura que creías Jane se ha disuelto entre los árboles. No hay nadie. Solo sombras y el olor dulzón que ya conoces.\n\nLlegas a la verja de Black Forest. Está abierta de par en par. Más allá, los edificios esperan. Y entre ellos, una luz. Una linterna, como la que dejaron para ti.\n\nTe acercas. En el suelo, junto a la linterna, hay una fotografía. La tomas.\n\nEs Jane. Pero no está sola. Alguien la abraza por detrás. Alguien que no puedes distinguir.\n\nAl dorso: “Ella ya eligió. Tú también puedes.”\n\nDejas caer la foto. La linterna parpadea. En el último parpadeo, ves una silueta en el umbral del edificio principal.\n\n—¿Jane?\n\nLa silueta no responde. Pero da un paso hacia adentro.\n\nEl bosque entero contiene la respiración.\n\nSabes que si entras, puede que no salgas. O puede que salgas sin ella. O puede que salgas siendo otro.\n\nPero si no entras, la perderás para siempre.",
+      "choices": [
+        {
+          "id": "entrar_edificio",
+          "text": "Entrar en el edificio. Sea lo que sea, tienes que encontrarla.",
+          "effects": {
+            "control": -2,
+            "stress": 3,
+            "addInfo": ["entrada_black_forest"]
+          },
+          "nextSceneId": 600
+        },
+        {
+          "id": "retroceder",
+          "text": "Retroceder. Buscar ayuda. No puedes solo.",
+          "effects": {
+            "control": 1,
+            "stress": 2
+          },
+          "nextSceneId": 600
+        }
+      ]
+    }
+  ]
+}

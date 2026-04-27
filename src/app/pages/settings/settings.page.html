@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="settings-content">
+  <div class="settings-container">
+    
+    <ion-list class="settings-list">
+      
+      <!-- Control de Volumen -->
+      <ion-item lines="none" class="setting-item">
+        <ion-icon slot="start" name="volume-high-outline" class="setting-icon"></ion-icon>
+        <ion-label>
+          <h2>Volumen</h2>
+          <p>Ajusta el volumen del audio</p>
+        </ion-label>
+      </ion-item>
+      
+      <ion-item lines="none" class="range-item">
+        <ion-range
+          [(ngModel)]="volume"
+          (ionChange)="onVolumeChange($event)"
+          [min]="0"
+          [max]="100"
+          [pin]="true"
+          [pinFormatter]="pinFormatter"
+          color="danger">
+        </ion-range>
+      </ion-item>
+
+      <!-- Selector de Idioma -->
+      <ion-item lines="none" class="setting-item">
+        <ion-icon slot="start" name="language-outline" class="setting-icon"></ion-icon>
+        <ion-label>
+          <h2>Idioma</h2>
+          <p>Selecciona el idioma del juego</p>
+        </ion-label>
+      </ion-item>
+      
+      <ion-item lines="none" class="select-item">
+        <ion-select
+          [(ngModel)]="language"
+          (ionChange)="onLanguageChange($event)"
+          interface="popover"
+          placeholder="Selecciona idioma">
+          <ion-select-option value="es">Español</ion-select-option>
+          <ion-select-option value="en">English</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Créditos (Próximamente) -->
+      <ion-item lines="none" class="setting-item credits-item" button (click)="openCredits()">
+        <ion-icon slot="start" name="information-circle-outline" class="setting-icon"></ion-icon>
+        <ion-label>
+          <h2>Créditos</h2>
+          <p>Próximamente</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+</ion-content>

@@ -1,0 +1,315 @@
+{
+  "chapter": 4,
+  "title": "El camino que no aparece en los mapas",
+  "scenes": [
+    {
+      "id": 400,
+      "title": "La decisión del amanecer",
+      "image": "/assets/images/black-forest-dawn.jpg",
+      "text": "La madrugada es fría y gris, como el interior de una tumba. Jane duerme en la cama —o quizás solo finge hacerlo— mientras tú te vistes a oscuras. Has preparado la mochila la noche anterior: linterna, agua, el mapa que copiaste de Don Manuel, un cuchillo de cocina (no sabes para qué, pero lo llevas), la grabación de la estática en el móvil. La batería apenas alcanza para dos horas, pero es lo que hay.\n\nAntes de salir, te detienes en el umbral de la habitación. Jane está de espaldas, el pelo revuelto sobre la almohada. Quieres decirle algo, cualquier cosa, pero las palabras se atascan. Si vuelvo, piensas. Si vuelvo, le cuento todo.\n\nSales sin hacer ruido. La puerta principal gime igual que la noche en que Don Manuel apareció. El bosque, allá abajo, aguarda entre la niebla que empieza a disiparse. El camino que bordea las últimas casas se hunde en los árboles como una herida.\n\nNadie te ve partir. O eso crees.",
+      "choices": [
+        {
+          "id": "iniciar_sendero",
+          "text": "Continuar hacia el bosque",
+          "nextSceneId": 401
+        }
+      ]
+    },
+    {
+      "id": 401,
+      "title": "El sendero",
+      "image": "/assets/images/black-forest-path.jpg",
+      "text": "Alcanzas el límite del bosque en veinte minutos. La verja oxidada de Black Forest está más allá, pero no piensas ir por la entrada principal. Don Manuel te habló de un sendero viejo, el que usaban los trabajadores para evitar los controles. Lo encontraste en su mapa: nace a la izquierda de la verja, camuflado entre zarzas y troncos caídos.\n\nLo encuentras. Es apenas una hendidura en la maleza, pero se adentra con determinación. El aire cambia al entrar. Se vuelve más denso, más quieto. Huele a tierra húmeda, a hongos, a algo que no quieres nombrar.\n\nCaminas con cuidado. Las ramas se cierran tras de ti como si nunca hubieras pasado. La luz del sol apenas se filtra; el bosque se vuelve túnel.\n\nDespués de diez minutos, el sendero se bifurca.\n\nA la izquierda, la huella se pierde entre helechos gigantes. A la derecha, el camino se ensancha y aparecen los primeros vestigios de construcción: postes de luz torcidos, un cartel carcomido con la palabra PELIGRO apenas legible.\n\nEn la horquilla, algo brilla contra un tronco. Un trozo de papel plastificado, atado con una cuerda. Te acercas. Es una fotografía antigua, borrosa por la humedad. Muestra a un grupo de personas frente a unos edificios de hormigón. En el reverso, escrito a mano: Black Forest, 1974. Última foto antes de que todo cambiara.\n\nTu teléfono vibra.\n\nUna barra de cobertura. Solo una. El mensaje que llega no tiene remitente, solo un número que no reconoces:\n\n“No sigas. Ella ya está aquí.”\n\nEl corazón te golpea las costillas. Marcas el número. Nada. Silencio absoluto. Llamas a Jane. Ni siquiera tono.",
+      "choices": [
+        {
+          "id": "sendero_izquierda",
+          "text": "Izquierda, el sendero perdido entre helechos.",
+          "effects": {
+            "control": -1,
+            "stress": 1
+          },
+          "nextSceneId": 402
+        },
+        {
+          "id": "sendero_derecha",
+          "text": "Derecha, hacia los restos de la construcción.",
+          "effects": {
+            "stress": 2,
+            "info": 1,
+            "addInfo": ["pisadas_recientes"]
+          },
+          "nextSceneId": 403
+        },
+        {
+          "id": "regresar",
+          "text": "Regresas. El mensaje te ha helado la sangre. Lo pensarás mejor.",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 404
+        },
+        {
+          "id": "buscar_origen",
+          "text": "Intentas localizar el origen del mensaje: miras alrededor, buscas a alguien entre los árboles.",
+          "effects": {
+            "control": -2,
+            "stress": 2
+          },
+          "nextSceneId": 405
+        }
+      ]
+    },
+    {
+      "id": 402,
+      "title": "Sendero perdido",
+      "image": "/assets/images/black-forest-ferns.jpg",
+      "text": "Te internas por la izquierda. Los helechos te azotan las piernas, el sendero se estrecha hasta casi desaparecer. La luz se vuelve verdosa, filtrada por un dosel cada vez más denso. El aire se vuelve más frío. Escuchas agua corriendo, pero no ves ningún arroyo.\n\nDespués de unos minutos, el camino se abre a un pequeño claro. En el centro, una piedra plana, y sobre ella, objetos: una vela apagada, unas flores marchitas, una fotografía de una mujer que no reconoces.\n\nAl darte la vuelta, ves que el sendero por donde viniste ya no está. Solo pared de helechos. No recuerdas haber cruzado ningún punto sin retorno.\n\nTu móvil vibra. El mismo número: “No buscabas esto. Buscabas a ella.”\n\nEl pánico empieza a crecer.",
+      "choices": [
+        {
+          "id": "perdido_salida",
+          "text": "Intentar encontrar la salida",
+          "effects": {
+            "control": -1,
+            "stress": 2
+          },
+          "nextSceneId": 499
+        }
+      ]
+    },
+    {
+      "id": 403,
+      "title": "Hacia las construcciones",
+      "image": "/assets/images/black-forest-buildings.jpg",
+      "text": "El camino se ensancha, pero la maleza lo invade todo. Los postes eléctricos parecen árboles metálicos, recubiertos de liquen. Llegas a un claro donde los edificios de Black Forest se alzan como huesos.\n\nSon tres estructuras principales: un hangar bajo de hormigón, un edificio de oficinas de dos pisos con las ventanas rotas, y una torre de comunicaciones derrumbada. El cartel de entrada, colgado de una cadena rota, reza: BLACK FOREST PROYECT – ACCESO RESTRINGIDO. Alguien ha añadido con pintura negra: NO SALEN LOS QUE ENTRAN.\n\nLa verja está abierta, las cadenas cortadas hace tiempo.\n\nAvanzas con el corazón en la boca. El suelo está lleno de pisadas recientes. Demasiado recientes.\n\nAl llegar al edificio de oficinas, ves una puerta metálica entreabierta. Del interior sale un olor dulzón, igual al de la tienda de Sarah, pero mucho más intenso. Te cubres la boca con el brazo.\n\nEmpujas la puerta. Cruje.\n\nEn el umbral, alguien ha dejado una linterna encendida apuntando al suelo. No hay nadie alrededor. La linterna es de las viejas, de metal pesado, igual a la que Don Manuel te enseñó.\n\nJunto a ella, un objeto pequeño: una horquilla de pelo. La reconoces. Es de Jane.\n\nTu mundo se reduce a ese objeto.",
+      "choices": [
+        {
+          "id": "tomar_y_avanzar",
+          "text": "Tomas la horquilla y la linterna. Avanzas hacia el interior del edificio.",
+          "effects": {
+            "control": -1,
+            "stress": 3,
+            "addInfo": ["horquilla_jane"]
+          },
+          "nextSceneId": 406
+        },
+        {
+          "id": "tomar_solo_horquilla",
+          "text": "Tomas solo la horquilla. Sales del edificio y llamas a Jane desde fuera, donde hay algo de cobertura.",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 407
+        },
+        {
+          "id": "tomar_linterna_exterior",
+          "text": "Tomas la linterna y examinas el exterior en busca de más señales de Jane.",
+          "effects": {
+            "stress": 2
+          },
+          "nextSceneId": 408
+        },
+        {
+          "id": "no_tocar_buscar_ayuda",
+          "text": "No tocas nada. Te alejas del edificio y decides buscar ayuda (Don Manuel o el sheriff).",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 409
+        }
+      ]
+    },
+    {
+      "id": 404,
+      "title": "Retirada",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Das media vuelta. El mensaje te ha helado la sangre. No estás preparado para esto. Necesitas pensar, planificar, quizás traer a alguien más.\n\nPero el camino de regreso parece más largo que a la ida. La niebla ha vuelto a cerrarse, y aunque caminas hacia donde debería estar tu casa, los árboles no parecen los mismos.\n\nTu móvil se apaga. Batería agotada.\n\nEl bosque se vuelve más oscuro.",
+      "choices": [
+        {
+          "id": "perdido",
+          "text": "Continuar caminando",
+          "effects": {
+            "stress": 2
+          },
+          "nextSceneId": 499
+        }
+      ]
+    },
+    {
+      "id": 405,
+      "title": "Buscar al remitente",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Miras alrededor, entre los árboles, buscando a quien envió el mensaje. Un crujido a tu derecha. Te giras. Nada.\n\nOtro crujido, más cerca.\n\n—¿Quién está ahí? —preguntas.\n\nSilencio.\n\nEntonces, entre los helechos, ves un destello. Algo metálico. Te acercas. Es otro teléfono, apoyado contra una raíz. La pantalla está encendida. El mensaje que te enviaron está ahí, en la conversación.\n\nPero el teléfono no tiene cobertura. Nunca la tuvo.\n\nAlguien estuvo aquí. Alguien sabía que vendrías.\n\nEl bosque se vuelve más oscuro a tu alrededor.",
+      "choices": [
+        {
+          "id": "tomar_telefono",
+          "text": "Tomar el teléfono y seguir explorando",
+          "effects": {
+            "control": -1,
+            "stress": 2,
+            "addInfo": ["telefono_misterioso"]
+          },
+          "nextSceneId": 410
+        }
+      ]
+    },
+    {
+      "id": 406,
+      "title": "Dentro del edificio",
+      "image": "/assets/images/black-forest-interior.jpg",
+      "text": "El interior del edificio es un laberinto de pasillos oscuros. La linterna de Don Manuel proyecta sombras que bailan en las paredes desconchadas. El olor dulzón se hace más denso, casi sólido. Escuchas un goteo constante, pero no ves de dónde viene.\n\nLas oficinas están vacías, los muebles volcados, las ventanas tapiadas con tablas. En una de las paredes, alguien ha escrito con lo que parece carbón: LOS QUE SE QUEDAN SE OLVIDAN. LOS QUE SE VAN RECUERDAN. Debajo, una letra más pequeña: NO HAY DIFERENCIA.\n\nLlegas a una puerta de acero, hermética, con un volante de cierre. Está entreabierta. Del otro lado no llega luz, solo el eco de tu propia respiración.\n\nAl apoyar la mano en el volante, la linterna parpadea. En el parpadeo, ves tu reflejo en el metal pulido de la puerta. No estás solo. Detrás de ti, alguien más se refleja.\n\nTe giras de golpe. No hay nadie.\n\nPero la linterna se apaga.\n\nA oscuras, sientes un aliento en la nuca. Cálido. Demasiado cercano.\n\nUna voz. La misma de la radio.\n\n—Te esperábamos.\n\nIntentas encender la linterna. No responde. Tus dedos buscan el móvil. La pantalla se enciende con una luz mortecina: una barra de cobertura. Y un mensaje nuevo:\n\n“Date la vuelta.”\n\nTe giras. La linterna se enciende sola, enfocando el pasillo vacío. En el suelo, a tus pies, hay una nueva fotografía. La recoges.\n\nEs Jane. Jane en este mismo pasillo, con la misma ropa que llevaba esta mañana. La foto está tomada desde detrás de ella, como si alguien la estuviera siguiendo.\n\nEn el reverso, la misma letra que en la primera foto: “Vuelve a casa.”",
+      "choices": [
+        {
+          "id": "salir_corriendo",
+          "text": "Sales corriendo del edificio. Necesitas salir, respirar, pensar.",
+          "effects": {
+            "control": -2,
+            "stress": 2,
+            "safety": -1
+          },
+          "nextSceneId": 499
+        },
+        {
+          "id": "seguir_puerta_acero",
+          "text": "Sigues el pasillo hasta la puerta de acero. Jane puede estar ahí dentro.",
+          "effects": {
+            "control": -1,
+            "stress": 3,
+            "safety": 1,
+            "addInfo": ["jane_detras_puerta"]
+          },
+          "nextSceneId": 410
+        },
+        {
+          "id": "tomar_foto_llamar",
+          "text": "Tomas la foto y llamas a Jane desde donde tienes cobertura. Si responde, podrás saber si está bien.",
+          "effects": {
+            "control": 1,
+            "safety": 1
+          },
+          "nextSceneId": 411
+        },
+        {
+          "id": "esperar_en_entrada",
+          "text": "Regresas a la entrada y esperas. Quien dejó la foto quizás vuelva.",
+          "effects": {
+            "stress": 2
+          },
+          "nextSceneId": 412
+        }
+      ]
+    },
+    {
+      "id": 407,
+      "title": "Llamada desde fuera",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sales del edificio, alejándote lo suficiente para que la cobertura del móvil se estabilice. Marcas el número de Jane.\n\nSuena. Una vez. Dos. Tres.\n\n—¿Daniel?\n\nSu voz suena cansada, pero es ella. Es ella.\n\n—¿Dónde estás? —preguntas.\n\n—En casa. ¿Dónde iba a estar? Terminé mis reuniones temprano. Me quedé dormida en el sofá.\n\nTu corazón late con fuerza. Jane está en casa. Entonces, ¿quién dejó la horquilla?\n\n—¿Seguro que no has salido hoy?\n\n—No. ¿Por qué? ¿Qué pasa?\n\nNo sabes qué decir.\n\n—Nada. Ya vuelvo.\n\nCuelgas. Miras la horquilla en tu mano. Es de ella. La reconoces. Pero ella dice que no ha salido.\n\nEl bosque se queda en silencio. Demasiado silencio.",
+      "choices": [
+        {
+          "id": "regresar_casa",
+          "text": "Regresar a casa inmediatamente",
+          "effects": {
+            "control": 1,
+            "stress": 1,
+            "addInfo": ["jane_en_casa_mentira"]
+          },
+          "nextSceneId": 499
+        }
+      ]
+    },
+    {
+      "id": 408,
+      "title": "Examen del exterior",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Con la linterna en mano, rodeas el edificio. Las ventanas están tapiadas, pero algunas tablas están rotas. En una de ellas, ves un trozo de tela enganchado. Es del color de la chaqueta de Jane.\n\nArrancas la tela. Es suya. No hay duda.\n\nMás allá, un sendero que bordea el hangar se adentra en el bosque. En el suelo, más pisadas. Y algo más: gotas de algo oscuro. Sangre. No mucha, pero suficiente para helarte.\n\nNo sabes si es de Jane. No quieres saberlo.\n\nLa linterna parpadea.",
+      "choices": [
+        {
+          "id": "seguir_sendero_sangre",
+          "text": "Seguir el sendero de las gotas",
+          "effects": {
+            "control": -1,
+            "stress": 3,
+            "addInfo": ["sangre_jane"]
+          },
+          "nextSceneId": 410
+        },
+        {
+          "id": "regresar_ayuda",
+          "text": "Regresar a buscar ayuda",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 409
+        }
+      ]
+    },
+    {
+      "id": 409,
+      "title": "Buscar ayuda",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Decides que no puedes solo. Necesitas a Don Manuel, o al sheriff, o a alguien que conozca el bosque.\n\nPero cuando llegas a la verja, alguien está ahí.\n\nDon Manuel. O lo que queda de él. Está de pie, inmóvil, mirando hacia los edificios. No se gira cuando te acercas.\n\n—Don Manuel —jadeas—. Jane está ahí dentro. Necesito ayuda.\n\nÉl no responde. Sigue mirando fijamente.\n\n—Don Manuel.\n\nPor fin se gira. Sus ojos están completamente negros. No hay blanco. Solo oscuridad.\n\n—Ya es tarde —dice, y su voz no es la suya—. Ella ya eligió.\n\nDas un paso atrás. Don Manuel no se mueve, pero algo detrás de él sí. Sombras que se alargan, que se mueven sin viento.\n\nHuyes. No miras atrás.\n\nEl bosque se cierra a tu paso, pero logras salir. Llegas a tu casa. Abres la puerta.\n\nJane está en el sofá, viendo la televisión.\n\n—¿Dónde estabas? —pregunta, y su voz es normal.\n\nNo sabes qué responder. En tu mano aún tienes la horquilla.\n\nY en la chaqueta de Jane, en el sofá, no falta ninguna horquilla.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 4",
+          "nextSceneId": 500
+        }
+      ]
+    },
+    {
+      "id": 410,
+      "title": "Hacia el corazón de Black Forest",
+      "image": "/assets/images/black-forest-dark.jpg",
+      "text": "Avanzas. La puerta de acero cede con un gemido. Del otro lado, una escalera desciende a una cámara subterránea. El olor dulzón es casi insoportable.\n\nAl final de la escalera, una habitación circular. En el centro, una mesa de operaciones, cubierta de polvo. Documentos esparcidos. Y en una silla, de espaldas a ti, una figura.\n\nEl corazón se te para.\n\n—¿Jane?\n\nLa figura no se mueve. Te acercas lentamente. Rodeas la silla.\n\nNo es Jane.\n\nEs Sarah.\n\nPero sus ojos... sus ojos son iguales a los de Don Manuel. Negros. Vacíos.\n\n—Llegaste —dice, y su voz es un eco—. Ella te espera más adentro.\n\nSeñala una segunda puerta, más pequeña, al fondo.\n\n—No tengas miedo. Al final, todos queremos ir.\n\nNo sabes si avanzar o huir.\n\nTu móvil vibra. El mensaje: “Ella está aquí. Contigo.”\n\nTe giras. Alguien está detrás de ti.\n\nJane. Tu Jane. Pero sus ojos... también están cambiando.\n\n—Daniel —dice—. Me alegra que hayas venido. No quería ir sola.\n\nSu sonrisa es la misma. Pero sus ojos no.\n\nY detrás de ella, en la penumbra, más figuras comienzan a moverse.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 4",
+          "nextSceneId": 500
+        }
+      ]
+    },
+    {
+      "id": 411,
+      "title": "La llamada que no conecta",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Intentas llamar a Jane. El teléfono suena, pero nadie contesta. Dejas un mensaje de voz, con la voz entrecortada.\n\nMientras esperas, la linterna parpadea. La puerta de acero se abre sola.\n\nDel interior no sale luz, solo un viento cálido que huele a tierra mojada y a algo más. Algo que reconoces sin haberlo olido nunca.\n\nUn susurro, desde dentro:\n\n—Pasa. Ella ya está aquí.\n\nNo entras. Algo te lo impide. Das un paso atrás, luego otro. La puerta se cierra de golpe.\n\nLa linterna se apaga del todo.\n\nCuando logras salir del edificio, el sol está más alto. Han pasado horas. Tu móvil tiene un mensaje de Jane, enviado hace una hora:\n\n“Volví a casa. ¿Dónde estás? Me preocupas.”\n\nSales del bosque a trompicones. Cuando llegas a casa, Jane está en la cocina, preparando el almuerzo. Te mira como si nada hubiera pasado.\n\n—¿Dónde te metiste? —pregunta.\n\nNo sabes qué decir. En tu bolsillo, la horquilla sigue ahí. Y en el pelo de Jane, todas están en su sitio.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 4",
+          "nextSceneId": 500
+        }
+      ]
+    },
+    {
+      "id": 412,
+      "title": "Esperar en la entrada",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Te sientas en el umbral del edificio, la linterna apagada en el regazo. El tiempo pasa. El olor dulzón se hace más intenso, pero te acostumbras.\n\nUna hora. Dos.\n\nNadie viene.\n\nPero algo cambia en el aire. La puerta de acero, la que da al interior, se abre lentamente. Del otro lado, una luz tenue.\n\nUna figura emerge. No es Jane. Es una mujer mayor, con bata blanca. Te mira como si te conociera.\n\n—Todavía puedes irte —dice—. Pero si esperas más, no querrás.\n\n—¿Quién eres?\n\n—La señora Higgins. La de las mermeladas. —Sonríe—. Yo también esperé, una vez. Y al final, entré. Ahora no puedo salir.\n\nSeñala el bosque a sus espaldas.\n\n—Jane ya está dentro. No está sufriendo. Pero tú, si entras ahora, quizás puedas sacarla.\n\n—¿Por qué me dices esto?\n\n—Porque alguien me lo dijo a mí. Y no hice caso. Ahora pago.\n\nTe tiende la mano.\n\n—¿Vienes?\n\nDetrás de ella, en la oscuridad, algo se mueve. Algo grande. Algo que te mira.\n\nNo tomas su mano. Te levantas y corres.\n\nCuando llegas a casa, Jane está en el jardín, regando las plantas. Te ve y sonríe.\n\n—¿Dónde estabas? —pregunta.\n\nEn tus manos no hay horquillas, ni fotos, ni nada. Solo el recuerdo de la señora Higgins.\n\nY en sus ojos, por un instante, ves algo que no habías visto antes.\n\nAlgo que te mira desde dentro de ella.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 4",
+          "nextSceneId": 500
+        }
+      ]
+    },
+    {
+      "id": 499,
+      "title": "Salida del bosque",
+      "image": "/assets/images/black-forest-edge.jpg",
+      "text": "Sales del bosque tambaleándote. La luz del sol te ciega. El móvil tiene cobertura de nuevo.\n\nLlegas a casa. Jane está en el sofá, leyendo.\n\n—¿Dónde estabas? —pregunta, y su voz es normal.\n\n—En el bosque. Te buscaba.\n\nMe mira extrañada.\n\n—¿Por qué ibas a buscarme? He estado aquí todo el día.\n\nNo sabes qué decir. En tu mano aún tienes la horquilla. La escondes.\n\n—Nada. Un mal sueño.\n\nElla sonríe, pero hay algo en su mirada que no te gusta.\n\nAlgo que no estaba antes.\n\nEl capítulo termina, pero la duda se queda. ¿Quién estaba en el bosque? ¿Quién dejó la horquilla?\n\nY lo peor: ¿por qué, cuando Jane se da la vuelta, ves la misma mancha oscura en la nuca que viste en Don Manuel?",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 4",
+          "nextSceneId": 500
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "chapter": 2,
+  "title": "Lo que se mueve en la oscuridad",
+  "scenes": [
+    {
+      "id": 200,
+      "title": "La mañana después",
+      "image": "/assets/images/black-forest-morning.jpg",
+      "text": "No dormiste bien.\n\nLa noche anterior, algo caminaba fuera. Algo que se detuvo justo debajo de tu ventana y se quedó allí, inmóvil, durante minutos que se hicieron horas.\n\nCuando por fin el sueño te venció, soñaste con el bosque. Con árboles que no eran árboles. Con una luz que parpadeaba dentro de tu cabeza.\n\nAhora es de mañana. La luz entra por la ventana como si nada hubiera pasado.\n\nPero tú sabes que sí pasó.\n\nTe despiertas sobresaltado. El corazón late demasiado rápido. La cama está vacía.\n\n—¿Jane?\n\nSilencio.\n\nTe incorporas. La habitación está en orden. Tu ropa de ayer, en la silla. El libro de Jane, en la mesilla. Todo normal.\n\nDemasiado normal.\n\nBajas las escaleras casi sin respirar. La cocina está vacía. El salón, vacío. La puerta trasera, la que da al bosque, está entreabierta.\n\nUna brisa fría entra por la rendija.\n\nTe acercas. Empujas la puerta suavemente.\n\nY ahí está Jane. De pie en el límite del jardín. Mirando fijamente hacia los árboles. No se mueve. No parpadea.\n\n—¿Jane?\n\nElla se gira. Tarda un segundo en reconocerte. En su rostro, algo pasa. Como si recordara quién eres.\n\n—Buenos días —dice, y su voz suena ronca—. ¿Dormiste bien?\n\nMiente. Tú también mentirías.",
+      "choices": [
+        {
+          "id": "preguntar_bosque",
+          "text": "“¿Qué hacías mirando al bosque?”",
+          "effects": {
+            "stress": 1,
+            "info": 1,
+            "addInfo": ["jane_suenos_bosque"]
+          },
+          "nextSceneId": 201
+        },
+        {
+          "id": "desviar_conversacion",
+          "text": "“No mucho. ¿Y tú? Te levantaste temprano.”",
+          "effects": {
+            "control": 1
+          },
+          "nextSceneId": 202
+        },
+        {
+          "id": "abrazar_jane",
+          "text": "Acercarte y abrazarla por detrás.",
+          "effects": {
+            "safety": 1,
+            "stress": -1
+          },
+          "nextSceneId": 203
+        },
+        {
+          "id": "preguntar_puerta",
+          "text": "Señalar la puerta: “¿Por qué estaba abierta?”",
+          "effects": {
+            "info": 1,
+            "stress": 2,
+            "control": -1,
+            "addInfo": ["puerta_abierta_misterio"]
+          },
+          "nextSceneId": 204
+        }
+      ]
+    },
+    {
+      "id": 201,
+      "title": "Sueños compartidos",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane aparta la mirada.\n\n—No lo sé —dice, y su voz suena extraña—. Soñé algo. Con el bosque. Con... no sé. Me desperté y estaba aquí. Como si hubiera caminado dormida.\n\nTe mira.\n\n—¿Te ha pasado alguna vez? ¿Caminar dormido?",
+      "choices": [
+        {
+          "id": "desayuno",
+          "text": "Continuar",
+          "nextSceneId": 205
+        }
+      ]
+    },
+    {
+      "id": 202,
+      "title": "Evitar la conversación",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane asiente, demasiado rápido.\n\n—Sí, temprano. No podía dormir. Calor, quizás.\n\nPero no hace calor. La mañana es fresca.\n\n—¿Desayunamos? —pregunta, y entra en casa sin esperar respuesta.\n\nDetrás de ella, el bosque espera.",
+      "choices": [
+        {
+          "id": "desayuno",
+          "text": "Continuar",
+          "nextSceneId": 205
+        }
+      ]
+    },
+    {
+      "id": 203,
+      "title": "El abrazo",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Te acercas y la abrazas por detrás. Apoyas la barbilla en su hombro. Hueles su pelo. Champú. Normalidad.\n\nJane se relaja contra ti.\n\n—Lo siento —murmura—. No sé qué me pasa. Este lugar...\n\n—Estamos bien —dices—. Estamos bien.\n\nPero mientras lo dices, miras el bosque por encima de su hombro. Y por un instante, juras que algo, entre los árboles, os mira también.",
+      "choices": [
+        {
+          "id": "desayuno",
+          "text": "Continuar",
+          "nextSceneId": 205
+        }
+      ]
+    },
+    {
+      "id": 204,
+      "title": "La puerta abierta",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—¿Por qué estaba abierta? —preguntas, señalando la puerta.\n\nJane mira hacia atrás, como si viera la puerta por primera vez.\n\n—No lo sé —dice lentamente—. No recuerdo haberla abierto.\n\nSu rostro palidece.\n\n—Daniel... ¿tú la abriste?\n\nNiegas.\n\nAmbos miran la puerta. Abierta. Hacia el bosque.",
+      "choices": [
+        {
+          "id": "desayuno",
+          "text": "Continuar",
+          "nextSceneId": 205
+        }
+      ]
+    },
+    {
+      "id": 205,
+      "title": "Desayuno tenso",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Desayunan en silencio. Un silencio que pesa. Jane remueve el café sin beberlo. Tú miras por la ventana. El bosque está ahí. Siempre está ahí.\n\n—Hoy tengo reuniones —dice Jane al fin—. Todo el día. ¿Tú?\n\n—También. Trabajo atrasado.\n\nMentira. No tienes reuniones. Pero necesitas tiempo. Para pensar. Para entender.\n\n—Vale —ella asiente—. ¿Cenamos juntos? ¿En casa?\n\nSu tono es casi una súplica.",
+      "choices": [
+        {
+          "id": "cenar_casa",
+          "text": "“Claro. En casa. Preparo yo.”",
+          "effects": {
+            "safety": 1,
+            "control": 1
+          },
+          "nextSceneId": 206
+        },
+        {
+          "id": "cenar_depende",
+          "text": "“Depende de cómo termine. Te escribo.”",
+          "effects": {
+            "safety": -1
+          },
+          "nextSceneId": 207
+        },
+        {
+          "id": "cenar_posada",
+          "text": "“¿Y si mejor cenamos en la posada? Necesito salir de aquí.”",
+          "effects": {
+            "stress": -1,
+            "addInfo": ["posada_opcion"]
+          },
+          "nextSceneId": 208
+        }
+      ]
+    },
+    {
+      "id": 206,
+      "title": "Promesa de normalidad",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane sonríe. Pequeña, pero sonríe.\n\n—Me gusta esa idea. Algo normal. —Se levanta, rodea la mesa y te da un beso—. Te quiero. Esto... esto es solo adaptación. ¿Verdad?\n\nAsientes.\n\nPero no estás seguro.",
+      "choices": [
+        {
+          "id": "jane_trabajo",
+          "text": "Continuar",
+          "nextSceneId": 209
+        }
+      ]
+    },
+    {
+      "id": 207,
+      "title": "Distancia",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane asiente, pero su mirada se apaga un poco.\n\n—Claro. Entiendo. El trabajo.\n\nRecoge su taza y la lleva al fregadero.\n\n—Te escribo entonces.\n\nSu espalda, mientras se aleja, dice más que sus palabras.",
+      "choices": [
+        {
+          "id": "jane_trabajo",
+          "text": "Continuar",
+          "nextSceneId": 209
+        }
+      ]
+    },
+    {
+      "id": 208,
+      "title": "La posada",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane duda.\n\n—¿La posada? —Mira hacia el bosque por la ventana—. Sí. Sí, quizás necesitamos... gente. Normalidad.\n\n—Exacto —dices—. Gente. Conversaciones normales. Quizás el dueño sabe cosas del pueblo. Historias. Podría...\n\n—Daniel. —Jane te mira fijamente—. ¿Vas a investigar, verdad? No es solo cenar.",
+      "choices": [
+        {
+          "id": "jane_trabajo",
+          "text": "Continuar",
+          "nextSceneId": 209
+        }
+      ]
+    },
+    {
+      "id": 209,
+      "title": "Jane se prepara",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane se prepara para sus reuniones. Ordena papeles, enciende el ordenador, se pone los auriculares. Desde su escritorio, en la habitación de invitados convertida en oficina, te lanza una última mirada antes de cerrar la puerta.\n\n—¿Todo bien? —pregunta.\n\nAsientes.\n\nLa puerta se cierra.\n\nY te quedas solo.",
+      "choices": [
+        {
+          "id": "manana_solitario",
+          "text": "Continuar",
+          "nextSceneId": 210
+        }
+      ]
+    },
+    {
+      "id": 210,
+      "title": "La mañana solitaria",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "El silencio de la casa es diferente cuando Jane se encierra en su oficina. Más denso. Más atento.\n\nTe sientas en el salón. Enciendes la televisión. Solo nieve. La radio. Estática. El móvil. Sin cobertura.\n\nNo. Espera.\n\nUna barra. Una sola. Llamadas de emergencia solamente.\n\nApagas el móvil. Lo vuelves a encender. Misma cobertura.\n\nEs la ubicación, piensas. Zona remota. Pasa.\n\nPero no deja de inquietarte.\n\nEntonces, un golpe.\n\nSeco. Contra la puerta principal.\n\nNo es un golpe para entrar. Es un golpe para anunciarse. Alguien está fuera.",
+      "choices": [
+        {
+          "id": "abrir_directo",
+          "text": "Abrir la puerta directamente.",
+          "effects": {
+            "control": -1,
+            "info": 1,
+            "stress": 1,
+            "addInfo": ["don_manuel_advertencia_bosque"]
+          },
+          "nextSceneId": 211
+        },
+        {
+          "id": "mirar_ventana",
+          "text": "Mirar por la ventana primero.",
+          "effects": {
+            "control": 1
+          },
+          "nextSceneId": 212
+        },
+        {
+          "id": "preguntar_desde_dentro",
+          "text": "Preguntar desde dentro: “¿Quién es?”",
+          "effects": {},
+          "nextSceneId": 213
+        },
+        {
+          "id": "no_abrir",
+          "text": "No abrir. Fingir que no estás.",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 214
+        }
+      ]
+    },
+    {
+      "id": 211,
+      "title": "Don Manuel entra",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Abres la puerta sin mirar.\n\nDon Manuel está al otro lado. Pero no es el Don Manuel alegre de los primeros días. Su rostro está gris. Sus ojos, hundidos.\n\n—Vecino —dice, y su voz suena a tierra—. Necesito pedirle un favor.\n\nHuele a bosque. A humedad. A algo podrido, muy lejano.\n\n—¿Qué necesita? —preguntas, y tu voz tiembla más de lo que quisieras.\n\nÉl sonríe. Pero la sonrisa no llega a sus ojos.\n\n—Que no entre al bosque. Pase lo que pase. Que no entre.",
+      "choices": [
+        {
+          "id": "visita_don_manuel",
+          "text": "Continuar",
+          "nextSceneId": 215
+        }
+      ]
+    },
+    {
+      "id": 212,
+      "title": "Observar primero",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Te asomas a la ventana, apartando la cortina lo justo.\n\nDon Manuel está en el porche. Pero no se mueve. Solo mira la puerta. Espera. Su rostro... algo en su rostro está mal. Como si no recordara cómo poner las expresiones correctas.\n\nRespiras hondo. Tomas control de la situación antes de abrir.",
+      "choices": [
+        {
+          "id": "abrir_despues",
+          "text": "Abrir la puerta",
+          "nextSceneId": 211
+        }
+      ]
+    },
+    {
+      "id": 213,
+      "title": "Preguntar desde dentro",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—¿Quién es? —preguntas desde detrás de la puerta.\n\nSilencio. Largo.\n\n—Soy yo —dice al fin la voz. Don Manuel. Pero suena diferente. Como si hablara desde muy lejos—. El vecino.\n\nAbres.\n\nSu aspecto te hiela la sangre. Pero sabías que era él.",
+      "choices": [
+        {
+          "id": "visita_don_manuel",
+          "text": "Continuar",
+          "nextSceneId": 215
+        }
+      ]
+    },
+    {
+      "id": 214,
+      "title": "No abrir",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Te quedas quieto. Inmóvil. Conteniendo la respiración.\n\nOtro golpe. Más fuerte.\n\nLuego silencio.\n\nLargo.\n\nPasos que se alejan.\n\nCuando por fin te atreves a mirar por la ventana, no hay nadie. Solo las plantas de Don Manuel, al otro lado de la calle, meciéndose sin viento.",
+      "choices": [
+        {
+          "id": "despues_visita",
+          "text": "Continuar",
+          "nextSceneId": 219
+        }
+      ]
+    },
+    {
+      "id": 215,
+      "title": "La advertencia de Don Manuel",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel entra sin que lo invites. Camina hacia el salón como si conociera la casa. Como si hubiera estado aquí antes.\n\n—Siéntese —dice, y te das cuenta de que él es quien da las órdenes ahora.\n\nObedeces. Porque algo en su presencia ha cambiado. Ya no es el anciano amable. Es otra cosa.\n\n—Escuche —dice, y sus manos, apoyadas en sus rodillas, tiemblan—. El bosque... el bosque está despierto. No siempre lo está. Duerme años. Décadas. Pero ahora... ahora se ha movido.\n\nTe mira. Sus ojos son dos pozos negros.\n\n—Usted y su mujer. Vinieron en mal momento. No es su culpa. Pero están aquí. Y él... lo que sea que haya en la montaña... los ha notado.\n\n—¿Qué está diciendo? —logras articular.\n\nDon Manuel se inclina hacia adelante.\n\n—Las luces. Las ha visto, ¿verdad? La radio. Los sueños. —Asientes sin querer—. Eso es él. Mirando. Decidiendo.\n\n—¿Decidiendo qué?\n\nLa sonrisa de Don Manuel es lo más triste que has visto.\n\n—A quién llevar.",
+      "choices": [
+        {
+          "id": "preguntar_adonde",
+          "text": "“¿Llevar adónde?”",
+          "effects": {
+            "info": 2,
+            "stress": 2,
+            "addInfo": ["devueltos_no_son_mismos"]
+          },
+          "nextSceneId": 216
+        },
+        {
+          "id": "preguntar_porque",
+          "text": "“¿Por qué nos dice esto?”",
+          "effects": {
+            "info": 1,
+            "safety": 1,
+            "addInfo": ["negacion_colectiva"]
+          },
+          "nextSceneId": 217
+        },
+        {
+          "id": "preguntar_jane_peligro",
+          "text": "“¿Jane está en peligro?”",
+          "effects": {
+            "info": 1,
+            "stress": 3,
+            "addInfo": ["jane_marcada"]
+          },
+          "nextSceneId": 218
+        },
+        {
+          "id": "echar_don_manuel",
+          "text": "“Usted no está bien. Debería irse.”",
+          "effects": {
+            "control": 1,
+            "safety": -1
+          },
+          "nextSceneId": 219
+        }
+      ]
+    },
+    {
+      "id": 216,
+      "title": "El destino de los que se llevan",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel niega lentamente.\n\n—No lo sé. Nadie lo sabe. Los que vuelven... no recuerdan. O no quieren recordar. Pero no son los mismos. Algo les falta. O algo les sobra.\n\nSu voz se quiebra.\n\n—Mi mujer. Ella volvió. Pero no era ella.",
+      "choices": [
+        {
+          "id": "despues_visita",
+          "text": "Continuar",
+          "nextSceneId": 219
+        }
+      ]
+    },
+    {
+      "id": 217,
+      "title": "Por qué habla ahora",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel te mira largamente.\n\n—Porque usted preguntó. Esta mañana. Se preocupó por mí cuando me vio raro. Nadie más pregunta. Nadie más ve. Aquí la gente... aprende a no ver.",
+      "choices": [
+        {
+          "id": "despues_visita",
+          "text": "Continuar",
+          "nextSceneId": 219
+        }
+      ]
+    },
+    {
+      "id": 218,
+      "title": "Jane está marcada",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel cierra los ojos.\n\n—Todos estamos en peligro. Pero ella... ella es más sensible. Lo sé. Lo huelo en ella cuando la veo. Como si... como si ya la hubieran marcado.\n\nTu corazón se detiene.\n\n—¿Marcado? ¿Qué significa marcado?\n\nPero Don Manuel no responde. Solo mira hacia la puerta cerrada de la habitación donde Jane trabaja.",
+      "choices": [
+        {
+          "id": "despues_visita",
+          "text": "Continuar",
+          "nextSceneId": 219
+        }
+      ]
+    },
+    {
+      "id": 219,
+      "title": "Después de la visita",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel se ha ido. La casa está en silencio otra vez. Pero ya no es el mismo silencio.\n\nTe sientas en el sofá. Las manos te tiemblan. A quién llevar. Mi mujer volvió, pero no era ella. Marcada.\n\nJane está al otro lado de esa puerta, trabajando, ajena a todo.\n\nO quizás no tan ajena.\n\nLos sueños. La puerta abierta esta mañana. Mirando al bosque.\n\nUn pensamiento horrible cruza tu mente: ¿Y si ya no es ella? ¿Y si ya la llevaron y volvió y yo no lo noté?\n\nNiegas con la cabeza. Es absurdo. Es el miedo hablando.\n\nPero el miedo no siempre se equivoca.",
+      "choices": [
+        {
+          "id": "hablar_ahora",
+          "text": "Hablar con Jane ahora mismo. Contarle todo lo que dijo Don Manuel.",
+          "effects": {
+            "safety": 1,
+            "stress": 1
+          },
+          "nextSceneId": 220
+        },
+        {
+          "id": "investigar_solo",
+          "text": "No decirle nada. Protegerla de la preocupación. Investigar por tu cuenta.",
+          "effects": {
+            "control": 1,
+            "safety": -1,
+            "addInfo": ["secreto_don_manuel"]
+          },
+          "nextSceneId": 220
+        },
+        {
+          "id": "sondear_sutil",
+          "text": "Preguntarle cosas sutiles. Sondear sin alarmar.",
+          "effects": {},
+          "nextSceneId": 220
+        },
+        {
+          "id": "escribir_diario",
+          "text": "Escribir todo lo que dijo Don Manuel. Un diario. Para no olvidar. Para encontrar patrones.",
+          "effects": {
+            "info": 1,
+            "control": 1,
+            "addInfo": ["diario_don_manuel"]
+          },
+          "nextSceneId": 220
+        }
+      ]
+    },
+    {
+      "id": 220,
+      "title": "La tarde",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "La tarde pasa lenta. Jane sale de su habitación cada par de horas. Tomas café. Comes algo. Finges normalidad.\n\nPero no puedes dejar de mirarla. De buscar señales. Algo que delate que no es ella.\n\nY entonces lo notas.\n\nElla se rasca la nuca. Un gesto que siempre ha tenido. Pero hoy... hoy sus dedos se detienen ahí. Como si tocaran algo. Como si sintieran algo bajo la piel.\n\n—¿Qué miras? —pregunta sin volverse.\n\n—Nada —respondes demasiado rápido.\n\nElla te mira. Larga. Luego sonríe.\n\n—Voy a la ducha. ¿Preparas algo de cenar?\n\nAsientes.\n\nCuando el agua comienza a correr, te acercas a la silla donde dejó el móvil.\n\nEstá encendido. Un mensaje escrit. A medio terminar.\n\n\"Mami, últimamente siento que no soy yo. Como si hubiera alguien más dentro de mi cabeza. Alguien que me llama. Desde el bosque. No se lo digas a Daniel, no quiere—\"\n\nEl texto se corta. No siguió escribiendo.\n\nTragas saliva.\n\nEl agua sigue corriendo.",
+      "choices": [
+        {
+          "id": "dejar_movil",
+          "text": "Dejar el móvil donde estaba. No has visto nada.",
+          "effects": {
+            "control": 1,
+            "stress": 2,
+            "addInfo": ["mensaje_jane_visto"]
+          },
+          "nextSceneId": 221
+        },
+        {
+          "id": "preguntar_mensaje",
+          "text": "Cuando Jane salga de la ducha, preguntarle directamente por el mensaje.",
+          "effects": {
+            "addInfo": ["confrontacion_mensaje"]
+          },
+          "nextSceneId": 222
+        },
+        {
+          "id": "borrar_mensaje",
+          "text": "Borrar el mensaje. Si no existe, no tienes que enfrentarlo.",
+          "effects": {
+            "control": -1,
+            "safety": -3,
+            "stress": -1
+          },
+          "nextSceneId": 223
+        },
+        {
+          "id": "copiar_mensaje",
+          "text": "Copiar el mensaje en tu diario y dejar el original. Vigilarás.",
+          "effects": {
+            "info": 1,
+            "control": 1,
+            "stress": 1,
+            "addInfo": ["mensaje_jane_copiado"]
+          },
+          "nextSceneId": 223
+        }
+      ]
+    },
+    {
+      "id": 221,
+      "title": "Fingir que no viste",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Apartas la mano del móvil. No has visto nada. No sabes nada.\n\nCuando Jane sale de la ducha, estás en la cocina, cortando verduras.\n\n—¿Todo bien? —pregunta.\n\n—Todo bien —respondes sin mirarla.\n\nElla se sienta a tu lado. Hay una distancia nueva entre vosotros. Algo no dicho. Algo que crece.\n\nCenan en silencio.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 2",
+          "nextSceneId": 300
+        }
+      ]
+    },
+    {
+      "id": 222,
+      "title": "La confrontación",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane sale del baño con el pelo aún húmedo. Te ve de pie junto a su móvil.\n\n—¿Qué haces?\n\n—He visto tu mensaje —dices—. El que no terminaste.\n\nEl rostro de Jane se congela.\n\n—¿Lo has leído?\n\nAsientes.\n\nElla se sienta en la cama. Sus hombros se hunden.\n\n—No sé qué me pasa, Daniel. Hay algo... algo dentro de mí. Que me llama. Y no sé si quiero ir o quedarme. Y me da miedo. Me da miedo no saber quién soy.\n\nSu voz se quiebra.\n\nTú no sabes qué decir. Te sientas a su lado y la abrazas.\n\nPero algo ha cambiado. Ya no es solo el bosque. Es ella. Es la duda.\n\nY la duda, una vez que entra, no se va.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 2",
+          "nextSceneId": 350
+        }
+      ]
+    },
+    {
+      "id": 223,
+      "title": "El peso del secreto",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane sale de la ducha. Tú estás en la cocina, como si nada hubiera pasado.\n\n—¿Preparaste algo? —pregunta.\n\n—Sí. Espero que te guste.\n\nCenan juntos. Hablan de cosas sin importancia. El trabajo. El clima. Nunca del mensaje. Nunca del bosque.\n\nPero está ahí. En cada pausa. En cada mirada que no se sostiene.\n\nCuando Jane se duerme, tú sigues despierto. El móvil está en la mesita. El mensaje sigue ahí.\n\nY dentro de ti, algo se está rompiendo.\n\nLa duda. El miedo. El secreto.\n\nEl capítulo termina con una pregunta que no tiene respuesta: ¿cuánto tiempo puedes fingir que no pasa nada?",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 2",
+          "nextSceneId": 300
+        }
+      ]
+    }
+  ]
+}
