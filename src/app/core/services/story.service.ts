@@ -3,6 +3,7 @@ import { Scene, Choice, ChoiceRequirements, ChoiceAvailability, ChoiceEvaluation
 import { PlayerIndicators } from '../models/player-state.model';
 import { GameStateService } from './game-state.service';
 import { InfoDatabaseService } from './info-database.service';
+import { SettingsService } from './settings.service';
 import { ReplaySubject, firstValueFrom } from 'rxjs';
 
 /**
@@ -21,7 +22,8 @@ export class StoryService {
 
   constructor(
     private gameState: GameStateService,
-    private infoDatabase: InfoDatabaseService
+    private infoDatabase: InfoDatabaseService,
+    private settingsService: SettingsService
   ) {
     this.loadPromise = this.loadScenes();
   }
@@ -266,12 +268,27 @@ export class StoryService {
   private async loadScenes() {
     try {
       const chapterFiles = await this.loadChapterManifest();
+      const language = this.settingsService.getLanguage();
 
       const fetchPromises = chapterFiles.map(async (chapterFile) => {
         try {
-          const response = await fetch(`/assets/story/${chapterFile}`);
+          // Intentar cargar versión localizada primero
+          let fileToLoad = chapterFile;
+          if (language !== 'es') {
+            const localizedFile = chapterFile.replace('.json', `.${language}.json`);
+            try {
+              const testResponse = await fetch(`/assets/story/${localizedFile}`);
+              if (testResponse.ok) {
+                fileToLoad = localizedFile;
+              }
+            } catch {
+              // Si no existe, usar el original
+            }
+          }
+
+          const response = await fetch(`/assets/story/${fileToLoad}`);
           if (!response.ok) {
-            throw new Error(`No se pudo cargar ${chapterFile} (HTTP ${response.status})`);
+            throw new Error(`No se pudo cargar ${fileToLoad} (HTTP ${response.status})`);
           }
           const data = (await response.json()) as any;
           return { status: 'fulfilled', value: data } as const;

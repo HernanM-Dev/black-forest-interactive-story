@@ -1,0 +1,734 @@
+{
+  "chapter": 1,
+  "title": "The first day",
+  "scenes": [
+    {
+      "id": 100,
+      "title": "Waking up in Oakhurst",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "The morning is quiet. The sound of the forest, that deep hum that seems to breathe, reaches the window like a distant lullaby. You wake up, open the shutters and there is the mountain, imposing to the north, with the mist sliding down its slope as if trying to hide something.\n\nMoving out of the city was the best decision, you think. Here nothing can go wrong.\n\nYou hear movement in the kitchen. Jane. When you go down, you find her singing softly while preparing breakfast. The change of environment has done her good: she has a relaxed gesture, a clear gaze. She greets you good morning with a kiss, serves you coffee and sits in front of you.\n\n—Don't forget to go down to the market for the ingredients for dinner —she says while you spread butter on the bread—. You know that everything closes early here.",
+      "choices": [
+        {
+          "id": "olvidar_lista",
+          "text": "\"Can you repeat the list?\"",
+          "effects": {
+            "stress": 1,
+            "safety": -1,
+            "addInfo": ["jane_preocupada"]
+          },
+          "nextSceneId": 101
+        },
+        {
+          "id": "cenar_posada",
+          "text": "\"What if we better have dinner at the town inn?\"",
+          "effects": {
+            "safety": 1,
+            "control": -1
+          },
+          "nextSceneId": 102
+        },
+        {
+          "id": "confiar_compra",
+          "text": "\"Don't worry, I'll go in a bit.\"",
+          "effects": {
+            "safety": 1,
+            "control": 1
+          },
+          "nextSceneId": 103
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "title": "La lista",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane suspira y desvía la mirada hacia la ventana, hacia el bosque. Durante un segundo, su expresión cambia. Algo tenso. Algo alerta. Luego vuelve a ti con una sonrisa forzada.\n\n—Apenas llevamos un mes aquí y ya pareces extrañar el caos de la ciudad —dice, pero no hay acritud, solo una especie de advertencia velada—. Por favor, presta atención, no estamos a la vuelta de un supermercado 24 horas.\n\nToma su teléfono y escuchas el pop de un mensaje enviado. La lista. En el móvil.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 104
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "title": "La posada",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Ella sonríe de lado, un gesto que conoces bien, el que hace cuando una idea le parece buena pero no del todo práctica.\n\n—Es buena idea, el dueño de la posada dice que tienen carne fresca de la zona. —Bebe un sorbo de café—. Pero eso no quita que necesitemos lo básico para mañana. Leche, pan, eso. Si vas, compra ambas cosas.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 104
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "title": "Confianza",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane se inclina sobre la mesa y te da un beso rápido, casi juguetón.\n\n—Confío en ti. —Se levanta para recoger los platos—. Si vas temprano, quizás alcances a ver a los vecinos. Son una pareja muy agradable. Ella se llama Marta, creo. Trabaja en algo del bosque, no recuerdo bien.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "title": "Don Manuel",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Terminas el desayuno. Mientras te pones las zapatillas para bajar al pueblo, repasas mentalmente la lista. O intentas recordarla. Da igual, la tienes en el móvil si la necesitas.\n\nSales al porche. El aire huele a tierra húmeda y a pino. El pueblo, allá abajo, parece un juguete. Te dispones a bajar cuando una voz te detiene.\n\n—¡Vecino! ¡Buenos días!\n\nDon Manuel. Tu vecino de la derecha, un hombre de unos setenta años, delgado, con manos de haber trabajado la tierra y una sonrisa que parece genuina. Está regando sus plantas, aunque el suelo aún está húmedo del rocío.\n\n—¿Cómo se encuentra el día de hoy? —pregunta, y algo en su tono te hace sentir que no es una pregunta cortés. Como si realmente quisiera saberlo.",
+      "choices": [
+        {
+          "id": "saludo_alegre",
+          "text": "“¡Don Manuel! Buenos días para usted también. Hermoso día, ¿verdad?”",
+          "effects": {
+            "stress": -1,
+            "safety": 1,
+            "info": 1,
+            "addInfo": ["don_manuel_advertencia"]
+          },
+          "nextSceneId": 105
+        },
+        {
+          "id": "saludo_cordial",
+          "text": "“Buen día, Don Manuel.”",
+          "effects": {},
+          "nextSceneId": 106
+        },
+        {
+          "id": "saludo_lejano",
+          "text": "Saludar con la mano y seguir tu camino.",
+          "effects": {
+            "stress": 1
+          },
+          "nextSceneId": 107
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "title": "La advertencia de Don Manuel",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel sonríe más ampliamente, pero sus ojos... sus ojos miran un segundo demasiado hacia el bosque.\n\n—Hermoso sí —dice, y la palabra parece pesar más de lo que debería—. Ya verá, joven. Aquí los días son así. Tranquilos. Hasta que dejan de serlo.\n\nSe ríe, como si fuera un chiste, pero no termina de ser gracioso.\n\n—Por cierto —añade cuando ya te giras para irte—. Si va al pueblo, evite la carretera vieja. La que rodea el bosque por el norte. Hay obras, dicen.\n\nPero no hay obras. Has visto esa carretera. Está vacía.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 108
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "title": "El saludo breve",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel asiente, cortés, y vuelve a sus plantas. Pero cuando ya has caminado unos metros, escuchas:\n\n—Cuídese en el bosque, ¿eh?\n\nTe giras. Él no te mira. Sigue regando. Como si no hubiera hablado.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 108
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "title": "La mirada",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Pasas de largo sin detenerte. Don Manuel no dice nada más. Pero sientes su mirada en la espalda durante todo el camino hasta la curva. Cuando te giras, ya no está. Pero las plantas siguen ahí, goteando agua al suelo.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 108
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "title": "Camino al pueblo",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Bajas por la cuesta de tierra que conecta las casas dispersas con el centro de Oakhurst. El bosque te flanquea a ambos lados. No es un bosque denso, no exactamente. Los árboles están lo suficientemente separados para que la luz se filtre, pero lo suficientemente juntos para que no puedas ver qué hay más allá de los primeros metros.\n\nEscuchas algo.\n\nUn crujido. No de ramas, sino de algo arrastrándose. Te detienes. Escuchas.\n\nNada. Solo el viento.\n\nPero el viento no suena así.\n\nSigues caminando. Más rápido.\n\nAl llegar a la primera calle del pueblo, te topas con una mujer joven que barre la entrada de una tienda. Sarah, según dice el letrero de su camiseta: Mercado Oakhurst. Tendrá veintitantos. Morena. Ojeras que el maquillaje no alcanza a cubrir del todo.\n\n—Hola —dice, y su sonrisa es rápida, profesional—. ¿Primera vez que baja temprano? No le había visto por aquí a esta hora.",
+      "choices": [
+        {
+          "id": "conversar_sarah",
+          "text": "“Sí, mi pareja me mandó por provisiones. ¿Lleva mucho tiempo viviendo aquí?”",
+          "effects": {
+            "info": 1,
+            "addInfo": ["sarah_local"]
+          },
+          "nextSceneId": 109
+        },
+        {
+          "id": "ir_al_grano",
+          "text": "“Buenos días. Solo vengo a comprar unas cosas. ¿Está abierto?”",
+          "effects": {
+            "control": 1
+          },
+          "nextSceneId": 110
+        },
+        {
+          "id": "pregunta_incisiva",
+          "text": "“¿Y usted? ¿Siempre barre tan temprano o hoy es especial?”",
+          "effects": {
+            "stress": 1,
+            "info": 1,
+            "addInfo": ["sarah_insomnio"]
+          },
+          "nextSceneId": 111
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "title": "Sarah, la local",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah apoya la escoba contra la pared y se limpia las manos en el delantal.\n\n—¿Provisiones? —repite, y algo en su tono se vuelve más cauteloso—. Sí, claro. La pareja de la casa de arriba, ¿verdad? La que se mudó hace unas semanas.\n\nAsientes.\n\n—Pues... —mira hacia el bosque, apenas un segundo—. Llevo viviendo aquí toda mi vida. Literalmente. Nací en Oakhurst. Mis padres también. Y sus padres.\n\nLo dice como si eso explicara algo. O como si fuera una advertencia.\n\n—¿Y nunca se ha ido? —preguntas.\n\nSarah sonríe, pero la sonrisa no llega a sus ojos.\n\n—Uno siempre vuelve.\n\nAntes de que puedas preguntar qué significa eso, ella abre la puerta de la tienda.\n\n—Pase. Está abierto. Si necesita algo, avíseme.",
+      "choices": [
+        {
+          "id": "entrar_tienda",
+          "text": "Entrar al mercado",
+          "nextSceneId": 112
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "title": "Directo al grano",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—Buenos días —dices—. Solo vengo a comprar unas cosas. ¿Está abierto?\n\nSarah asiente y abre la puerta sin más conversación.\n\n—Adelante. Avíseme si encuentra todo.\n\nSu tono es amable pero distante. Mientras pasas a su lado, notas que mira el bosque. Solo un momento. Como si esperara algo.\n\nO a alguien.",
+      "choices": [
+        {
+          "id": "entrar_tienda",
+          "text": "Entrar al mercado",
+          "nextSceneId": 112
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "title": "La pregunta incómoda",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah se queda quieta. La escoba en sus manos deja de moverse.\n\n—¿Siempre tan desconfiado? —pregunta, pero no suena ofendida. Suena cansada—. No. No siempre barro tan temprano. Pero hoy necesitaba... hacer algo. Con las manos ocupadas.\n\nTe mira directamente.\n\n—¿Usted cree que el trabajo manual ayuda a no pensar?\n\nLa pregunta te descoloca.\n\n—No sé —respondes—. ¿Ayuda?\n\nElla se encoge de hombros.\n\n—A veces. Otras, no. Depende de lo que uno esté tratando de no pensar.\n\nAbre la puerta y te hace un gesto para que entres.",
+      "choices": [
+        {
+          "id": "entrar_tienda",
+          "text": "Entrar al mercado",
+          "nextSceneId": 112
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "title": "Dentro del mercado",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "El mercado de Oakhurst es pequeño pero ordenado. Estanterías de madera, productos locales en una sección, productos de supermercado en otra. Huele a pan, a limpieza, y a algo más. Algo dulzón que no terminas de identificar.\n\nSarah se coloca detrás del mostrador y saca un libro. Lee mientras tú recorres los pasillos buscando los ingredientes.\n\nLeche. Pan. Huevos. La carne la compraréis en la posada si finalmente vais allí.\n\nCuando estás en el pasillo de las conservas, notas algo.\n\nTarros de mermelada. Artesanales, pone la etiqueta. Con una foto del bosque al atardecer.\n\nMirás la fecha de elaboración.\n\nDentro de tres meses.\n\nParpadeas. La fecha no puede ser esa. Debe ser un error de imprenta. O de tu vista.\n\nAgarras otro tarro. Misma fecha. Otro. Igual.\n\nDejas el tarro en la estantería. Das un paso atrás.\n\n—¿Encuentra todo?\n\nLa voz de Sarah, justo detrás de ti. No la escuchaste acercarse.",
+      "choices": [
+        {
+          "id": "preguntar_fechas",
+          "text": "“Las fechas de estos tarros. Están mal.”",
+          "effects": {
+            "stress": 1,
+            "info": 1,
+            "addInfo": ["tarros_fecha_extraña"]
+          },
+          "nextSceneId": 113
+        },
+        {
+          "id": "ignorar_tarros",
+          "text": "“Sí, todo bien.”",
+          "effects": {
+            "control": 1
+          },
+          "nextSceneId": 114
+        },
+        {
+          "id": "preguntar_etiquetas",
+          "text": "“Qué bonitas etiquetas. ¿Quién los hace?”",
+          "effects": {
+            "info": 1,
+            "safety": 1,
+            "addInfo": ["senora_higgins"]
+          },
+          "nextSceneId": 115
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "title": "Las fechas equivocadas",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—Sarah —señalas los tarros—. Las fechas de estos tarros. Están mal.\n\nElla se inclina para mirar. Lee. Su expresión no cambia.\n\n—Ah, sí. La señora Higgins. Siempre se equivoca con las etiquetas. Ya no ve bien, la pobre.\n\nSonríe, pero es una sonrisa que parece ensayada.\n\n—¿Seguro? —insistes—. Porque pone...\n\n—Es solo una etiqueta —te interrumpe, suave pero firme—. La mermelada está buena. Se la recomiendo.\n\nTe mira. Espera.",
+      "choices": [
+        {
+          "id": "continuar_compra",
+          "text": "Terminar la compra",
+          "nextSceneId": 116
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "title": "Seguir con la compra",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—Sí, todo bien —respondes sin volverte—. Gracias.\n\nEscuchas sus pasos alejándose hacia el mostrador. Suspiras. Debiste imaginar las fechas. Estrés de la mudanza. Cambio de rutina. Cualquier cosa.\n\nPero cuando pasas por el pasillo de salida, los tarros siguen ahí. Y no puedes evitar mirarlos.\n\nLa fecha sigue siendo la misma.",
+      "choices": [
+        {
+          "id": "continuar_compra",
+          "text": "Terminar la compra",
+          "nextSceneId": 116
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "title": "La señora Higgins",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—Qué bonitas etiquetas —dices, señalando los tarros—. ¿Quién los hace?\n\nSarah se relaja visiblemente.\n\n—La señora Higgins. Vive al final del pueblo, cerca de la carretera vieja. Hace mermeladas desde que tengo memoria. Mi abuela ya le compraba.\n\n—¿Y siempre ha usado esa foto del bosque?\n\nSarah mira la etiqueta. Tarda un segundo en responder.\n\n—Sí. Siempre. —Pausa—. Bueno, desde que tengo uso de razón. Es una foto antigua, creo. De antes de que yo naciera.",
+      "choices": [
+        {
+          "id": "continuar_compra",
+          "text": "Terminar la compra",
+          "nextSceneId": 116
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "title": "La advertencia de Sarah",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Terminas de reunir los ingredientes. Pan, leche, huevos, algunas verduras. Pagas en el mostrador. Sarah te pasa la tarjeta por un lector manual (el datáfono parece de otra década) y te da el ticket.\n\n—Que tenga buen día —dice—. Y... no se preocupe si escucha cosas por la noche. El bosque hace ruidos. Son normales.\n\nNo preguntaste por ruidos nocturnos.",
+      "choices": [
+        {
+          "id": "preguntar_ruidos",
+          "text": "“¿Qué tipo de ruidos?”",
+          "effects": {
+            "info": 1,
+            "stress": 1,
+            "addInfo": ["ruidos_nocturnos"]
+          },
+          "nextSceneId": 117
+        },
+        {
+          "id": "pedir_mas_info",
+          "text": "“Gracias por el aviso. ¿Algo más que deba saber?”",
+          "effects": {
+            "info": 2,
+            "safety": 1,
+            "addInfo": ["advertencia_bosque_noche", "advertencia_luces"]
+          },
+          "nextSceneId": 118
+        },
+        {
+          "id": "asentir_callar",
+          "text": "Asentir y salir sin preguntar.",
+          "effects": {
+            "control": 1,
+            "stress": -1
+          },
+          "nextSceneId": 119
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "title": "Los ruidos",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah duda. Mira hacia la puerta, como si confirmara que están solos.\n\n—Ruidos —repite—. Como si algo se moviera. Pero no hay nada. Solo animales. O el viento. Eso dice la gente.\n\n—¿Usted qué dice?\n\nElla te mira. Por un momento, parece muy joven y muy vieja a la vez.\n\n—Yo digo que hay cosas que es mejor no saber. Buenas tardes.\n\nDa la conversación por terminada.",
+      "choices": [
+        {
+          "id": "salir_tienda",
+          "text": "Salir de la tienda",
+          "nextSceneId": 120
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "title": "Más advertencias",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah sonríe. Cansada, pero sonríe.\n\n—Que no se le ocurra ir al bosque de noche. Suena a consejo de pueblo pequeño, lo sé. Pero tómelo en serio. Y si ve luces en la montaña... no las mire fijamente.\n\n—¿Luces?\n\nPero ella ya está leyendo su libro. La conversación ha terminado.",
+      "choices": [
+        {
+          "id": "salir_tienda",
+          "text": "Salir de la tienda",
+          "nextSceneId": 120
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "title": "El silencio",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Asientes, coges las bolsas y sales sin mirar atrás.\n\n—Gracias —dices, solo por educación.\n\nYa en la calle, el sol sigue alto. El pueblo parece normal. Gente yendo a sus cosas. Una señora con un perro. Un hombre arreglando una bicicleta.\n\nPero la frase de Sarah se queda.\n\nNo se preocupe si escucha cosas por la noche.\n\nNo estabas preocupado. Ahora, quizás, un poco.",
+      "choices": [
+        {
+          "id": "regresar_casa",
+          "text": "Regresar a casa",
+          "nextSceneId": 120
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "title": "De regreso",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Subes la cuesta con las bolsas. El peso es agradable, cotidiano. Te hace sentir que esto es real, que la mudanza funcionó.\n\nAl pasar por la casa de Don Manuel, ves que las plantas siguen ahí. Pero él no está.\n\nLa puerta de su casa está entreabierta.\n\nSolo un poco. Lo justo para ver el pasillo oscuro del interior.",
+      "choices": [
+        {
+          "id": "acercarse_puerta",
+          "text": "Acercarte a preguntar si Don Manuel está bien.",
+          "effects": {
+            "info": 1,
+            "safety": 1,
+            "stress": 1,
+            "addInfo": ["don_manuel_mapa"]
+          },
+          "nextSceneId": 121
+        },
+        {
+          "id": "seguir_camino",
+          "text": "Seguir caminando. No es tu problema.",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 122
+        },
+        {
+          "id": "llamar_distancia",
+          "text": "Llamar desde la distancia: “¿Don Manuel? ¿Todo bien?”",
+          "effects": {},
+          "nextSceneId": 123
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "title": "Dentro de casa de Don Manuel",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Te acercas a la puerta.\n\n—¿Don Manuel?\n\nSilencio.\n\n—¿Don Manuel? Soy el vecino. ¿Está bien?\n\nEmpujas la puerta suavemente. Se abre con un gemido de bisagras.\n\nEl interior es oscuro. Huele a madera, a tierra, y a ese olor dulzón del mercado, pero más fuerte.\n\n—Don Manuel...\n\nUna figura emerge de la oscuridad. Don Manuel. Pero su expresión... no es la misma de esta mañana. Parece más viejo. Más vacío.\n\n—Ah, vecino —dice, y su voz suena ronca—. Disculpe. Estaba descansando. ¿Necesita algo?\n\nDetrás de él, en la pared del fondo, ves algo. Un mapa. Del bosque. Con marcas. Muchas marcas.\n\nDon Manuel sigue tu mirada. Da un paso hacia un lado, bloqueando la vista.\n\n—Cosas viejas —dice—. Recuerdos. No vale la pena.",
+      "choices": [
+        {
+          "id": "regresar_casa",
+          "text": "Regresar a tu casa",
+          "nextSceneId": 124
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "title": "La silueta",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Pasas de largo. No es tu problema. Si Don Manuel necesita algo, pedirá ayuda.\n\nPero al llegar a tu puerta, no puedes evitar mirar atrás.\n\nLa puerta de Don Manuel sigue entreabierta. Y ahora ves una silueta en el umbral.\n\nMirándote.\n\nDon Manuel.\n\nNo te saludó.",
+      "choices": [
+        {
+          "id": "entrar_casa",
+          "text": "Entrar a tu casa",
+          "nextSceneId": 124
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "title": "La puerta que se cierra",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—¿Don Manuel? —llamas desde el camino—. ¿Todo bien?\n\nPausa.\n\nLa puerta se cierra lentamente. No de golpe. Como si alguien la empujara con cuidado.\n\n—¡Todo bien, vecino! —llega la voz, ahogada por la madera—. ¡Hasta luego!\n\nY silencio.\n\nNo sales de dudas. Pero al menos preguntaste.",
+      "choices": [
+        {
+          "id": "entrar_casa",
+          "text": "Entrar a tu casa",
+          "nextSceneId": 124
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "title": "La radio",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane te recibe en la puerta.\n\n—¿Conseguiste todo? —pregunta, quitándote las bolsas.\n\n—Sí —respondes—. Bueno, casi. La carne la conseguimos en la posada si quieres.\n\nElla sonríe.\n\n—Perfecto. Por cierto —señala hacia la cocina—, mientras no estabas, pasó algo raro. La radio. Empezó a sonar sola. Solo estática. Pero con... ritmo. Como si alguien estuviera enviando un mensaje en código.\n\nTe mira.\n\n—¿Crees que sea normal aquí? ¿Por lo aislado?",
+      "choices": [
+        {
+          "id": "interferencias",
+          "text": "“Seguro son interferencias. Pasa en zonas rurales.”",
+          "effects": {
+            "control": 1,
+            "safety": -1
+          },
+          "nextSceneId": 125
+        },
+        {
+          "id": "grabar_estatica",
+          "text": "“¿Grabaste algo? Podríamos intentar escucharlo más tarde.”",
+          "effects": {
+            "info": 1,
+            "safety": 1,
+            "stress": 1,
+            "addInfo": ["grabacion_estatica"]
+          },
+          "nextSceneId": 126
+        },
+        {
+          "id": "aviso_futuro",
+          "text": "“No sé. Pero si vuelve a pasar, avísame.”",
+          "effects": {},
+          "nextSceneId": 127
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "title": "Normalidad forzada",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—Seguro son interferencias —dices con naturalidad—. Pasa en zonas rurales. Torres, cables viejos, lo que sea.\n\nJane asiente, pero su expresión duda.\n\n—Supongo. Es que... sonaba organizado. Como si...\n\n—¿Como si qué?\n\nElla niega con la cabeza.\n\n—Nada. Olvídalo. ¿Me ayudas a guardar la compra?",
+      "choices": [
+        {
+          "id": "atardecer",
+          "text": "Continuar",
+          "nextSceneId": 128
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "title": "La grabación",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—¿Grabaste algo? —preguntas—. Podríamos escucharlo más tarde, ver si encontramos un patrón.\n\nLos ojos de Jane se iluminan un poco.\n\n—Sí, lo grabé con el móvil. No sé por qué. Intuición, supongo. —Te sonríe—. Me alegra que no pienses que estoy loca.\n\n—Nunca lo haría.",
+      "choices": [
+        {
+          "id": "atardecer",
+          "text": "Continuar",
+          "nextSceneId": 128
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "title": "La radio en espera",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—No sé —admites—. Pero si vuelve a pasar, avísame. Escuchamos juntos.\n\nJane asiente.\n\n—Vale. Seguro que no es nada.\n\nPero mientras guarda la leche en la nevera, te das cuenta de que no aparta la vista de la radio.",
+      "choices": [
+        {
+          "id": "atardecer",
+          "text": "Continuar",
+          "nextSceneId": 128
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "title": "La luz en la montaña",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "El sol comienza a esconderse tras la montaña. El pueblo, allá abajo, se va quedando a oscuras calle por calle. Las farolas se encienden. Pocas. Las justas.\n\nJane prepara la cena. Tú estás en el salón, mirando por la ventana.\n\nY entonces lo ves.\n\nUna luz. En la montaña.\n\nNo es una linterna. Es más grande. Más... organizada. Parpadea en intervalos regulares. Como un código.\n\nComo la estática de la radio.",
+      "choices": [
+        {
+          "id": "llamar_jane",
+          "text": "Llamar a Jane para que lo vea.",
+          "effects": {
+            "info": 1,
+            "safety": 1,
+            "stress": 1,
+            "addInfo": ["luz_montana_compartida"]
+          },
+          "nextSceneId": 129
+        },
+        {
+          "id": "observar_solo",
+          "text": "No decir nada y observar solo.",
+          "effects": {
+            "info": 1,
+            "control": 1,
+            "addInfo": ["luz_montana_personal"]
+          },
+          "nextSceneId": 130
+        },
+        {
+          "id": "cerrar_cortinas",
+          "text": "Cerrar las cortinas y seguir con tu día.",
+          "effects": {
+            "control": 1,
+            "stress": -1
+          },
+          "nextSceneId": 131
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "title": "Mirando juntos",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—Jane —llamas sin apartar la vista—. Ven. Mira esto.\n\nElla se acerca, secándose las manos en un paño.\n\n—¿Qué pasa?\n\nSeñalas la montaña. La luz sigue ahí. Parpadeando.\n\n—¿Qué es? —susurra Jane.\n\n—No lo sé.\n\nAmbos miran en silencio. La luz parpadea diez, quince veces más. Luego se apaga.\n\nComo si supiera que la estaban mirando.",
+      "choices": [
+        {
+          "id": "noche",
+          "text": "Continuar",
+          "nextSceneId": 132
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "title": "Observar en secreto",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Te quedas quieto. Observas. La luz parpadea. Marcas el ritmo con los dedos contra el muslo. Cuentas: dieciocho parpadeos. Pausa. Doce parpadeos. Pausa. Otra vez.\n\nEstás tan concentrado que no escuchas a Jane acercarse.\n\n—¿Qué miras?\n\nTe giras. Ella está ahí.\n\n—Nada —dices—. Solo el atardecer.\n\nElla mira por la ventana. La luz ya se apagó.\n\n—Ah.\n\nPero su tono dice que no te cree del todo.",
+      "choices": [
+        {
+          "id": "noche",
+          "text": "Continuar",
+          "nextSceneId": 132
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "title": "Cortinas cerradas",
+      "safeZone": true,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Cierras las cortinas. No quieres pensar en luces. No quieres pensar en nada raro. Viniste aquí a descansar.\n\nPero mientras cenas con Jane, no puedes evitar mirar el borde de la cortina. La rendija por donde la luz, si quisiera, podría colarse.\n\nY tienes la incómoda sensación de que algo, al otro lado, sabe que las cerraste.",
+      "choices": [
+        {
+          "id": "noche",
+          "text": "Continuar",
+          "nextSceneId": 132
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "title": "Noche",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Son las once. Jane duerme a tu lado. Su respiración es profunda, regular.\n\nTú no.\n\nAlgo te mantiene despierto. El recuerdo de la luz. Las palabras de Sarah. La puerta entreabierta de Don Manuel.\n\nY entonces lo escuchas.\n\nAfuera. En el bosque.\n\nAlgo que se mueve.\n\nNo es un animal. Los animales no se mueven así. Con pausas. Con intención. Como si alguien... como si algo... caminara entre los árboles.\n\nMirando hacia tu casa.",
+      "choices": [
+        {
+          "id": "mirar_ventana",
+          "text": "Levantarte y mirar por la ventana.",
+          "effects": {
+            "control": -1,
+            "stress": 2
+          },
+          "nextSceneId": 133
+        },
+        {
+          "id": "despertar_jane",
+          "text": "Despertar a Jane.",
+          "effects": {
+            "safety": 1,
+            "stress": 1
+          },
+          "nextSceneId": 134
+        },
+        {
+          "id": "quedarse_inmovil",
+          "text": "Quedarte en la cama, inmóvil, escuchando.",
+          "effects": {
+            "control": 1,
+            "stress": 1
+          },
+          "nextSceneId": 135
+        },
+        {
+          "id": "encender_radio",
+          "text": "Encender la radio de mesilla.",
+          "effects": {
+            "stress": 2,
+            "addInfo": ["voz_radio_noche"]
+          },
+          "nextSceneId": 136
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "title": "Mirar a la oscuridad",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Te levantas en silencio. Cada paso hacia la ventana es un latido que retumba en tus oídos.\n\nApartas la cortina.\n\nEl bosque está negro. Las estrellas no alcanzan a iluminar el suelo. Durante un largo instante, no ves nada.\n\nY entonces, dos puntos de luz. Bajos. Entre los árboles.\n\nFijos.\n\nMirándote.\n\nNo parpadean. No se mueven.\n\nTu corazón se detiene.\n\nCuando vuelves a mirar, han desaparecido.\n\nPero algo en el aire ha cambiado. El olor del bosque se ha filtrado dentro de la casa.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 1",
+          "nextSceneId": 200
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "title": "Despertar a Jane",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—Jane —susurras, tocándole el hombro—. Jane.\n\nElla abre los ojos lentamente.\n\n—¿Qué pasa?\n\n—Escucha.\n\nAmbos se quedan en silencio. El sonido viene del bosque. Algo que camina. Algo que no debería estar ahí.\n\nJane agarra tu brazo. No dice nada, pero su respiración se acelera.\n\n—Es solo un animal —murmuras, pero ninguno de los dos lo cree.\n\nEl sonido se detiene justo debajo de la ventana. Un minuto. Dos. Luego, pasos que se alejan lentamente.\n\nJane no vuelve a dormir en toda la noche.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 1",
+          "nextSceneId": 200
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "title": "Inmóvil",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Contienes la respiración. Cada fibra de tu cuerpo te ordena no moverte.\n\nEl sonido se acerca. Crujido tras crujido. Como si algo pisara deliberadamente cada rama seca.\n\nSe detiene.\n\nJusto debajo de tu ventana.\n\nEscuchas su respiración. O la tuya. Ya no puedes distinguir.\n\nEl silencio se alarga. Un minuto. Dos. Tres.\n\nCuando por fin te atreves a exhalar, el sonido ya no está. Pero sabes que sigue ahí fuera.\n\nEsperando.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 1",
+          "nextSceneId": 200
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "title": "La radio",
+      "safeZone": false,
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Tu mano busca la radio en la oscuridad. La enciendes.\n\nEstática.\n\nNada más. Solo ese ruido blanco que parece llenar la habitación.\n\nY entonces, entre el ruido, una voz.\n\nNo es la locutora de la noche. No es una canción.\n\nEs un susurro.\n\nTu nombre.\n\nEl corazón te golpea el pecho. Quieres apagarla, pero tus dedos no responden.\n\nTu nombre, otra vez. Más cerca.\n\nLa estática se intensifica. Y luego, una palabra:\n\n—*Espérame.*\n\nApagas la radio de golpe.\n\nJane sigue durmiendo a tu lado.\n\nAfuera, el bosque calla.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 1",
+          "nextSceneId": 200
+        }
+      ]
+    }
+  ]
+}

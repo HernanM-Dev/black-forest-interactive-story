@@ -6,13 +6,14 @@ import { headsetOutline } from 'ionicons/icons';
 import { AudioService } from '../../core/services/audio.service';
 import { SettingsService } from '../../core/services/settings.service';
 import { GameStateService } from '../../core/services/game-state.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
   templateUrl: './intro.page.html',
   styleUrls: ['./intro.page.scss'],
-  imports: [IonContent, IonButton, IonIcon],
+  imports: [IonContent, IonButton, IonIcon, TranslateModule],
 })
 export class IntroPage implements OnInit, OnDestroy {
   

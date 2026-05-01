@@ -7,17 +7,17 @@
         <ion-icon name="headset-outline"></ion-icon>
       </div>
 
-      <h2 class="intro-title">Antes de comenzar</h2>
+      <h2 class="intro-title">{{ 'INTRO.TITLE' | translate }}</h2>
 
       <div class="intro-text">
         <p class="main-text">
-          Para una mejor experiencia, usa audífonos.
+          {{ 'INTRO.HEADPHONES' | translate }}
         </p>
         
         <p class="warning-text">
-          No todas las decisiones son correctas.<br>
-          El silencio también es una elección.<br>
-          El universo recuerda lo que haces.
+          {{ 'INTRO.WARNING_LINE_1' | translate }}<br>
+          {{ 'INTRO.WARNING_LINE_2' | translate }}<br>
+          {{ 'INTRO.WARNING_LINE_3' | translate }}
         </p>
       </div>
 
@@ -26,7 +26,7 @@
         shape="round" 
         class="continue-button"
         (click)="continue()">
-        Continuar
+        {{ 'INTRO.CONTINUE' | translate }}
       </ion-button>
 
       <ion-button 
@@ -34,7 +34,7 @@
         fill="clear" 
         class="back-button"
         (click)="goBack()">
-        Volver
+        {{ 'INTRO.BACK' | translate }}
       </ion-button>
 
     </div>

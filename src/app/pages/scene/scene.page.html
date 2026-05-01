@@ -6,7 +6,7 @@
       class="indicator"
       type="button"
       [class]="getIndicatorClass(playerState.indicators.info)"
-      [attr.aria-label]="'Ver indicador Información: ' + playerState.indicators.info + '%'"
+      [attr.aria-label]="('SCENE.VIEW_INDICATOR' | translate) + ' ' + ('SCENE.INDICATOR_INFO' | translate) + ': ' + playerState.indicators.info + '%'"
       (click)="showIndicatorInfo('info')">
       <ion-icon name="information-circle-outline"></ion-icon>
       <ion-progress-bar [value]="getIndicatorLevel(playerState.indicators.info)"></ion-progress-bar>
@@ -16,7 +16,7 @@
       class="indicator"
       type="button"
       [class]="getIndicatorClass(playerState.indicators.stress)"
-      [attr.aria-label]="'Ver indicador Estrés: ' + playerState.indicators.stress + '%'"
+      [attr.aria-label]="('SCENE.VIEW_INDICATOR' | translate) + ' ' + ('SCENE.INDICATOR_STRESS' | translate) + ': ' + playerState.indicators.stress + '%'"
       (click)="showIndicatorInfo('stress')">
       <ion-icon name="flash-outline"></ion-icon>
       <ion-progress-bar [value]="getIndicatorLevel(playerState.indicators.stress)"></ion-progress-bar>
@@ -26,7 +26,7 @@
       class="indicator"
       type="button"
       [class]="getIndicatorClass(playerState.indicators.safety)"
-      [attr.aria-label]="'Ver indicador Seguridad: ' + playerState.indicators.safety + '%'"
+      [attr.aria-label]="('SCENE.VIEW_INDICATOR' | translate) + ' ' + ('SCENE.INDICATOR_SAFETY' | translate) + ': ' + playerState.indicators.safety + '%'"
       (click)="showIndicatorInfo('safety')">
       <ion-icon name="shield-outline"></ion-icon>
       <ion-progress-bar [value]="getIndicatorLevel(playerState.indicators.safety)"></ion-progress-bar>
@@ -36,20 +36,20 @@
       class="indicator"
       type="button"
       [class]="getIndicatorClass(playerState.indicators.control)"
-      [attr.aria-label]="'Ver indicador Control: ' + playerState.indicators.control + '%'"
+      [attr.aria-label]="('SCENE.VIEW_INDICATOR' | translate) + ' ' + ('SCENE.INDICATOR_CONTROL' | translate) + ': ' + playerState.indicators.control + '%'"
       (click)="showIndicatorInfo('control')">
       <ion-icon name="hand-left-outline"></ion-icon>
       <ion-progress-bar [value]="getIndicatorLevel(playerState.indicators.control)"></ion-progress-bar>
     </button>
 
     <!-- Botón de diario -->
-    <button class="journal-button" type="button" aria-label="Abrir diario" (click)="openJournal()">
+    <button class="journal-button" type="button" [attr.aria-label]="'SCENE.OPEN_JOURNAL' | translate" (click)="openJournal()">
       <ion-icon name="book-outline"></ion-icon>
       <ion-badge *ngIf="playerState.infoEntries.length > 0">{{ playerState.infoEntries.length }}</ion-badge>
     </button>
 
     <!-- Botón de menú principal -->
-    <button class="home-button" type="button" aria-label="Volver al inicio" (click)="goHome()">
+    <button class="home-button" type="button" [attr.aria-label]="'SCENE.GO_HOME' | translate" (click)="goHome()">
       <ion-icon name="home-outline"></ion-icon>
     </button>
   </div>
@@ -98,7 +98,7 @@
         class="tutorial-button"
         *ngIf="showTutorialButton"
         type="button"
-        aria-label="Abrir tutorial"
+        [attr.aria-label]="'SCENE.OPEN_TUTORIAL' | translate"
         (click)="openTutorial()">
         <ion-icon name="help-circle-outline"></ion-icon>
       </button>
@@ -107,7 +107,7 @@
       <div class="scene-image" *ngIf="scene && scene.image">
         <img
           [src]="scene.image"
-          [alt]="scene.title || 'Escena'"
+          [alt]="scene.title || ('SCENE.IMAGE_ALT' | translate)"
           loading="lazy"
           decoding="async"
           (error)="onSceneImageError($event)" />
@@ -121,7 +121,7 @@
       <!-- Botón de decisión/continuar -->
       <div class="decision-button-container" *ngIf="showDecisionButton">
         <button class="decision-button" type="button" (click)="openDecisionModal()">
-          <span>{{ hasChoices ? 'Tomar decisión' : 'Continuar' }}</span>
+          <span>{{ hasChoices ? ('SCENE.TAKE_DECISION' | translate) : ('SCENE.CONTINUE' | translate) }}</span>
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </button>
       </div>
@@ -136,7 +136,7 @@
           
           <!-- Header del modal (solo si hay decisiones) -->
           <div class="modal-header" *ngIf="hasChoices">
-            <h2>¿Qué decides?</h2>
+            <h2>{{ 'SCENE.WHAT_DO_YOU_DECIDE' | translate }}</h2>
           </div>
 
           <!-- Opciones de decisión -->
@@ -170,9 +170,9 @@
             <div class="regulation-divider"></div>
             <div class="regulation-header-modal">
               <ion-icon name="heart-outline"></ion-icon>
-              <span>Acciones de Regulación</span>
+              <span>{{ 'SCENE.REGULATION_ACTIONS' | translate }}</span>
             </div>
-            <p class="regulation-notice-modal">No avanzan la historia • Solo una vez</p>
+            <p class="regulation-notice-modal">{{ 'SCENE.REGULATION_NOTICE' | translate }}</p>
             
             <div class="regulation-actions-modal">
               <button
@@ -194,42 +194,42 @@
   <ion-modal [isOpen]="isTutorialOpen" (didDismiss)="closeTutorial()" class="tutorial-modal">
     <ng-template>
       <div class="modal-overlay">
-        <div class="tutorial-content">
-          <button class="tutorial-close" type="button" aria-label="Cerrar tutorial" (click)="closeTutorial()">
+        <div class="tutorial-container">
+          <button class="tutorial-close" type="button" [attr.aria-label]="'SCENE.CLOSE_TUTORIAL' | translate" (click)="closeTutorial()">
             <ion-icon name="close-outline"></ion-icon>
           </button>
           
-          <h2 class="tutorial-title">Cómo Jugar</h2>
+          <h2 class="tutorial-title">{{ 'SCENE.TUTORIAL_TITLE' | translate }}</h2>
           
           <div class="tutorial-section">
             <div class="tutorial-icon">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-            <h3>Decisiones</h3>
-            <p>Cada decisión que tomes afectará tu estado mental y físico. Algunas opciones pueden estar bloqueadas según tus indicadores actuales.</p>
+            <h3>{{ 'SCENE.TUTORIAL_DECISIONS_TITLE' | translate }}</h3>
+            <p>{{ 'SCENE.TUTORIAL_DECISIONS_TEXT' | translate }}</p>
           </div>
 
           <div class="tutorial-section">
             <div class="tutorial-icon">
               <ion-icon name="stats-chart-outline"></ion-icon>
             </div>
-            <h3>Indicadores</h3>
+            <h3>{{ 'SCENE.TUTORIAL_INDICATORS_TITLE' | translate }}</h3>
             <div class="tutorial-indicators">
               <div class="tutorial-indicator">
                 <ion-icon name="information-circle-outline" style="color: #3b82f6;"></ion-icon>
-                <span><strong>Información:</strong> Conocimiento que has adquirido</span>
+                <span><strong>{{ 'SCENE.INDICATOR_INFO' | translate }}:</strong> {{ 'SCENE.INDICATOR_INFO_DESC' | translate }}</span>
               </div>
               <div class="tutorial-indicator">
                 <ion-icon name="flash-outline" style="color: #ef4444;"></ion-icon>
-                <span><strong>Estrés:</strong> Tu nivel de presión mental</span>
+                <span><strong>{{ 'SCENE.INDICATOR_STRESS' | translate }}:</strong> {{ 'SCENE.INDICATOR_STRESS_DESC' | translate }}</span>
               </div>
               <div class="tutorial-indicator">
                 <ion-icon name="shield-outline" style="color: #22c55e;"></ion-icon>
-                <span><strong>Seguridad:</strong> Tu bienestar físico</span>
+                <span><strong>{{ 'SCENE.INDICATOR_SAFETY' | translate }}:</strong> {{ 'SCENE.INDICATOR_SAFETY_DESC' | translate }}</span>
               </div>
               <div class="tutorial-indicator">
                 <ion-icon name="hand-left-outline" style="color: #8b5cf6;"></ion-icon>
-                <span><strong>Control:</strong> Tu sangre fría</span>
+                <span><strong>{{ 'SCENE.INDICATOR_CONTROL' | translate }}:</strong> {{ 'SCENE.INDICATOR_CONTROL_DESC' | translate }}</span>
               </div>
             </div>
           </div>
@@ -238,20 +238,20 @@
             <div class="tutorial-icon">
               <ion-icon name="alert-circle-outline"></ion-icon>
             </div>
-            <h3>Consecuencias</h3>
-            <p>Tus decisiones tienen consecuencias a largo plazo. Lo que elijas ahora puede afectar opciones futuras.</p>
+            <h3>{{ 'SCENE.TUTORIAL_CONSEQUENCES_TITLE' | translate }}</h3>
+            <p>{{ 'SCENE.TUTORIAL_CONSEQUENCES_TEXT' | translate }}</p>
           </div>
 
           <div class="tutorial-section">
             <div class="tutorial-icon">
               <ion-icon name="heart-outline"></ion-icon>
             </div>
-            <h3>Acciones de Regulación</h3>
-            <p>Cuando el estrés sea alto, podrás usar acciones para calmarte. No avanzan la historia, pero te ayudan a sobrevivir.</p>
+            <h3>{{ 'SCENE.TUTORIAL_REGULATION_TITLE' | translate }}</h3>
+            <p>{{ 'SCENE.TUTORIAL_REGULATION_TEXT' | translate }}</p>
           </div>
 
           <button class="tutorial-got-it" type="button" (click)="closeTutorial()">
-            Entendido
+            {{ 'SCENE.TUTORIAL_GOT_IT' | translate }}
           </button>
         </div>
       </div>
@@ -266,10 +266,10 @@
           <div class="critical-icon">
             <ion-icon [name]="criticalWarningType === 'stress' ? 'flash' : 'shield'"></ion-icon>
           </div>
-          <h2 class="critical-title">¡Advertencia!</h2>
+          <h2 class="critical-title">{{ 'SCENE.CRITICAL_TITLE' | translate }}</h2>
           <p class="critical-message">{{ criticalWarningMessage }}</p>
           <button class="critical-button" (click)="closeCriticalWarning()">
-            Entendido
+            {{ 'SCENE.CRITICAL_BUTTON' | translate }}
           </button>
         </div>
       </div>
@@ -281,9 +281,9 @@
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Información Recopilada</ion-title>
+          <ion-title>{{ 'SCENE.JOURNAL_TITLE' | translate }}</ion-title>
           <ion-buttons slot="end">
-            <ion-button (click)="closeJournal()">
+            <ion-button [attr.aria-label]="'SCENE.CLOSE_JOURNAL' | translate" (click)="closeJournal()">
               <ion-icon name="close-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
@@ -293,7 +293,7 @@
       <ion-content class="journal-content">
         <div class="journal-container">
           <p class="journal-intro" *ngIf="infoEntries.length === 0">
-            Aún no has descubierto ninguna información relevante.
+            {{ 'SCENE.JOURNAL_NO_INFO' | translate }}
           </p>
 
           <ion-list *ngIf="infoEntries.length > 0">

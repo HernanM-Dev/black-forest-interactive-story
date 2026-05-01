@@ -16,6 +16,7 @@ import {
   IonLabel,
   IonBadge,
 } from '@ionic/angular/standalone';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { addIcons } from 'ionicons';
 import {
   informationCircleOutline,
@@ -89,6 +90,7 @@ interface ToastNotification {
     IonLabel,
     IonBadge,
     CommonModule,
+    TranslateModule,
   ],
 })
 export class ScenePage implements OnInit, OnDestroy {
@@ -157,7 +159,8 @@ export class ScenePage implements OnInit, OnDestroy {
     private story: StoryService,
     private audioService: AudioService,
     private settingsService: SettingsService,
-    private regulationService: RegulationService
+    private regulationService: RegulationService,
+    private translate: TranslateService
   ) {
     // Registrar iconos
     addIcons({
@@ -445,17 +448,17 @@ export class ScenePage implements OnInit, OnDestroy {
     let message = '';
     
     if (stressChange <= -15) {
-      message = 'Te sientes más tranquilo';
+      message = 'SCENE.TOAST_CALM';
     } else if (safetyChange >= 10) {
-      message = 'Recuperas seguridad';
+      message = 'SCENE.TOAST_SAFE';
     } else if (controlChange >= 10) {
-      message = 'Recuperas el control';
+      message = 'SCENE.TOAST_CONTROL';
     }
 
     if (message) {
       const toast: ToastNotification = {
         id: Date.now(),
-        message,
+        message: this.translate.instant(message),
         type: 'positive',
       };
 
@@ -566,25 +569,25 @@ export class ScenePage implements OnInit, OnDestroy {
     const indicators = this.playerState.indicators;
     const configs = {
       info: {
-        name: 'Información',
+        name: this.translate.instant('SCENE.INDICATOR_INFO'),
         icon: 'information-circle-outline',
         value: indicators.info,
         color: '#3b82f6',
       },
       stress: {
-        name: 'Estrés',
+        name: this.translate.instant('SCENE.INDICATOR_STRESS'),
         icon: 'flash-outline',
         value: indicators.stress,
         color: '#ef4444',
       },
       safety: {
-        name: 'Seguridad',
+        name: this.translate.instant('SCENE.INDICATOR_SAFETY'),
         icon: 'shield-outline',
         value: indicators.safety,
         color: '#22c55e',
       },
       control: {
-        name: 'Control',
+        name: this.translate.instant('SCENE.INDICATOR_CONTROL'),
         icon: 'hand-left-outline',
         value: indicators.control,
         color: '#8b5cf6',

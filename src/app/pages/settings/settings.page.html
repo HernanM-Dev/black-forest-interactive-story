@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Configuración</ion-title>
+    <ion-title>{{ 'SETTINGS.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,8 +16,8 @@
       <ion-item lines="none" class="setting-item">
         <ion-icon slot="start" name="volume-high-outline" class="setting-icon"></ion-icon>
         <ion-label>
-          <h2>Volumen</h2>
-          <p>Ajusta el volumen del audio</p>
+          <h2>{{ 'SETTINGS.VOLUME' | translate }}</h2>
+          <p>{{ 'SETTINGS.VOLUME_DESCRIPTION' | translate }}</p>
         </ion-label>
       </ion-item>
       
@@ -37,8 +37,8 @@
       <ion-item lines="none" class="setting-item">
         <ion-icon slot="start" name="language-outline" class="setting-icon"></ion-icon>
         <ion-label>
-          <h2>Idioma</h2>
-          <p>Selecciona el idioma del juego</p>
+          <h2>{{ 'SETTINGS.LANGUAGE' | translate }}</h2>
+          <p>{{ 'SETTINGS.LANGUAGE_DESCRIPTION' | translate }}</p>
         </ion-label>
       </ion-item>
       
@@ -46,8 +46,7 @@
         <ion-select
           [(ngModel)]="language"
           (ionChange)="onLanguageChange($event)"
-          interface="popover"
-          placeholder="Selecciona idioma">
+          interface="popover">
           <ion-select-option value="es">Español</ion-select-option>
           <ion-select-option value="en">English</ion-select-option>
         </ion-select>
@@ -57,8 +56,8 @@
       <ion-item lines="none" class="setting-item credits-item" button (click)="openCredits()">
         <ion-icon slot="start" name="information-circle-outline" class="setting-icon"></ion-icon>
         <ion-label>
-          <h2>Créditos</h2>
-          <p>Próximamente</p>
+          <h2>{{ 'SETTINGS.CREDITS' | translate }}</h2>
+          <p>{{ 'SETTINGS.COMING_SOON' | translate }}</p>
         </ion-label>
       </ion-item>
 

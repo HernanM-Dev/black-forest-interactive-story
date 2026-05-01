@@ -2,7 +2,7 @@
   <div class="overlay">
     <div class="home-container">
       <h1 class="title">BLACK FOREST</h1>
-      <p class="subtitle">{{ subtitle }}</p>
+      <p class="subtitle">{{ subtitleKey | translate }}</p>
 
       <!-- Botón Continuar (solo si hay partida guardada) -->
       <ion-button 
@@ -11,7 +11,7 @@
         shape="round" 
         class="continue-button"
         (click)="continueGame()">
-        CONTINUAR
+        {{ 'HOME.CONTINUE' | translate }}
       </ion-button>
 
       <!-- Botón Nuevo Juego -->
@@ -21,7 +21,7 @@
         shape="round" 
         class="start-button"
         (click)="newGame()">
-        NUEVO JUEGO
+        {{ 'HOME.NEW_GAME' | translate }}
       </ion-button>
 
       <ion-button 
@@ -30,7 +30,7 @@
         fill="clear" 
         class="settings-button"
         (click)="openSettings()">
-        Opciones
+        {{ 'HOME.OPTIONS' | translate }}
       </ion-button>
     </div>
   </div>

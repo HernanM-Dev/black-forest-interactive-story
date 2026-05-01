@@ -922,7 +922,8 @@ ion-modal {
     animation: overlayFadeIn 0.3s ease-out;
   }
 
-  .tutorial-container {
+  .tutorial-container,
+  .tutorial-content {
     width: 100%;
     max-width: 500px;
     max-height: 85vh;

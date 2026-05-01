@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IonContent, IonButton } from '@ionic/angular/standalone';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AudioService } from '../../core/services/audio.service';
 import { SettingsService } from '../../core/services/settings.service';
 import { GameStateService } from '../../core/services/game-state.service';
@@ -11,12 +12,11 @@ import { GameStateService } from '../../core/services/game-state.service';
   standalone: true,
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  imports: [IonContent, IonButton, CommonModule],
+  imports: [IonContent, IonButton, CommonModule, TranslateModule],
 })
 export class HomePage implements OnInit {
   
-  // Textos que cambian según las visitas
-  subtitle = 'Todos están ocultos. El silencio es la única forma de seguir existiendo.';
+  subtitleKey = 'HOME.SUBTITLE_DEFAULT';
   showButton = false;
   visitCount = 0;
   hasSavedGame = false;
@@ -25,7 +25,8 @@ export class HomePage implements OnInit {
     private router: Router,
     private audioService: AudioService,
     private settingsService: SettingsService,
-    private gameStateService: GameStateService
+    private gameStateService: GameStateService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit() {
@@ -69,9 +70,11 @@ export class HomePage implements OnInit {
    */
   private updateContent() {
     if (this.visitCount === 1) {
-      this.subtitle = 'El silencio es supervivencia.';
+      this.subtitleKey = 'HOME.SUBTITLE_VISIT_1';
     } else if (this.visitCount >= 2) {
-      this.subtitle = 'No hagas ruido.';
+      this.subtitleKey = 'HOME.SUBTITLE_VISIT_MANY';
+    } else {
+      this.subtitleKey = 'HOME.SUBTITLE_DEFAULT';
     }
   }
 

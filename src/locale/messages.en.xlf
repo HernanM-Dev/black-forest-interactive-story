@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6076319951837431770" datatype="html">
+        <source>Configuración</source>
+        <target>Settings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings.page.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3436302829664547778" datatype="html">
+        <source>Volumen</source>
+        <target>Volume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings.page.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4321348518159952765" datatype="html">
+        <source>Ajusta el volumen del audio</source>
+        <target>Adjust the audio volume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings.page.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1500181871307171807" datatype="html">
+        <source>Idioma</source>
+        <target>Language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings.page.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="759321603479403501" datatype="html">
+        <source>Selecciona el idioma del juego</source>
+        <target>Select the game language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings.page.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1146540483731141984" datatype="html">
+        <source>Créditos</source>
+        <target>Credits</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings.page.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2451872750973533014" datatype="html">
+        <source>Próximamente</source>
+        <target>Coming Soon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings.page.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
