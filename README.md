@@ -12,12 +12,11 @@ Every decision matters. Every indicator counts. There are no right answers.
 
 | Main Menu | Intro | Settings |
 |:-:|:-:|:-:|
-| <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max)" src="https://github.com/user-attachments/assets/b9e788cb-adf5-4496-870c-e2797374fea5" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (2)" src="https://github.com/user-attachments/assets/08c54a44-6e7c-4e1a-9958-e105ba98c00c" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (1)" src="https://github.com/user-attachments/assets/40df91b5-f3e1-446c-803d-bca75a2e4e8b" />
- |
+| <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max)" src="https://github.com/user-attachments/assets/b9e788cb-adf5-4496-870c-e2797374fea5" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (2)" src="https://github.com/user-attachments/assets/08c54a44-6e7c-4e1a-9958-e105ba98c00c" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (1)" src="https://github.com/user-attachments/assets/40df91b5-f3e1-446c-803d-bca75a2e4e8b" /> |
 
-| Information Journal | Tutorial | Indicators |
+| History | Tutorial | Information |
 |:-:|:-:|:-:|
-| *(screenshot)* | *(screenshot)* | *(screenshot)* |
+| <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (3)" src="https://github.com/user-attachments/assets/3dc203a5-781a-4a7d-b0bd-c37e29c56744" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (4)" src="https://github.com/user-attachments/assets/e4210c5b-6494-4e5a-80cb-3e8ff2de5620" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (5)" src="https://github.com/user-attachments/assets/9cdd7235-c44d-4aef-8994-9914f98519e5" /> |
 
 ---
 
