@@ -1,0 +1,296 @@
+{
+  "chapter": "3b",
+  "title": "La grieta (confrontación)",
+  "scenes": [
+    {
+      "id": 350,
+      "title": "La mañana después de la confesión",
+      "image": "/assets/images/black-forest-morning.jpg",
+      "text": "Anoche Jane te confesó que algo la llama desde el bosque. No durmieron. Estuvieron abrazados en la cama, en silencio, hasta que el amanecer tiñó las cortinas de gris.\n\nElla lloró. Tú no. El secreto ya no está entre ustedes, pero la duda sigue ahí, pesada como una losa.\n\nAhora el sol entra por la ventana. Jane está a tu lado, despierta, mirando el techo.\n\n—¿Qué hacemos? —pregunta, y su voz es un hilo.\n\nTe sientas en la cama. La cabeza te da vueltas, pero una cosa está clara: no pueden seguir así.\n\n—Hoy voy a buscar a Don Manuel —dices—. Él sabe cosas. Y tú no te quedas sola.\n\nElla asiente. No discute. Por primera vez en días, no hay distancia.\n\nSe levantan. Preparan café en silencio. Mientras el agua hierve, Jane aparece en la puerta de la cocina.\n\n—Soñé con el bosque otra vez —dice—. Pero esta vez no tenía miedo. Esta vez... quería ir.\n\nTe giras. Su rostro está pálido, pero sereno.\n\n—No voy a ir —dice—. No sin ti. Pero necesito entender qué me pasa.\n\nAsientes. No hay palabras.\n\nDesayunan rápido. Cuando terminan, Jane se viste. Va a acompañarte.\n\nPero al salir, la puerta principal está abierta. No la abrieron. Nadie está fuera.\n\nEn el umbral hay una rama con una marca y una nota:\n\n\"No vengan los dos. Él solo.\"\n\nLa letra es de Don Manuel.\n\nJane te mira. Sus ojos preguntan.",
+      "choices": [
+        {
+          "id": "ir_solo",
+          "text": "\u201cQuédate. Voy solo. Pero no te muevas de casa.\u201d",
+          "effects": {
+            "control": 1,
+            "safety": 0,
+            "stress": 1,
+            "addInfo": ["jane_se_queda_casa"]
+          },
+          "nextSceneId": 351
+        },
+        {
+          "id": "ir_juntos",
+          "text": "\u201cVamos juntos. Sea lo que sea, lo enfrentamos juntos.\u201d",
+          "effects": {
+            "safety": 2,
+            "control": -1,
+            "stress": 1,
+            "addInfo": ["jane_acompana"]
+          },
+          "nextSceneId": 352
+        }
+      ]
+    },
+    {
+      "id": 351,
+      "title": "Jane se queda en casa",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane duda, pero asiente.\n\n—Ten cuidado —dice—. Y vuelve.\n\nTe abraza. Largo. Cuando se separa, tiene los ojos brillantes, pero no llora.\n\nSales. El pueblo está envuelto en una niebla ligera. Las calles están vacías. Nadie barre. Nadie camina.\n\nLlegas a la casa de Don Manuel. La puerta está cerrada, pero al llamar, se abre sola.\n\nEl interior está a oscuras. Huele a humedad y a ese olor dulzón que ya conoces.\n\n—Don Manuel —llamas.\n\nSilencio.\n\nAvanzas. En la pared está el mapa. Las marcas han cambiado. Hay nuevas fechas, nuevos nombres. El tuyo. El de Jane.\n\nY una palabra: \"HOY\".\n\nTu teléfono vibra. Un mensaje de Jane: \"Alguien está tocando la puerta. ¿Eres tú?\"\n\nEl corazón se te para. No eres tú.\n\n\"No abras. Voy para allá.\"\n\nSales corriendo.",
+      "choices": [
+        {
+          "id": "regreso_casa",
+          "text": "Correr a casa",
+          "nextSceneId": 353
+        }
+      ]
+    },
+    {
+      "id": 352,
+      "title": "Juntos hacia Don Manuel",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Caminan juntos hacia la casa de Don Manuel. La niebla se disipa, pero el aire sigue pesado. Jane va a tu lado, seria. No habla. Tampoco tú.\n\nLlegan. La puerta está entreabierta. Empujas. Entran.\n\nDon Manuel está sentado en el salón, en la misma silla de la vez anterior. Parece más viejo. Sus ojos están hundidos, pero cuando los ve, se iluminan un segundo.\n\n—Vinieron los dos —dice, y su voz es un susurro—. No debieron.\n\n—Usted nos llamó —dice Jane, firme.\n\nDon Manuel niega.\n\n—No fui yo. Fue él. Lo que habita en la montaña. Quiere que vengan. Juntos es más fácil.\n\nJane palidece.\n\n—¿Más fácil para qué?\n\nDon Manuel la mira. Luego te mira a ti.\n\n—Para llevarlos. Para que se queden. Para que se olviden de quiénes son.\n\n—No vamos a ir —dices.\n\nDon Manuel sonríe. Esa sonrisa triste.\n\n—Eso es lo que todos dicen. Hasta que los llaman. Hasta que sueñan. Hasta que una parte de ellos ya está allá.\n\nSeñala la nuca de Jane.\n\n—Ya la tiene. La marca. Miren.\n\nTe acercas. En la nuca de Jane, justo donde ella se rasca a veces, hay una mancha. Oscura. Pequeña. Como una sombra bajo la piel.\n\n—¿Qué es eso? —preguntas.\n\n—La marca —repite Don Manuel—. Cuando aparece, ya es tarde. Ella ya oye la voz. Ya quiere ir. Solo falta que usted también la tenga.\n\nJane se toca la nuca. Tiembla.\n\n—¿Puede quitarse? —pregunta.\n\nDon Manuel niega.\n\n—No. Solo se va si no vuelven a llamarla. Si se van del pueblo. Hoy mismo. Ahora.\n\n—¿Usted no se va? —preguntas.\n\nÉl baja la mirada.\n\n—Ya no puedo. Ellos me tienen. Me llaman y yo voy. Cada noche un poco más. Pronto no recordaré quién fui.\n\nSe levanta con esfuerzo.\n\n—Váyanse. Ahora. No miren atrás.\n\nJane te agarra la mano. Está helada.\n\n—¿Nos vamos, Daniel? —pregunta, y en su voz hay miedo real.\n\nAfuera, el sol se esconde. La noche empieza a caer.\n\nY desde el bosque llega un sonido. Algo que se acerca.",
+      "choices": [
+        {
+          "id": "huir_pueblo",
+          "text": "Huir del pueblo. Ahora. Llevarte a Jane y no mirar atrás.",
+          "effects": {
+            "control": 2,
+            "stress": 2,
+            "safety": 1,
+            "addInfo": ["decision_huir"]
+          },
+          "nextSceneId": 380
+        },
+        {
+          "id": "investigar_black_forest",
+          "text": "No huir. Ir a Black Forest. Acabar con esto.",
+          "effects": {
+            "control": -1,
+            "stress": 3,
+            "safety": -1,
+            "addInfo": ["decision_ir_black_forest"]
+          },
+          "nextSceneId": 390
+        }
+      ]
+    },
+    {
+      "id": 353,
+      "title": "De regreso a casa",
+      "image": "/assets/images/black-forest-home.jpg",
+      "text": "Corres sin mirar atrás. Las piernas te arden, los pulmones te queman. La cuesta hacia tu casa parece más empinada que nunca.\n\nLlegas. La puerta está abierta. Entras.\n\nJane está en el salón, de pie, mirando por la ventana. No se ha movido.\n\n—¿Quién tocó? —preguntas, jadeando.\n\nElla se gira. Su rostro está tranquilo. Demasiado.\n\n—Nadie —dice—. Debí imaginarlo.\n\n—¿Estás segura?\n\n—Segura.\n\nPero en sus ojos hay algo nuevo. Algo que no estaba esta mañana.\n\n—¿Escuchaste algo? —insistes.\n\nElla niega. Se sienta en el sofá.\n\n—Estoy cansada, Daniel. Todo esto me tiene agotada.\n\nTe sientas a su lado. Tomas su mano. Está fría.\n\n—Vamos a salir de esto —dices—. Juntos.\n\nElla apoya la cabeza en tu hombro.\n\n—¿Y si no puedo? ¿Y si la voz es más fuerte que yo?\n\n—La vamos a vencer.\n\n—¿Cómo?\n\nNo sabes qué responder. Solo la abrazas.\n\nPasan las horas. El día se vuelve tarde. Jane cocina algo. Comes sin hambre. Hablan de cosas sin importancia, como si nada estuviera pasando.\n\nPero todo está pasando.\n\nAl anochecer, la radio se enciende sola.\n\nEstática. Y luego, una voz:\n\n\"Vuelve a casa, Jane. Te esperamos.\"\n\nElla no se sobresalta. Solo escucha. Y por un instante, cierra los ojos. Como si disfrutara la voz.\n\n—Jane.\n\nAbre los ojos. Te mira. Sonríe.\n\n—No te preocupes —dice—. No voy a ir.\n\nPero tú ya no sabes si eso es verdad.",
+      "choices": [
+        {
+          "id": "apagar_radio",
+          "text": "Apagar la radio de golpe.",
+          "effects": {
+            "control": 1,
+            "stress": -1
+          },
+          "nextSceneId": 354
+        },
+        {
+          "id": "preguntar_jane",
+          "text": "Preguntarle a Jane: \u201c¿Qué sentiste cuando oíste eso?\u201d",
+          "effects": {
+            "info": 1,
+            "stress": 1,
+            "addInfo": ["jane_reaccion_voz"]
+          },
+          "nextSceneId": 355
+        }
+      ]
+    },
+    {
+      "id": 354,
+      "title": "Apagar la radio",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Apagas la radio de golpe. El silencio es inmediato, denso.\n\nJane no dice nada. Sigue mirando el aparato apagado.\n\n—No debería hacer eso —dice al fin—. Apagarla no hace que deje de llamarme.\n\n—¿Qué quieres decir?\n\n—Que la oigo igual. En mi cabeza. Todo el tiempo.\n\nSe toca la sien.\n\n—Es como una música lejana. A veces bonita. A veces triste. Pero nunca se va.\n\n—¿Desde cuándo?\n\n—Desde la primera noche. Cuando viste la luz en la montaña.\n\nTu sangre se hiela.\n\n—¿Y no me lo dijiste?\n\n—Tenía miedo. Miedo de que pensaras que me estaba volviendo loca. Miedo de que fuera cierto.\n\nSe encoge en el sofá.\n\n—¿Qué hacemos, Daniel?\n\nNo lo sabes. Pero sabes que necesitan ayuda.\n\n—Mañana vamos a ver a Don Manuel —dices—. Los dos.\n\nElla asiente.\n\n—¿Y si no podemos esperar hasta mañana?\n\n—Podemos.\n\nPero en el fondo, tampoco estás seguro.",
+      "choices": [
+        {
+          "id": "fin_noche",
+          "text": "Continuar",
+          "nextSceneId": 356
+        }
+      ]
+    },
+    {
+      "id": 355,
+      "title": "Preguntar a Jane",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "—¿Qué sentiste cuando oíste eso? —preguntas.\n\nJane tarda en responder. Sus dedos juegan con el borde de su camiseta.\n\n—Paz —dice al fin—. Sentí paz. Como si estuviera en un lugar seguro. Como si alguien me estuviera esperando.\n\n—¿Eso no te da miedo?\n\n—Me da más miedo no sentirlo. Porque cuando no lo siento, siento que me falta algo.\n\nTe mira.\n\n—¿Estoy enferma, Daniel?\n\nNo sabes qué decir. Tomas su mano.\n\n—No estás enferma. Algo está pasando aquí. En el pueblo. En el bosque. Y vamos a averiguarlo.\n\n—¿Juntos?\n\n—Juntos.\n\nElla sonríe. Débil, pero sonríe.\n\n—Mañana vamos a ver a Don Manuel —dices—. Él sabe cosas.\n\n—¿Y si no podemos esperar?\n\n—Podemos.\n\nPero la noche es larga, y la radio sigue apagada, pero la voz, ella dice, no se va.",
+      "choices": [
+        {
+          "id": "fin_noche",
+          "text": "Continuar",
+          "nextSceneId": 356
+        }
+      ]
+    },
+    {
+      "id": 356,
+      "title": "La noche en vela",
+      "image": "/assets/images/black-forest-night.jpg",
+      "text": "No duermen. O sí, pero en fragmentos. Cada vez que cierras los ojos, ves el bosque. La montaña. La luz que parpadea.\n\nJane se mueve a tu lado. También está despierta.\n\n—Daniel —susurra—. ¿Crees en lo que dijo Don Manuel? ¿Lo de la marca?\n\n—No sé.\n\n—Yo la sentí. Antes de que la viera. Como si algo se hubiera pegado a mí.\n\n—¿Duele?\n\n—No. Solo está ahí. Y a veces quiero rascarme hasta sacarla. Pero no puedo.\n\nPone su mano en la nuca.\n\n—¿Tú tienes una?\n\nNo lo sabes. Nunca te has mirado.\n\n—Ven —dice Jane—. Déjame ver.\n\nTe giras. Ella aparta tu cabello. Sus dedos tocan tu piel.\n\n—No —dice—. No tienes nada.\n\n—¿Y eso es bueno?\n\n—No sé. Tal vez solo significa que todavía no te han llamado.\n\n—O que no soy importante para ellos.\n\n—O eso.\n\nSe quedan en silencio. El reloj marca las tres de la mañana.\n\n—¿Crees que deberíamos irnos del pueblo? —pregunta Jane.\n\n—¿Y si eso no sirve? ¿Y si la voz te sigue?\n\n—No lo sé. Pero aquí siento que me estoy perdiendo.\n\nSu voz se quiebra.\n\n—A veces miro al espejo y no me reconozco. No sé si soy yo o soy otra. Y me da miedo.\n\nLa abrazas.\n\n—No te voy a dejar.\n\n—Lo sé. Por eso me da más miedo. Porque si me pierdo, te voy a arrastrar conmigo.\n\nNo hay respuesta para eso.\n\nAfuera, el bosque calla. Pero ustedes saben que está ahí. Escuchando.",
+      "choices": [
+        {
+          "id": "amanecer",
+          "text": "Amanece",
+          "nextSceneId": 357
+        }
+      ]
+    },
+    {
+      "id": 357,
+      "title": "Segundo día",
+      "image": "/assets/images/black-forest-morning2.jpg",
+      "text": "El sol entra por la ventana como si nada estuviera pasando. Pero todo sigue pasando.\n\nJane está dormida a tu lado. Por fin cedió al cansancio. No la despiertas.\n\nBajas a la cocina. Preparas café. Mientras esperas, miras por la ventana.\n\nEl bosque está ahí. Siempre está ahí.\n\nTu teléfono vibra. Un mensaje. Número desconocido.\n\n\"No vayas a casa de Don Manuel. Está vigilado. Nos vemos en la iglesia a mediodía. Trae a Jane. —Sarah\"\n\nEl corazón te da un vuelco. Sarah. La chica de la tienda.\n\nSubes. Jane sigue dormida. La despiertas suavemente.\n\n—Tenemos que hablar.\n\nLe muestras el mensaje. Lee. Frunce el ceño.\n\n—¿Crees que es verdad?\n\n—No lo sé. Pero Don Manuel nos dijo que nos fuéramos. Sarah nos pide que vayamos a la iglesia.\n\n—¿Y si es una trampa?\n\n—¿Para qué?\n\n—Para llevarnos al bosque. Para que nos llamen.\n\nJane se sienta. Se pasa la mano por la cara.\n\n—Estoy cansada de no saber en quién confiar.\n\n—Yo también.\n\n—¿Qué hacemos?\n\nMiras el mensaje otra vez. Mediodía. Iglesia.\n\nTienes tiempo para decidir.",
+      "choices": [
+        {
+          "id": "ir_iglesia",
+          "text": "Ir a la iglesia a ver a Sarah.",
+          "effects": {
+            "info": 1,
+            "stress": 1,
+            "addInfo": ["encuentro_sarah_iglesia"]
+          },
+          "nextSceneId": 358
+        },
+        {
+          "id": "ir_don_manuel",
+          "text": "Ir a casa de Don Manuel. No confías en Sarah.",
+          "effects": {
+            "control": 1,
+            "stress": 1,
+            "addInfo": ["visita_don_manuel_dia2"]
+          },
+          "nextSceneId": 360
+        },
+        {
+          "id": "quedarse_casa",
+          "text": "No ir a ningún lado. Esperar. Pensar.",
+          "effects": {
+            "control": 1,
+            "stress": 0,
+            "addInfo": ["espera_en_casa"]
+          },
+          "nextSceneId": 362
+        }
+      ]
+    },
+    {
+      "id": 358,
+      "title": "La iglesia",
+      "image": "/assets/images/black-forest-church.jpg",
+      "text": "Llegan a la iglesia al mediodía. El pueblo sigue desierto. Las puertas de la iglesia están abiertas.\n\nAdentro, huele a incienso y a madera vieja. Sarah está sentada en un banco, sola.\n\n—Pensé que no vendrían —dice sin levantarse.\n\n—¿Por qué nos citaste aquí? —pregunta Jane.\n\nSarah se gira. Tiene ojeras profundas. La piel gris.\n\n—Porque aquí no me pueden oír. En la tienda, en mi casa, en la calle... ellos escuchan.\n\n—¿Quiénes? —preguntas.\n\n—Los que están en la montaña. Los que llaman. Los que marcaron a Jane.\n\nJane se toca la nuca instintivamente.\n\n—¿Cómo lo sabes? —dice.\n\n—Porque a mí también me marcaron. Cuando volví de Black Forest.\n\n—¿Volviste? —preguntas.\n\nSarah asiente.\n\n—Entré. Me perdí. Volví. Pero no toda. Una parte se quedó allá. Y ahora quiero regresar. Todos los días. Todo el tiempo. Es como una sed que no se calma.\n\n—¿Por qué nos dices esto? —pregunta Jane.\n\n—Porque ustedes todavía pueden irse. Antes de que sea tarde.\n\n—Don Manuel nos dijo lo mismo —dices.\n\n—Don Manuel ya está perdido. Habla con ellos sin saberlo. Cree que nos advierte, pero ellos lo usan para asustarnos. Para que corramos hacia el bosque.\n\n—¿Entonces qué hacemos? —pregunta Jane.\n\nSarah las mira fijamente.\n\n—Tienen que entrar a Black Forest. Pero no de noche. No solos. Y no para quedarse.\n\n—¿Para qué, entonces?\n\n—Para romper el lazo. Para que deje de llamarlos. Hay una manera. Pero necesitan algo de adentro.\n\n—¿Qué cosa?\n\n—Un registro. Papeles. Algo que demuestre qué pasó allí. Si lo llevan a la ciudad, a las autoridades, tal vez cierren el proyecto. Tal vez los que llaman se vayan.\n\n—¿Y tú? —preguntas.\n\nSarah sonríe. Triste.\n\n—Yo ya no puedo irme. Ellos me tienen. Pero ustedes... ustedes todavía pueden.\n\nSaca un papel doblado del bolsillo.\n\n—Este es un mapa. El camino más corto a los archivos. No se lo muestren a nadie. Y no confíen en Don Manuel.\n\nTe da el mapa.\n\n—Vayan hoy. Antes del anochecer. Y salgan antes de que oscurezca del todo.\n\n—¿Por qué?\n\n—Porque de noche... ellos caminan.\n\nSe levanta.\n\n—Y no miren atrás. No importa lo que oigan.\n\nSale de la iglesia. Ustedes se quedan solos, con el mapa en las manos.",
+      "choices": [
+        {
+          "id": "ir_black_forest",
+          "text": "Ir a Black Forest ahora mismo. Seguir el mapa de Sarah.",
+          "effects": {
+            "control": -1,
+            "stress": 2,
+            "info": 1,
+            "addInfo": ["decision_ir_black_forest_mapa"]
+          },
+          "nextSceneId": 390
+        },
+        {
+          "id": "dudar_sarah",
+          "text": "No confiar en Sarah. Buscar a Don Manuel para contrastar.",
+          "effects": {
+            "control": 1,
+            "stress": 1,
+            "addInfo": ["dudar_sarah"]
+          },
+          "nextSceneId": 360
+        }
+      ]
+    },
+    {
+      "id": 360,
+      "title": "Casa de Don Manuel (segunda visita)",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Llegan a casa de Don Manuel. La puerta está cerrada. Llaman. Nadie responde.\n\n—Don Manuel —llamas—. Somos nosotros.\n\nSilencio.\n\nJane empuja la puerta. Está abierta.\n\nEntran. La casa está vacía. El mapa de la pared ha desaparecido. Solo queda un clavo.\n\n—¿Dónde está? —pregunta Jane.\n\nNo lo sabes.\n\nEn el suelo, un papel. Lo recoges.\n\n\"Me voy. No me busquen. El bosque me llama. No dejen que los llame a ustedes.\"\n\nLa letra es temblorosa, pero es de Don Manuel.\n\n—Se fue —dice Jane—. Se fue al bosque.\n\n—O lo llevaron.\n\nSe miran. El miedo crece.\n\n—¿Qué hacemos ahora? —pregunta ella.\n\n—Sarah nos dio un mapa. Tal vez sea la única opción.\n\n—¿Confías en ella?\n\n—No. Pero Don Manuel nos dijo que nos fuéramos. Sarah nos dice que entremos. Alguien miente. O los dos.\n\n—¿Y si los dos están diciendo la verdad? ¿Y si entrar es la única manera de salir?\n\n—No lo sé.\n\nJane toma tu mano.\n\n—Cualquier cosa que hagamos, la hacemos juntos.\n\nAsientes.",
+      "choices": [
+        {
+          "id": "ir_black_forest_duda",
+          "text": "Ir a Black Forest con el mapa de Sarah.",
+          "effects": {
+            "control": -1,
+            "stress": 2,
+            "addInfo": ["decision_ir_black_forest_duda"]
+          },
+          "nextSceneId": 390
+        },
+        {
+          "id": "preparar_escape",
+          "text": "Preparar el coche. Irse del pueblo ahora mismo.",
+          "effects": {
+            "control": 2,
+            "stress": 1,
+            "safety": 1,
+            "addInfo": ["decision_huir_coche"]
+          },
+          "nextSceneId": 380
+        }
+      ]
+    },
+    {
+      "id": 362,
+      "title": "Esperar en casa",
+      "image": "/assets/images/black-forest-home.jpg",
+      "text": "Deciden no salir. Pasan el día en casa, revisando ventanas, cerrando puertas con llave. Jane revisa el teléfono una y otra vez. No hay cobertura.\n\n—¿Crees que deberíamos haber ido? —pregunta.\n\n—No lo sé. Pero algo me dice que salir ahora es peligroso.\n\n—¿Y quedarnos?\n\n—También.\n\nLa tarde cae. La luz se vuelve naranja, luego roja, luego gris.\n\nY entonces, un golpe en la puerta.\n\nNo es un golpe fuerte. Es suave. Casi educado.\n\n—¿Quién es? —preguntas.\n\n—Sarah —dice una voz—. Por favor, abran.\n\nMirás a Jane. Ella asiente.\n\nAbres.\n\nSarah está en el umbral. Tiene una herida en la frente. Sangra.\n\n—Me encontraron —dice—. Don Manuel... ya no es Don Manuel. Me atacó. Tuve que correr.\n\n—¿Quién te atacó? —pregunta Jane.\n\n—Él. Pero no era él. Sus ojos... estaban negros. Como los de los otros.\n\n—¿Qué otros?\n\n—Los que volvieron. Los que ya no son ellos.\n\nSarah entra. Tiembla.\n\n—No se queden aquí. Esta noche van a venir. Todos. Los van a buscar.\n\n—¿Adónde podemos ir? —preguntas.\n\n—Al bosque. Es el único lugar donde no entran.\n\n—¿Al bosque? ¿No es justo de donde vienen?\n\n—Sí. Pero hay una parte... una parte donde no pueden pasar. La vieja iglesia abandonada, cerca de Black Forest. Ahí estaremos a salvo.\n\n—¿Y después?\n\n—Después... después veremos.\n\nJane te mira.\n\n—¿Vamos?",
+      "choices": [
+        {
+          "id": "ir_bosque_sarah",
+          "text": "Ir con Sarah al bosque, a la iglesia abandonada.",
+          "effects": {
+            "control": -1,
+            "stress": 2,
+            "addInfo": ["decision_ir_iglesia_abandonada"]
+          },
+          "nextSceneId": 390
+        },
+        {
+          "id": "no_confiar_sarah",
+          "text": "No confiar en Sarah. Encerrarse en casa y esperar.",
+          "effects": {
+            "control": 1,
+            "stress": 2,
+            "safety": -1,
+            "addInfo": ["rechazar_sarah"]
+          },
+          "nextSceneId": 380
+        }
+      ]
+    },
+    {
+      "id": 380,
+      "title": "El escape",
+      "image": "/assets/images/black-forest-car.jpg",
+      "text": "Deciden huir. Preparan el coche. Meten lo esencial: agua, comida, linternas, la grabación de la radio, el mapa de Don Manuel.\n\nJane mira por la ventana.\n\n—Están ahí —dice—. Afuera. Entre los árboles.\n\nTe asomas. No ves nada. Pero lo sientes. La presencia. La espera.\n\n—Vámonos —dices.\n\nArrancas el coche. Las luces iluminan el camino. Sales de la entrada.\n\nEl pueblo está desierto. Las calles vacías. Las casas, oscuras.\n\nLlegas a la carretera que bordea el bosque. Aceleras.\n\n—Mira —dice Jane, señalando el retrovisor.\n\nDetrás de ustedes, en la carretera, hay figuras. No corren. Caminan. Pero mantienen la distancia.\n\n—Son ellos —susurra Jane.\n\nAceleras más. El pueblo se aleja. La montaña se hace pequeña.\n\nPero las figuras siguen ahí. En los bordes del camino. Entre los árboles.\n\n—No nos van a dejar ir —dice Jane.\n\n—Vamos a intentarlo.\n\nEl camino se hace más oscuro. Las luces del coche apenas cortan la noche. Y adelante, en medio de la carretera, hay una figura.\n\nFrenas en seco.\n\nEs Don Manuel. O lo que queda de él. Sus ojos brillan en la oscuridad.\n\n—No pueden irse —dice, y su voz no es la suya—. Ella tiene que volver.\n\n—Jane, agáchate —dices.\n\nPero Jane no se agacha. Abre la puerta.\n\n—¿Qué haces?\n\n—Tengo que hablar con él.\n\n—No es él.\n\n—Lo sé. Pero tal vez pueda escucharme.\n\nSale del coche. Don Manuel se acerca.\n\n—Jane —dices—. Por favor, vuelve.\n\nElla no te escucha.\n\nDon Manuel alza la mano. Jane se detiene.\n\nY entonces, algo ocurre. Jane cierra los ojos. Don Manuel también.\n\nPasan segundos. Una eternidad.\n\nJane abre los ojos. Da un paso atrás.\n\n—Ya no está —dice—. Se fue.\n\n—¿Quién?\n\n—Lo que lo controlaba. Lo soltó. Por un momento.\n\nDon Manuel cae al suelo. Jane corre hacia él.\n\n—Está vivo —dice—. Pero no responde.\n\n—Tenemos que irnos —dices—. Antes de que vuelvan.\n\nAyudas a Jane a subir a Don Manuel al coche. Lo recuestan en el asiento de atrás.\n\nArrancas. Las figuras en los bordes del camino empiezan a moverse. Más rápido.\n\n—¡Acelera! —grita Jane.\n\nPisas el fondo. El coche ruge.\n\nLas figuras quedan atrás. El pueblo también. Solo la carretera y la oscuridad.\n\nManejas hasta que el sol empieza a salir. Cuando por fin ves un letrero que dice \"Bienvenidos a la ciudad\", te detienes.\n\nJane está pálida. Don Manuel respira, pero no despierta.\n\n—¿Salimos? —pregunta Jane.\n\nMiras atrás. La carretera está vacía.\n\n—Salimos.\n\nBajan del coche. El aire de la ciudad huele a gasolina y a café. Es horrible. Pero es normal.\n\n—¿Qué hacemos con él? —pregunta Jane, señalando a Don Manuel.\n\n—Lo llevamos a un hospital. Y luego tenemos que hablar con alguien. La policía. Los periódicos. Alguien que nos crea.\n\n—¿Y si no nos creen?\n\n—Entonces volvemos. Con pruebas.\n\nJane te mira. Tiene los ojos rojos, pero hay algo en ellos que no habías visto en días: esperanza.\n\n—¿Crees que podremos volver a ser normales?\n\n—No lo sé. Pero lo vamos a intentar.\n\nLa abrazas. Detrás de ustedes, Don Manuel tose. Despierta.\n\n—¿Dónde...? —murmura.\n\n—Está a salvo —dices—. Los dos.\n\nPero mientras lo dices, miras la carretera. Al final, muy lejos, ves una última figura.\n\nQuieta. Mirándolos.\n\nParpadeas. Desaparece.\n\nO tal vez nunca estuvo.\n\nEl capítulo termina. Han escapado... por ahora.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 3",
+          "nextSceneId": 500
+        }
+      ]
+    },
+    {
+      "id": 390,
+      "title": "Hacia Black Forest",
+      "image": "/assets/images/black-forest-path.jpg",
+      "text": "Deciden ir a Black Forest. El mapa de Sarah tiembla en tus manos. Jane va a tu lado, seria, con la linterna encendida aunque aún hay luz.\n\n—¿Estás seguro de esto? —pregunta.\n\n—No. Pero es la única pista que tenemos.\n\nEl sendero se abre paso entre los árboles. Los postes de luz torcidos. El cartel de PELIGRO. La verja oxidada.\n\nBlack Forest.\n\nDetrás de la verja, los edificios esperan.\n\n—Huele igual que la tienda de Sarah —dice Jane.\n\n—Sí.\n\nEntran. Las pisadas recientes en el suelo. La puerta metálica entreabierta.\n\nEn el umbral, una linterna encendida. Y junto a ella, una horquilla.\n\nJane la reconoce.\n\n—Es mía —dice—. Pero no la he perdido aquí.\n\n—Alguien la trajo.\n\n—¿Para qué?\n\n—Para que supiéramos que estuviste aquí. O para que creyéramos que estuviste.\n\nJane tiembla.\n\n—¿Seguimos?\n\nAsientes.\n\nToman la linterna. Avanzan.\n\nEl interior es un laberinto de pasillos oscuros. El olor dulzón se hace más denso. En las paredes, frases escritas con carbón: \"LOS QUE SE QUEDAN SE OLVIDAN. LOS QUE SE VAN RECUERDAN.\"\n\nLlegan a una puerta de acero. Está entreabierta.\n\n—¿Entramos? —pregunta Jane.\n\n—Sí.\n\nEmpujan. Del otro lado, una escalera que desciende.\n\nAl fondo, una luz tenue.\n\nBajan. La linterna parpadea.\n\nEn la cámara subterránea, hay archivos. Papeles. Cajas.\n\n—Los registros —dice Jane—. Sarah tenía razón.\n\nEmpiezan a revisar. Documentos fechados en los 70. Nombres. Experimentos. Algo llamado \"Proyecto Ecos\".\n\n—Mira esto —dice Jane, mostrando una fotografía.\n\nEs la misma que viste en el sendero. El grupo de personas frente a los edificios.\n\nPero en esta, alguien ha escrito los nombres. Y uno de ellos... es Don Manuel.\n\n—Él trabajaba aquí —dices.\n\n—Y nunca lo mencionó.\n\n—Porque no quería que supiéramos.\n\nUn ruido. Arriba.\n\nAlguien está bajando las escaleras.\n\nApagan la linterna. Se esconden detrás de una estantería.\n\nLas pisadas se acercan. Una figura aparece en la penumbra.\n\nEs Sarah.\n\nPero sus ojos... son negros.\n\n—Los encontré —dice, y su voz es un eco—. Ahora sí, van a quedarse.\n\n—Sarah —dice Jane—. No eres tú.\n\n—Ya no. Pero ustedes sí. Y él quiere verlos.\n\n—¿Quién? —preguntas.\n\n—Lo que duerme en la montaña. Lo que llaman.\n\nSarah da un paso. Ustedes retroceden.\n\n—No van a llevarnos —dice Jane.\n\n—Ya los llevamos. Solo falta que caminen.\n\nDetrás de Sarah, más figuras. Don Manuel. La señora Higgins. Otros que no reconocen.\n\nTodos con los ojos negros.\n\n—Corre —dices.\n\nCorren hacia la escalera. Suben. Sarah y los otros los siguen, pero lentamente. Como si no tuvieran prisa.\n\n—¿Por qué no corren? —jadea Jane.\n\n—Porque saben que no podemos salir.\n\nLlegan a la salida. La verja está cerrada. No la abrieron ustedes.\n\n—Estamos atrapados —susurra Jane.\n\nDetrás, las figuras se acercan.\n\nY entonces, una explosión de estática. La radio de la entrada cobra vida.\n\nUna voz. La misma que llamaba a Jane.\n\n—Déjenlos ir —dice—. Todavía no están listos.\n\nLas figuras se detienen.\n\nSarah abre los ojos. Por un momento, vuelven a ser normales.\n\n—Corran —dice—. Antes de que cambie de opinión.\n\nLa verja se abre sola.\n\nSalen corriendo. No miran atrás.\n\nEl bosque los escupe de vuelta al pueblo. Llegan a casa, cierran la puerta con llave, se sientan en el suelo.\n\nJane llora. Tú no. Pero las manos te tiemblan.\n\n—¿Qué fue eso? —pregunta.\n\n—No lo sé. Pero nos dejaron ir.\n\n—¿Por qué?\n\n—Porque todavía no estamos listos. Dijo.\n\n—¿Listos para qué?\n\nNo respondes. No sabes.\n\nAfuera, el bosque espera.\n\nEl capítulo termina. Han entrado y han salido. Pero la marca de Jane... brilla en la oscuridad.\n\nY la tuya... acaba de aparecer.",
+      "choices": [
+        {
+          "id": "fin_capitulo",
+          "text": "Fin del Capítulo 3",
+          "nextSceneId": 400
+        }
+      ]
+    }
+  ]
+}

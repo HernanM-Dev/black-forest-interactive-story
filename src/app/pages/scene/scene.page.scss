@@ -1,0 +1,1184 @@
+// ─── Paleta de colores ───────────────────────────────────────────────────────
+$red:          #dc2626;
+$red-light:    #ef4444;
+$red-05:       rgba(220, 38, 38, 0.05);
+$red-08:       rgba(220, 38, 38, 0.08);
+$red-10:       rgba(220, 38, 38, 0.10);
+$red-12:       rgba(220, 38, 38, 0.12);
+$red-15:       rgba(220, 38, 38, 0.15);
+$red-18:       rgba(220, 38, 38, 0.18);
+$red-20:       rgba(220, 38, 38, 0.20);
+$red-25:       rgba(220, 38, 38, 0.25);
+$red-30:       rgba(220, 38, 38, 0.30);
+$red-40:       rgba(220, 38, 38, 0.40);
+$red-50:       rgba(220, 38, 38, 0.50);
+$red-60:       rgba(220, 38, 38, 0.60);
+$red-70:       rgba(220, 38, 38, 0.70);
+$red-90:       rgba(220, 38, 38, 0.90);
+$purple:       #8b5cf6;
+$purple-light: #a78bfa;
+$purple-08:    rgba(139, 92, 246, 0.08);
+$purple-15:    rgba(139, 92, 246, 0.15);
+$purple-30:    rgba(139, 92, 246, 0.30);
+$purple-50:    rgba(139, 92, 246, 0.50);
+$purple-70:    rgba(139, 92, 246, 0.70);
+$black-85:     rgba(0, 0, 0, 0.85);
+$black-90:     rgba(0, 0, 0, 0.90);
+$black-92:     rgba(0, 0, 0, 0.92);
+$black-95:     rgba(0, 0, 0, 0.95);
+$white-05:     rgba(255, 255, 255, 0.05);
+$white-10:     rgba(255, 255, 255, 0.10);
+$white-70:     rgba(255, 255, 255, 0.70);
+$white-80:     rgba(255, 255, 255, 0.80);
+$white-90:     rgba(255, 255, 255, 0.90);
+
+// ─── Mixins reutilizables ────────────────────────────────────────────────────
+@mixin btn-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:active { transform: scale(0.95); }
+}
+
+@mixin red-border-btn {
+  @include btn-base;
+  border: 2px solid $red;
+  border-radius: 8px;
+  background: $red-10;
+  ion-icon { color: $red; }
+  &:hover { background: $red-20; }
+  &:focus-visible { outline: 2px solid $red-light; outline-offset: 3px; }
+}
+
+@mixin custom-scrollbar($thumb-color: $red-50) {
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-track { background: $white-05; border-radius: 3px; }
+  &::-webkit-scrollbar-thumb { background: $thumb-color; border-radius: 3px; }
+}
+
+@mixin modal-overlay($blur: 8px) {
+  position: fixed;
+  inset: 0;
+  background: $black-90;
+  backdrop-filter: blur($blur);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+.scene-content {
+  --background: #000;
+  overflow: hidden; // Evitar scroll externo
+}
+
+// Barra de indicadores
+.indicators-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  /* Añadir espacio extra en la parte superior para notch/statusbar */
+  padding-top: calc(1rem + var(--ion-safe-area-top, 0px));
+  background: $black-90;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid $white-05;
+}
+
+.indicator {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  ion-icon {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+  }
+
+  ion-progress-bar {
+    width: 100%;
+    height: 4px;
+    --background: $white-10;
+  }
+
+  &:active {
+    transform: scale(0.95);
+
+    ion-icon {
+      opacity: 1;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $red-90;
+    outline-offset: 3px;
+    border-radius: 10px; // valor específico del indicador, no aplica variable
+  }
+
+  // Colores según nivel
+  &.low {
+    ion-icon { color: $red-light; }
+    ion-progress-bar { --progress-background: #{$red-light}; }
+  }
+
+  &.medium-low {
+    ion-icon { color: #f97316; }
+    ion-progress-bar { --progress-background: #f97316; }
+  }
+
+  &.medium {
+    ion-icon { color: #eab308; }
+    ion-progress-bar { --progress-background: #eab308; }
+  }
+
+  &.medium-high {
+    ion-icon { color: #84cc16; }
+    ion-progress-bar { --progress-background: #84cc16; }
+  }
+
+  &.high {
+    ion-icon { color: #22c55e; }
+    ion-progress-bar { --progress-background: #22c55e; }
+  }
+}
+
+// Botón de diario
+.journal-button {
+  @include red-border-btn;
+  position: relative;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  min-width: 44px;
+
+  ion-icon {
+    font-size: 1.4rem;
+  }
+
+  ion-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    --background: #{$red};
+    --color: #fff;
+    font-size: 0.7rem;
+    min-width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    border-color: $red-light;
+  }
+}
+
+// Botón de menú (home)
+.home-button {
+  @include btn-base;
+  position: relative;
+  background: transparent;
+  border: 2px solid $red-50;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  min-width: 44px;
+
+  ion-icon {
+    font-size: 1.4rem;
+    color: $red-70; // no hay variable $red-70, valor puntual
+  }
+
+  &:hover {
+    background: $red-10;
+    border-color: $red;
+
+    ion-icon {
+      color: $red;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $red-90;
+    outline-offset: 3px;
+  }
+}
+
+// Contenedor de mensajes de feedback
+.feedback-container {
+  position: fixed;
+  top: calc(6rem + var(--ion-safe-area-top, 0px));
+  right: 1rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.feedback-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  background: $black-85;
+  border-radius: 50%;
+  border: 2px solid;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  width: 50px;
+  height: 50px;
+
+  animation: feedbackSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  ion-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    animation: iconPulse 0.8s ease-in-out infinite;
+  }
+}
+
+// Toast Notifications (eventos positivos)
+.toast-container {
+  position: fixed;
+  top: calc(6rem + var(--ion-safe-area-top, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 250;
+  pointer-events: none;
+}
+
+.toast-notification {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  animation: toastBounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &.positive {
+    background: linear-gradient(135deg, #22c55e 0%, #84cc16 100%);
+    border: 2px solid rgba(34, 197, 94, 0.5);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+  }
+
+  ion-icon {
+    font-size: 1.8rem;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  span {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+  }
+}
+
+@keyframes toastBounceIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px) scale(0.8);
+  }
+  50% {
+    transform: translateX(-50%) translateY(5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes feedbackSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+// Tooltip de indicador
+.indicator-tooltip {
+  position: fixed;
+  top: calc(5.5rem + var(--ion-safe-area-top, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 250;
+  background: $black-95;
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 1rem;
+  min-width: 200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  animation: tooltipFadeIn 0.2s ease-out;
+
+  .tooltip-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+
+    ion-icon {
+      font-size: 1.5rem;
+    }
+
+    .tooltip-name {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+
+  .tooltip-bar {
+    width: 100%;
+    height: 8px;
+    background: $white-10;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+
+    .tooltip-progress {
+      height: 100%;
+      transition: width 0.3s ease;
+      border-radius: 4px;
+    }
+  }
+
+  .tooltip-value {
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+// ========================================
+// NUEVO DISEÑO: Viewport narrativo fijo
+// ========================================
+
+.narrative-viewport {
+  position: fixed;
+  top: calc(5.5rem + var(--ion-safe-area-top, 0px)); // Debajo de los indicadores y notch
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.narrative-window {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  /* Ajustar la altura máxima considerando safe-area bottom */
+  max-height: calc(100vh - (7.5rem + var(--ion-safe-area-bottom, 0px)));
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid $red-30;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: calc(1rem + var(--ion-safe-area-bottom, 0px));
+}
+
+// Botón de tutorial (solo Capítulo 1)
+.tutorial-button {
+  @include btn-base;
+  position: absolute;
+  top: calc(1rem + var(--ion-safe-area-top, 0px));
+  right: 1rem;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid $red;
+  animation: tutorialPulse 2s ease-in-out infinite;
+
+  ion-icon {
+    font-size: 1.5rem;
+    color: $red;
+  }
+
+  &:hover {
+    background: $red-10;
+    border-color: $red;
+    transform: scale(1.1);
+    animation: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(239, 68, 68, 0.95);
+    outline-offset: 4px;
+    animation: none;
+  }
+}
+
+@keyframes tutorialPulse {
+  0% {
+    box-shadow: 0 0 0 0 $red-60;
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(220, 38, 38, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+// Imagen de la escena
+.scene-image {
+  width: 100%;
+  max-height: 180px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-bottom: 1px solid $red-20;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+// Contenedor de texto con scroll interno
+.narrative-text-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.5rem;
+  padding-bottom: calc(5rem + var(--ion-safe-area-bottom, 0px)); // Espacio extra para el botón de continuar y safe-area
+
+  @include custom-scrollbar;
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $red-70; // no hay variable $red-70
+  }
+}
+
+.narrative-text {
+  color: $white-90;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: left;
+  margin: 0;
+  letter-spacing: 0.02rem;
+  white-space: pre-line;
+}
+
+// Botón de decisión/continuar
+.decision-button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1rem calc(1.5rem + var(--ion-safe-area-bottom, 0px));
+  background: linear-gradient(to top, rgba(10, 10, 10, 1) 60%, rgba(10, 10, 10, 0.95) 80%, transparent);
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 0.4s ease-out;
+  pointer-events: none;
+
+  button {
+    pointer-events: auto;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.decision-button {
+  background: $red-15;
+  border: 2px solid $red;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: $red;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.03rem;
+
+  ion-icon {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background: $red-25;
+    border-color: $red-light;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px $red-40; // no hay variable $red-40
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(239, 68, 68, 0.95);
+    outline-offset: 4px;
+  }
+}
+
+// ========================================
+// Modal de decisiones (Mejorado)
+// ========================================
+
+.decision-modal {
+  --background: transparent;
+
+  .modal-overlay {
+    @include modal-overlay(12px);
+    background: $black-92;
+    animation: overlayFadeIn 0.4s ease-out;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: 500px;
+    max-height: 80vh;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.98) 0%, rgba(20, 10, 10, 0.98) 100%);
+    border: 1px solid $red-30;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 40px $red-10;
+    overflow-y: auto;
+    animation: modalSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    // Estilo simplificado cuando solo es "Continuar"
+    &.simple-continue {
+      max-width: 350px;
+
+      .modal-choices {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @include custom-scrollbar;
+  }
+
+  .modal-header {
+    padding: 2rem 1.5rem 1rem;
+    border-bottom: 1px solid $red-15;
+
+    h2 {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0;
+      text-align: center;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  .modal-choices {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    // Centrado cuando solo es continuar
+    &.centered {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .modal-choice-button {
+    background: $red-08;
+    border: 1px solid $red-30;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: normal;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+
+    // Efecto de brillo al hover
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, $red-20, transparent);
+      transition: left 0.5s ease;
+    }
+
+    // Estilo especial para botón de continuar único
+    &.continue-only {
+      min-width: 200px;
+      padding: 1.5rem 2rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      background: $red-12;
+      border-color: $red-40;
+    }
+
+    &.available:hover {
+      background: $red-18;
+      border-color: $red-60;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 20px $red-25;
+
+      &::before {
+        left: 100%;
+      }
+    }
+
+    &.available:active {
+      transform: translateY(-1px) scale(0.99);
+    }
+
+    &.blocked {
+      opacity: 0.4;
+      border-color: $red-15;
+      cursor: not-allowed;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(239, 68, 68, 0.95);
+      outline-offset: 4px;
+    }
+  }
+
+  .modal-choice-blocked {
+    .blocked-reason {
+      margin-top: 0.5rem;
+      color: $red-70;
+      font-size: 0.85rem;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+
+  // Acciones de regulación dentro del modal
+  .modal-regulation {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .regulation-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, $purple-30, transparent);
+    margin-bottom: 1rem;
+  }
+
+  .regulation-header-modal {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: $purple;
+    justify-content: center;
+
+    ion-icon {
+      font-size: 1.2rem;
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
+
+  .regulation-notice-modal {
+    color: $purple-70;
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .regulation-actions-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .regulation-button-modal {
+    background: $purple-08;
+    border: 1px solid $purple-30;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+
+    .regulation-text-modal {
+      color: $purple-light;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .regulation-effects-modal {
+      color: rgba(167, 139, 250, 0.7);
+      font-size: 0.75rem;
+      font-style: italic;
+    }
+
+    &:hover {
+      background: $purple-15;
+      border-color: $purple-50;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(167, 139, 250, 0.95);
+      outline-offset: 3px;
+    }
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// ========================================
+// Estilos del modal de diario
+// ========================================
+
+.journal-content {
+  --background: #0a0a0a;
+}
+
+.journal-container {
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.journal-intro {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+}
+
+ion-list {
+  background: transparent;
+  padding: 0;
+}
+
+ion-item {
+  --background: #{$red-10};
+  --border-color: #{$red-30};
+  --color: #fff;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+
+  ion-icon {
+    color: $red;
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+  }
+
+  ion-label {
+    h2 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $white-70;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      white-space: normal;
+    }
+  }
+
+  &:hover {
+    --background: $red-12;
+  }
+}
+
+ion-modal {
+  --background: #0a0a0a;
+
+  ion-header {
+    ion-toolbar {
+      --background: #0a0a0a;
+      --border-color: #{$red-30};
+
+      ion-title {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      ion-button {
+        --color: #{$red};
+      }
+    }
+  }
+}
+
+// ========================================
+// Modal de Tutorial
+// ========================================
+
+.tutorial-modal {
+  --background: transparent;
+
+  .modal-overlay {
+    @include modal-overlay(8px);
+    background: $black-90;
+    animation: overlayFadeIn 0.3s ease-out;
+  }
+
+  .tutorial-container,
+  .tutorial-content {
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.98) 0%, rgba(20, 10, 10, 0.98) 100%);
+    border: 1px solid $red-30;
+    border-radius: 20px;
+    padding: 2rem;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    @include custom-scrollbar;
+  }
+
+  .tutorial-close {
+    @include btn-base;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid $red;
+
+    ion-icon {
+      font-size: 1.3rem;
+      color: $red;
+    }
+
+    &:hover {
+      background: $red-10;
+      border-color: $red;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(239, 68, 68, 0.95);
+      outline-offset: 3px;
+    }
+  }
+
+  .tutorial-title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #{$red} 0%, #{$red-light} 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tutorial-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: $red-05;
+    border: 1px solid $red-30;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $red-08;
+      border-color: $red-50;
+    }
+
+    .tutorial-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: $red-15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+
+      ion-icon {
+        font-size: 1.8rem;
+        color: $red;
+      }
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 0.75rem 0;
+      text-align: center;
+    }
+
+    p {
+      color: $white-80;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .tutorial-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .tutorial-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+
+    ion-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    span {
+      color: $white-90;
+      font-size: 0.9rem;
+      line-height: 1.4;
+
+      strong {
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .tutorial-got-it {
+    @include btn-base;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid $red;
+    border-radius: 25px;
+    color: $red;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+
+    &:hover {
+      background: $red-10;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px $red-40;
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(239, 68, 68, 0.95);
+      outline-offset: 4px;
+    }
+  }
+}
+
+// ========================================
+// Modal de Advertencia Crítica
+// ========================================
+
+.critical-modal {
+  --background: transparent;
+
+  .critical-overlay {
+    @include modal-overlay(10px);
+    background: $black-92;
+    animation: overlayFadeIn 0.3s ease-out;
+  }
+
+  .critical-content {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(239, 68, 68, 0.95);
+    border: 3px solid $red;
+    border-radius: 20px;
+    box-shadow: 0 12px 48px rgba(239, 68, 68, 0.6);
+    padding: 2rem;
+    text-align: center;
+    animation: criticalShake 0.5s ease-in-out, modalSlideIn 0.4s ease-out;
+    position: relative;
+  }
+
+  .critical-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    animation: iconPulse 1s ease-in-out infinite;
+
+    ion-icon {
+      font-size: 3rem;
+      color: #fff;
+    }
+  }
+
+  .critical-title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .critical-message {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+    font-weight: 500;
+  }
+
+  .critical-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 12px;
+    color: $red;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.98);
+    }
+  }
+}
+
+@keyframes criticalShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}

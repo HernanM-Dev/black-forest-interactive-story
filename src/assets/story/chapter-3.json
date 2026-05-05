@@ -1,0 +1,544 @@
+{
+  "chapter": 3,
+  "title": "La grieta",
+  "scenes": [
+    {
+      "id": 300,
+      "title": "La mañana de niebla",
+      "image": "/assets/images/black-forest-fog.jpg",
+      "text": "Tres días han pasado desde que leíste el mensaje de Jane.\n\nTres días fingiendo que no existe.\n\nTres días vigilándola. Cada gesto. Cada palabra. Cada vez que mira al bosque.\n\nElla lo nota. Claro que lo nota. Pero no dice nada. O no se atreve. O quizás espera que tú hables primero.\n\nPero tú no hablas. Porque si hablas, tendrás que admitir que viste algo que no debías. O que ella está escribiendo cosas que no te cuenta. O que algo, dentro de ella, ya no es ella.\n\nEsta mañana, el pueblo despierta cubierto de niebla.\n\nUna niebla espesa, blanca, que borra el bosque, que borra la montaña, que borra todo excepto lo que está a tres metros.\n\nY en esa niebla, las cosas se acercan sin que las veas llegar.\n\nTe despiertas con la garganta seca. La cama, vacía. El lado de Jane está frío. Lleva horas fuera.\n\nEl corazón se acelera.\n\n—¿Jane?\n\nSilencio. La niebla presiona contra las ventanas como un animal quieto.\n\nBajas las escaleras casi corriendo. La cocina está vacía. El salón, vacío. La puerta trasera, la que da al bosque, está abierta de par en par. La niebla entra, lamiendo el suelo.\n\nY Jane está ahí fuera. Sentada en el último escalón del porche. En pijama. Descalza. Mirando fijamente hacia donde debería estar el bosque, pero solo hay blanco.\n\nNo se mueve cuando te acercas.\n\nNo parpadea cuando te sientas a su lado.\n\n—Jane.\n\nElla gira la cabeza. Pero el movimiento es extraño. Demasiado lento. Demasiado... deliberado.\n\n—Hace frío —dice. Su voz suena normal. Demasiado normal—. Deberías ponerte algo.\n\nComo si ella no estuviera en pijama en la niebla. Como si fuera normal.\n\n—¿Cuánto tiempo llevas aquí? —preguntas.\n\nElla mira al frente. A la nada blanca.\n\n—No lo sé. El tiempo es raro con la niebla. ¿No lo has notado?\n\nSu mano busca la tuya. Está helada.\n\n—He estado pensando —dice—. En el bosque. En cómo debe ser estar dentro. Perdido. Sin saber dónde termina uno y empieza el árbol.\n\nTe mira.\n\n—¿Tú crees que duele? ¿Perderse?",
+      "choices": [
+        {
+          "id": "dentro_frio",
+          "text": "“Jane, estás helada. Vamos dentro.”",
+          "effects": {
+            "control": 1,
+            "stress": -1
+          },
+          "nextSceneId": 301
+        },
+        {
+          "id": "preguntar_porque",
+          "text": "“¿Por qué preguntas eso?”",
+          "effects": {
+            "info": 1,
+            "stress": 1,
+            "addInfo": ["jane_suenos_espera"]
+          },
+          "nextSceneId": 302
+        },
+        {
+          "id": "rara_que_pasa",
+          "text": "“Llevas días rara. ¿Qué está pasando?”",
+          "effects": {
+            "stress": 2,
+            "info": 1,
+            "addInfo": ["jane_nota_mirada"]
+          },
+          "nextSceneId": 303
+        },
+        {
+          "id": "abrazar_fuerte",
+          "text": "No respondes. La abrazas fuerte.",
+          "effects": {
+            "safety": 1,
+            "stress": -1
+          },
+          "nextSceneId": 304
+        }
+      ]
+    },
+    {
+      "id": 301,
+      "title": "Cuidado inmediato",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "La ayudas a levantarse. Sus pies están morados de frío. Dentro, la envuelves en una manta, le preparas té. Ella deja que lo hagas. Pero sus ojos siguen mirando hacia la puerta. Hacia la niebla.\n\n—Gracias —murmura—. No sé qué me pasa. Últimamente... me cuesta volver.\n\n—¿Volver?\n\nPero ella niega con la cabeza. Bebe su té en silencio.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 305
+        }
+      ]
+    },
+    {
+      "id": 302,
+      "title": "Los sueños de Jane",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane tarda en responder. Sus dedos juegan con el dobladillo del pijama.\n\n—Por los sueños —dice al fin—. Sueño que camino por el bosque. Pero no estoy perdida. Estoy... esperando. Algo. A alguien. Y no sé si quiero que llegue o no.\n\nTe mira.\n\n—¿Tú sueñas con el bosque?",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 305
+        }
+      ]
+    },
+    {
+      "id": 303,
+      "title": "La conversación que quiebra",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane aparta la mirada.\n\n—¿Rara? —repite—. No sé. ¿Tú crees que soy rara?\n\n—No he dicho...\n\n—Sí has dicho. Llevas días mirándome raro. Como si esperaras que hiciera algo. O como si tuvieras miedo de mí.\n\nSu voz tiembla.\n\n—Daniel, ¿qué está pasando? ¿Qué sabes que yo no sé?\n\nTe ha pillado desprevenido.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 305
+        }
+      ]
+    },
+    {
+      "id": 304,
+      "title": "El abrazo en la niebla",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "La abrazas fuerte. Sientes su cuerpo helado contra el tuyo. Por un momento, deja de temblar.\n\n—Lo siento —susurra contra tu hombro—. Lo siento, lo siento, lo siento.\n\nNo sabes por qué pide perdón. Pero la abrazas más fuerte.\n\nCuando se separa, tiene los ojos secos. Pero algo en su expresión ha cambiado. Como si hubiera tomado una decisión.\n\n—Hoy tengo que ir al pueblo —dice—. Sola. Necesito... hacer unas cosas.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 305
+        }
+      ]
+    },
+    {
+      "id": 305,
+      "title": "Jane se va",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane se ha ido al pueblo. Dijo que volvería para comer. Dijo que no te preocuparas.\n\nPero te preocupas.\n\nLa niebla sigue espesa. Desde la ventana, apenas ves la calle. Las siluetas de las casas vecinas son fantasmas.\n\nY entonces, una silueta se materializa.\n\nDon Manuel. Camina hacia tu puerta. Pero su caminar es extraño. Demasiado recto. Demasiado mecánico.\n\nGolpea la puerta. Tres veces. Seco. Ritual.",
+      "choices": [
+        {
+          "id": "abrir_si",
+          "text": "Abrir. Don Manuel ya te advirtió una vez. Quizás tiene más información.",
+          "effects": {
+            "info": 1,
+            "stress": 1,
+            "addInfo": ["don_manuel_ojos_raros"]
+          },
+          "nextSceneId": 306
+        },
+        {
+          "id": "no_abrir",
+          "text": "No abrir. Después de la última vez, no quieres más visitas suyas.",
+          "effects": {
+            "control": 1,
+            "stress": 2,
+            "addInfo": ["rama_mensaje_fecha"]
+          },
+          "nextSceneId": 307
+        },
+        {
+          "id": "mirar_ventana",
+          "text": "Mirar por la ventana antes de decidir.",
+          "effects": {
+            "control": 1
+          },
+          "nextSceneId": 306
+        }
+      ]
+    },
+    {
+      "id": 306,
+      "title": "Don Manuel en el porche",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Don Manuel está en el porche. Pero sus ojos... sus ojos miran en direcciones ligeramente distintas. Como si no coordinaran. Como si dos cosas diferentes miraran a través de ellos.\n\n—Vecino —dice cuando abres—. Necesito que venga conmigo.\n\n—¿Adónde?\n\n—Al límite del bosque. Hay algo que debe ver.",
+      "choices": [
+        {
+          "id": "acompanar",
+          "text": "Acompañar a Don Manuel",
+          "effects": {
+            "info": 3,
+            "stress": 2,
+            "addInfo": ["black_forest_real", "sarah_devuelta"]
+          },
+          "nextSceneId": 308
+        },
+        {
+          "id": "no_acompanar",
+          "text": "Negarse. No quieres adentrarte en el bosque.",
+          "effects": {
+            "control": 1,
+            "addInfo": ["rechazo_don_manuel"]
+          },
+          "nextSceneId": 309
+        }
+      ]
+    },
+    {
+      "id": 307,
+      "title": "La rama tallada",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Los golpes se repiten. Más fuertes.\n\nLuego silencio.\n\nLuego una voz, pegada a la puerta:\n\n—Sé que está ahí.\n\nNo te mueves.\n\n—No importa. Irá igual. Todos van.\n\nPasos que se alejan.\n\nCuando miras por la ventana, Don Manuel ya no está. Pero en la puerta, alguien ha dejado algo.\n\nUna rama. Del bosque. Con una marca tallada: una fecha. La de tu llegada a Oakhurst.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 309
+        }
+      ]
+    },
+    {
+      "id": 308,
+      "title": "Black Forest",
+      "image": "/assets/images/black-forest-gate.jpg",
+      "text": "Caminan en silencio. La niebla los envuelve. Don Manuel avanza con paso firme, como si viera a través de ella. Tú apenas ves el camino.\n\n—¿Adónde vamos? —preguntas.\n\n—Al límite —responde—. Donde el bosque empieza a recordar.\n\nLlegan a una zona que no conoces. Una verja. Oxidada. Con un cartel: BLACK FOREST. PROPIEDAD PRIVADA. PROHIBIDO EL PASO.\n\n—Esto es —dice Don Manuel.\n\nDetrás de la verja, entre la niebla, se ven edificios bajos. Antiguos. Como un laboratorio abandonado. O un hospital. O algo peor.\n\n—¿Qué es esto?\n\nDon Manuel te mira. Por un momento, sus ojos vuelven a ser los suyos. Humanos. Asustados.\n\n—No lo sé. Nadie lo sabe ya. Pero algo pasó aquí. Algo que despertó lo que duerme en la montaña.\n\nSeñala los edificios.\n\n—La gente que trabajaba aquí... algunos desaparecieron. Otros volvieron. Pero no eran ellos. Como Sarah. Como tantos.\n\n—¿Sarah? —repites—. ¿La chica de la tienda?\n\nDon Manuel asiente.\n\n—Ella volvió. Pero no recuerda. O no quiere. Mírela bien la próxima vez. Mire sus ojos. Verá que algo falta.",
+      "choices": [
+        {
+          "id": "regresar",
+          "text": "Regresar a casa",
+          "nextSceneId": 309
+        }
+      ]
+    },
+    {
+      "id": 309,
+      "title": "Regreso a casa (tarde)",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "La niebla comienza a disiparse cuando el sol cae. Jane vuelve primero. Tú llegas después, si fuiste con Don Manuel.\n\nOs encontráis en la cocina. Ambos tenéis algo que contar. Ambos dudáis.",
+      "choices": [
+        {
+          "id": "contar_black_forest",
+          "text": "Tú cuentas lo de Black Forest y Don Manuel.",
+          "effects": {
+            "safety": 1,
+            "stress": 1,
+            "addInfo": ["informacion_compartida"]
+          },
+          "nextSceneId": 310
+        },
+        {
+          "id": "preguntar_dia",
+          "text": "Preguntas a Jane qué tal su día.",
+          "effects": {
+            "safety": 1
+          },
+          "nextSceneId": 311
+        },
+        {
+          "id": "silencio",
+          "text": "No dices nada. Esperas a ver si ella habla.",
+          "effects": {
+            "control": 1,
+            "safety": -1
+          },
+          "nextSceneId": 310
+        },
+        {
+          "id": "preguntar_sarah",
+          "text": "“¿Fuiste a la tienda? ¿Viste a Sarah?”",
+          "effects": {
+            "addInfo": ["pregunta_sarah"]
+          },
+          "nextSceneId": 311
+        }
+      ]
+    },
+    {
+      "id": 310,
+      "title": "La noche en casa",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Cenáis en silencio. Un silencio que pesa. Cada uno sabe que el otro esconde algo. Cada uno espera que el otro hable primero.\n\nNinguno lo hace.\n\nDespués de cenar, Jane se sienta en el salón. Tú recoges la mesa. Cuando terminas, ella está mirando la radio apagada.\n\n—Ponla —dice sin mirarte.\n\n—¿Qué?\n\n—La radio. Ponla.\n\nLa enciendes. Estática. Pero no es estática aleatoria. Tiene ritmo. Como la otra vez.\n\n—Escucha —susurra Jane.\n\nY entonces, entre el ruido, una voz.\n\nNo palabras. Algo peor. Un suspiro. Largo. Profundo. Como si alguien exhalara justo al otro lado del aparato.\n\nLuego, otra voz. Más cercana. Más... familiar.\n\nTu nombre.\n\nSusurrado.\n\nY luego, el de Jane.",
+      "choices": [
+        {
+          "id": "apagar_radio",
+          "text": "Apagar la radio de golpe.",
+          "effects": {
+            "control": 1,
+            "stress": -1
+          },
+          "nextSceneId": 312
+        },
+        {
+          "id": "subir_volumen",
+          "text": "Subir el volumen. Quieres escuchar más.",
+          "effects": {
+            "info": 2,
+            "stress": 3,
+            "control": -1,
+            "addInfo": ["voz_familiar", "vuelve_a_casa"]
+          },
+          "nextSceneId": 313
+        },
+        {
+          "id": "mirar_jane",
+          "text": "Mirar a Jane. Su expresión lo dice todo.",
+          "effects": {
+            "info": 2,
+            "stress": 3,
+            "safety": -2,
+            "addInfo": ["jane_reconoce_voz", "jane_quiere_ir"]
+          },
+          "nextSceneId": 314
+        },
+        {
+          "id": "tirar_radio",
+          "text": "Agarrar la radio y tirarla por la ventana.",
+          "effects": {
+            "control": -1,
+            "stress": 0,
+            "safety": 1,
+            "info": 1,
+            "addInfo": ["radio_rota_sigue_sonando"]
+          },
+          "nextSceneId": 315
+        }
+      ]
+    },
+    {
+      "id": 311,
+      "title": "La noche en casa (variante sin confrontación)",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Cenáis en silencio. Un silencio que pesa. Cada uno sabe que el otro esconde algo. Cada uno espera que el otro hable primero.\n\nNinguno lo hace.\n\nDespués de cenar, Jane se sienta en el salón. Tú recoges la mesa. Cuando terminas, ella está mirando la radio apagada.\n\n—Ponla —dice sin mirarte.\n\n—¿Qué?\n\n—La radio. Ponla.\n\nLa enciendes. Estática. Pero no es estática aleatoria. Tiene ritmo. Como la otra vez.\n\n—Escucha —susurra Jane.\n\nY entonces, entre el ruido, una voz.\n\nNo palabras. Algo peor. Un suspiro. Largo. Profundo. Como si alguien exhalara justo al otro lado del aparato.\n\nLuego, otra voz. Más cercana. Más... familiar.\n\nTu nombre.\n\nSusurrado.\n\nY luego, el de Jane.",
+      "choices": [
+        {
+          "id": "apagar_radio",
+          "text": "Apagar la radio de golpe.",
+          "effects": {
+            "control": 1,
+            "stress": -1
+          },
+          "nextSceneId": 312
+        },
+        {
+          "id": "subir_volumen",
+          "text": "Subir el volumen. Quieres escuchar más.",
+          "effects": {
+            "info": 2,
+            "stress": 3,
+            "control": -1,
+            "addInfo": ["voz_familiar", "vuelve_a_casa"]
+          },
+          "nextSceneId": 313
+        },
+        {
+          "id": "mirar_jane",
+          "text": "Mirar a Jane. Su expresión lo dice todo.",
+          "effects": {
+            "info": 2,
+            "stress": 3,
+            "safety": -2,
+            "addInfo": ["jane_reconoce_voz", "jane_quiere_ir"]
+          },
+          "nextSceneId": 314
+        },
+        {
+          "id": "tirar_radio",
+          "text": "Agarrar la radio y tirarla por la ventana.",
+          "effects": {
+            "control": -1,
+            "stress": 0,
+            "safety": 1,
+            "info": 1,
+            "addInfo": ["radio_rota_sigue_sonando"]
+          },
+          "nextSceneId": 315
+        }
+      ]
+    },
+    {
+      "id": 312,
+      "title": "Apagar la radio",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Apagas la radio. El silencio es súbito, denso. Jane no dice nada. Sus ojos están fijos en el aparato apagado.\n\n—¿Escuchaste eso? —susurra.\n\nAsientes. No hay nada que decir.\n\nPasan los minutos. La noche se cierra fuera. Dentro, el silencio se vuelve insoportable.\n\nFinalmente, Jane se levanta y sube a dormir. Tú te quedas un rato más, mirando la radio. Esperando que vuelva a sonar.\n\nNo lo hace. Pero el silencio, ahora, pesa más que cualquier ruido.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 316
+        }
+      ]
+    },
+    {
+      "id": 313,
+      "title": "La voz que llama",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "La voz sigue. No dice nada más. Solo nombres. El tuyo. El de Jane. Una y otra vez. Como un niño que aprende a hablar. Como alguien que memoriza a quién tiene que llamar.\n\nY entonces, entre los nombres, algo nuevo:\n\n\"Vuelve.\"\n\nNo es una amenaza. Es una invitación.\n\n\"Vuelve a casa.\"\n\nJane te agarra el brazo. Sus uñas se clavan.\n\n—¿De quién es esa voz? —susurra.\n\nPero tú crees saberlo. Porque la voz... la voz te suena. Y no quieres reconocer por qué.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 316
+        }
+      ]
+    },
+    {
+      "id": 314,
+      "title": "El reconocimiento",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane está pálida. Pero no es miedo lo que ves en sus ojos. Es reconocimiento.\n\n—La he oído antes —dice—. En sueños. Me llama. Me dice... me dice que me espera.\n\n—¿Quién?\n\nElla niega.\n\n—No lo sé. Pero sé que es importante. Que debo ir.\n\n—¿Ir adónde?\n\n—Al bosque. A la montaña. A donde sea que me llamen.\n\nTe mira.\n\n—Y una parte de mí quiere ir, Daniel. Una parte de mí... ya no quiere estar aquí.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 316
+        }
+      ]
+    },
+    {
+      "id": 315,
+      "title": "La radio rota",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "La radio vuela por la ventana. Cristales rotos. Noche que entra fría.\n\nJane te mira. Primero sorprendida. Luego, algo más. ¿Alivio? ¿Miedo?\n\n—¿Por qué has hecho eso?\n\n—Porque no quiero escuchar. No quiero que nos llame. No quiero.\n\nTe tiemblan las manos.\n\nJane se acerca. Te abraza.\n\n—Está bien —murmura—. Está bien.\n\nPero no lo está. Porque desde fuera, desde la noche, llega un sonido.\n\nLa radio. Sigue encendida. Sigue susurrando vuestros nombres.\n\nAunque la hayas tirado.\n\nAunque esté rota.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 316
+        }
+      ]
+    },
+    {
+      "id": 316,
+      "title": "Pasada la medianoche",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Jane duerme. O finge dormir. Tú no.\n\nTe levantas sin hacer ruido. Bajas al salón. Los cristales rotos de la ventana dejan pasar el aire. La radio está en el jardín. Sigue emitiendo estática. Pero ya no susurra nombres.\n\nTe sientas en el sofá. La cabeza entre las manos.\n\nY entonces, un golpe suave en la puerta.\n\nNo es Don Manuel. Es un golpe más pequeño. Más... infantil.\n\nAbres.\n\nSarah está en el porche. La chica de la tienda. Pero no es la misma. Su rostro está relajado. Demasiado. Como si hubiera tomado una decisión.\n\n—Sé lo que quiere —dice—. Lo que quiere saber. Puedo contárselo. Pero tiene que prometerme algo.",
+      "choices": [
+        {
+          "id": "lo_que_sea",
+          "text": "“Lo que sea. Dime.”",
+          "effects": {
+            "info": 3,
+            "stress": 3,
+            "control": -1,
+            "addInfo": ["devueltos_incompletos", "quieren_regresar"]
+          },
+          "nextSceneId": 317
+        },
+        {
+          "id": "que_tienes_que_ver",
+          "text": "“¿Qué tienes que ver tú con todo esto?”",
+          "effects": {
+            "info": 3,
+            "stress": 2,
+            "safety": 1,
+            "addInfo": ["sarah_black_forest", "los_que_esperan"]
+          },
+          "nextSceneId": 318
+        },
+        {
+          "id": "no_quiero_saber",
+          "text": "“No quiero saber nada. Vete.”",
+          "effects": {
+            "control": 1,
+            "stress": 1,
+            "info": 0
+          },
+          "nextSceneId": 319
+        },
+        {
+          "id": "jane_peligro",
+          "text": "“¿Jane está en peligro?”",
+          "effects": {
+            "info": 2,
+            "stress": 4,
+            "addInfo": ["jane_ya_va_en_suenos", "nadie_puede_resistirse"]
+          },
+          "nextSceneId": 320
+        }
+      ]
+    },
+    {
+      "id": 317,
+      "title": "Lo que sea",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah sonríe. Una sonrisa triste.\n\n—No debería decir \"lo que sea\". Eso es lo que dije yo. Y mírame ahora.\n\nSeñala su propio rostro.\n\n—¿Ve mis ojos? Mire bien.\n\nTe acercas. Sus ojos... algo en ellos está apagado. Como si hubiera luces que ya no brillan.\n\n—Volví —dice—. Pero no toda. Una parte se quedó allí. Y ahora... ahora solo quiero volver. Completarme. ¿Entiende?\n\nNiegas.\n\n—Entenderá. Cuando la llamen. Cuando sepa que le falta algo. Cuando quiera ir.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 321
+        }
+      ]
+    },
+    {
+      "id": 318,
+      "title": "Lo que Sarah sabe",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah mira hacia el bosque.\n\n—Yo trabajaba allí —dice—. En Black Forest. Era administrativa. No sabía qué hacían. Solo archivos. Papeles. Pero un día... un día entré donde no debía.\n\nSu voz se quiebra.\n\n—Vi cosas. Cosas que no deberían existir. Y ellos... ellos me vieron a mí.\n\n—¿Quiénes?\n\n—Los que esperan. Los que están en la montaña. Los que llaman.\n\nSe toca la sien.\n\n—Desde entonces, están aquí. En mi cabeza. Llamándome. Y yo quiero ir. Pero si voy... no volveré entera. O no volveré.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 321
+        }
+      ]
+    },
+    {
+      "id": 319,
+      "title": "No quiero saber",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah asiente lentamente.\n\n—Lo entiendo. Yo también quise no saber. Pero el saber viene igual. Con los sueños. Con las voces. Con la necesidad.\n\nDa media vuelta.\n\n—Cuando quiera saber, búsqueme. Pero no espere demasiado. Pronto... pronto me iré. Y no podré contarle nada.\n\nSe pierde en la noche.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 321
+        }
+      ]
+    },
+    {
+      "id": 320,
+      "title": "Jane ya está yendo",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah te mira con algo parecido a la ternura.\n\n—¿Jane? —repite—. Ella... ella ya está yendo. No físicamente. Pero su mente... su alma... lo que sea que la hace ser ella... ya está caminando por el bosque. Pregúntele con qué sueña. Pregúntele a quién espera.\n\nTu sangre se hiela.\n\n—¿Cómo lo sabes?\n\n—Porque yo también soñaba. Antes de ir. Todos soñamos igual. El bosque. La espera. Alguien que llega.\n\nSe acerca y te toca el brazo.\n\n—Cuídela. Pero sepa que si la llaman... no podrá resistirse. Nadie puede.",
+      "choices": [
+        {
+          "id": "continuar",
+          "text": "Continuar",
+          "nextSceneId": 321
+        }
+      ]
+    },
+    {
+      "id": 321,
+      "title": "Madrugada",
+      "image": "/assets/images/black-forest.jpg",
+      "text": "Sarah se ha ido. La noche es quieta. La radio, en el jardín, sigue emitiendo estática rítmica.\n\nSubes a la habitación. Jane duerme. Pero no duerme bien. Sus párpados se mueven. Sueña. Y sus labios... sus labios murmuran algo.\n\nTe acercas. Inclinas la cabeza.\n\n\"Ya voy\", susurra en sueños. \"Espérame. Ya voy.\"\n\nTe quedas mirándola. La mujer que amas. La mujer que quizás ya no sea tuya.\n\nY en la radio, abajo, la estática cambia. Por un momento, clara como el agua, una voz:\n\n\"Bienvenido a casa.\"",
+      "choices": [
+        {
+          "id": "despertar_contar",
+          "text": "Despertar a Jane. Contarle todo. Sarah, la radio, sus sueños. Todo.",
+          "effects": {
+            "safety": 2,
+            "stress": 3,
+            "control": -1,
+            "addInfo": ["honestidad_radical"]
+          },
+          "nextSceneId": 400
+        },
+        {
+          "id": "investigar_solo",
+          "text": "No decirle nada. Investigar Black Forest por tu cuenta. Hoy mismo.",
+          "effects": {
+            "control": 1,
+            "safety": -2,
+            "stress": 2,
+            "addInfo": ["investigacion_solo"]
+          },
+          "nextSceneId": 400
+        },
+        {
+          "id": "pedir_irse",
+          "text": "Pedirle que se vaya del pueblo. Que te espere en la ciudad. Tú resolverás esto.",
+          "effects": {
+            "control": 1,
+            "stress": -1,
+            "safety": 0,
+            "addInfo": ["jane_fuera"]
+          },
+          "nextSceneId": 400
+        },
+        {
+          "id": "preguntar_suenos",
+          "text": "Preguntarle por sus sueños. Directamente. Sin rodeos.",
+          "effects": {
+            "info": 1,
+            "stress": 1,
+            "safety": 0,
+            "addInfo": ["pregunta_suenos"]
+          },
+          "nextSceneId": 400
+        }
+      ]
+    }
+  ]
+}

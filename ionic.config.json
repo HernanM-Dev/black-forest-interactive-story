@@ -1,0 +1,7 @@
+{
+  "name": "Black-Forest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

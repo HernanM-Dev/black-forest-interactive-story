@@ -1,0 +1,37 @@
+<ion-content fullscreen class="home-background">
+  <div class="overlay">
+    <div class="home-container">
+      <h1 class="title">BLACK FOREST</h1>
+      <p class="subtitle">{{ subtitleKey | translate }}</p>
+
+      <!-- Botón Continuar (solo si hay partida guardada) -->
+      <ion-button 
+        *ngIf="showButton && hasSavedGame"
+        expand="block" 
+        shape="round" 
+        class="continue-button"
+        (click)="continueGame()">
+        {{ 'HOME.CONTINUE' | translate }}
+      </ion-button>
+
+      <!-- Botón Nuevo Juego -->
+      <ion-button 
+        *ngIf="showButton"
+        expand="block" 
+        shape="round" 
+        class="start-button"
+        (click)="newGame()">
+        {{ 'HOME.NEW_GAME' | translate }}
+      </ion-button>
+
+      <ion-button 
+        *ngIf="showButton"
+        expand="block" 
+        fill="clear" 
+        class="settings-button"
+        (click)="openSettings()">
+        {{ 'HOME.OPTIONS' | translate }}
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
