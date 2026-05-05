@@ -1,4 +1,4 @@
-# 🌲 Black Forest
+# Black Forest
 
 > *"Something walks between the trees. And it knows you're there."*
 
@@ -8,11 +8,12 @@ Every decision matters. Every indicator counts. There are no right answers.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-| Main Menu | Narrative Scene | Decision Modal |
+| Main Menu | Intro | Settings |
 |:-:|:-:|:-:|
-| *(screenshot)* | *(screenshot)* | *(screenshot)* |
+| <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max)" src="https://github.com/user-attachments/assets/b9e788cb-adf5-4496-870c-e2797374fea5" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (2)" src="https://github.com/user-attachments/assets/08c54a44-6e7c-4e1a-9958-e105ba98c00c" /> | <img width="300" height="600" alt="localhost_8100_home(iPhone 14 Pro Max) (1)" src="https://github.com/user-attachments/assets/40df91b5-f3e1-446c-803d-bca75a2e4e8b" />
+ |
 
 | Information Journal | Tutorial | Indicators |
 |:-:|:-:|:-:|
@@ -20,14 +21,14 @@ Every decision matters. Every indicator counts. There are no right answers.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🎭 Branching Narrative
+### Branching Narrative
 - Story divided into chapters with **multiple routes** based on player decisions
 - From Chapter 3 onward, the story splits into completely different paths (`chapter-3a`, `chapter-3b`) depending on key choices made in Chapter 2
 - Narrative text written in second person with **dynamic variants** based on player state
 
-### 📊 Dynamic Indicator System
+### Dynamic Indicator System
 Four indicators that evolve throughout the story:
 
 | Indicator | Description |
@@ -39,7 +40,7 @@ Four indicators that evolve throughout the story:
 
 Indicators affect which options are available, what text is displayed, and how the character reacts.
 
-### 🧘 Regulation Actions
+### Regulation Actions
 In safe zones, when stress exceeds 40%, the player can use narrative actions to calm down:
 - *"Close your eyes and breathe slowly"*
 - *"Think about Jane. Something good"*
@@ -47,15 +48,15 @@ In safe zones, when stress exceeds 40%, the player can use narrative actions to 
 
 Each action has a cost in other indicators and can only be used once per scene.
 
-### 📖 Information Journal
+### Information Journal
 A system of unlockable entries discovered through decisions. Each entry is a puzzle piece — not a direct answer.
 
-### 🔊 Audio System
+### Audio System
 - Heartbeat sounds that reinforce tension
 - Ambient music differentiated between menu and gameplay
 - Configurable volume from the settings screen
 
-### 🎨 Immersive UI/UX
+### Immersive UI/UX
 - Fixed viewport with no external scroll — feels like a game, not a webpage
 - Narrative window with internal scroll and reading gradient
 - Decision modal with entrance animation and blurred overlay
@@ -65,7 +66,7 @@ A system of unlockable entries discovered through decisions. Each entry is a puz
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Version | Usage |
 |------------|---------|-------|
@@ -85,7 +86,7 @@ A system of unlockable entries discovered through decisions. Each entry is a puz
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+
@@ -123,7 +124,7 @@ npx cap open android
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 bosque-oscuro/
@@ -162,7 +163,7 @@ bosque-oscuro/
 
 ---
 
-## 🗺️ Chapter System
+## Chapter System
 
 The story uses an ID range system to manage multiple branching routes:
 
@@ -178,7 +179,7 @@ Adding a new chapter is as simple as creating a JSON file and registering it in 
 
 ---
 
-## 🎮 How to Play
+## How to Play
 
 1. **New Game** — start from Chapter 1
 2. **Read** the narrative text at your own pace
@@ -192,7 +193,7 @@ Adding a new chapter is as simple as creating a JSON file and registering it in 
 
 ---
 
-## 🔮 Roadmap
+## Roadmap
 
 - [ ] **Full i18n support** — complete English localization
 - [ ] **Adaptive music** — soundtrack shifts based on player indicators
@@ -205,9 +206,9 @@ Adding a new chapter is as simple as creating a JSON file and registering it in 
 
 ---
 
-## 👤 Credits
+## Credits
 
-**Development & Writing**: [Your name]
+**Development & Writing**: Hernán Martinez
 
 **Audio**:
 - *Heartbeat Sound* — Dragon Studio (via Pixabay)
