@@ -209,6 +209,8 @@ Adding a new chapter is as simple as creating a JSON file and registering it in 
 
 **Development & Writing**: Hernán Martinez
 
+This project is under active development. The story is being built little by little. I will keep you updated.
+
 **Audio**:
 - *Heartbeat Sound* — Dragon Studio (via Pixabay)
 - *Dark Space Ambient* — Tunetank (via Pixabay)
